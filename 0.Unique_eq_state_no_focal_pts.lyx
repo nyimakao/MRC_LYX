@@ -1,0 +1,2557 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass amsart
+\begin_preamble
+\input{general-preamble}          
+
+
+\address{Department of Mathematics,
+The Ohio State University, Columbus, OH 43210, USA} 
+\email{chen.8022@osu.edu}
+\address{Department of Mathematics, The University of Chicago, Chicago, IL 60637, USA} 
+\email{lkao@math.uchicago.edu}
+\address{Department of Mathematics, The University of Chicago, Chicago, IL 60637, USA} 
+\email{kihopark@math.uchicago.edu}
+\address{Department of Mathematics, University of Utah, Salt Lake City, UT, 84112, USA} 
+\email{msmith@math.utah.edu}
+\address{Departamento de Matem\'{a}tica, Estat\'{i}stica e Computa\c{c}a\~{o} Cient\'{i}fica, IMECC-UNICAMP, Campinas-SP, Brazil} 
+\email{regisvarao@ime.unicamp.br}
+
+
+%\thanks{Kao gratefully acknowledges partial support from the National Science Foundation Postdoctoral Research Fellowship and from U.S. National Science Foundation grants DMS 1107452, 1107263, 1107367 "RNMS: GEometric structures And Representation varieties" (the GEAR Network).}
+
+\keywords{}
+
+\subjclass[2000]{}
+\thanks{This material is based upon work supported by the National Science Foundation (NSF) under Grant Number DMS 1641020. The second author gratefully acknowledges support from the NSF Postdoctoral Research Fellowship under Grant Number DMS 1703554.}
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\s{\sigma}
+\def\Si{\Sigma}
+\def\G{\Gamma}
+\def\g{\gamma}
+\def\l{\lambda}
+\def\L{\Lambda}
+
+\def\D{\mathbb{D}}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\H{\mathbb{H}}
+
+\def\pa{\partial}
+\def\ep{\varepsilon}
+
+\def\T{\mathcal{T}}
+\def\F{\mathcal{F}}
+
+\def\lt{\lambda_{T}}
+\def\ut{T^1M}
+\def\gt{G_T}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+initials
+theorems-sec
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "citecolor=blue"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 1
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Uniqueness States for Geodesic Flows on Manifolds without Focal Points
+\end_layout
+
+\begin_layout Author
+Dong Chen, Lien-Yung Kao, Kiho Park, Matthew Smith, and Régis Varão
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Abstract
+In this paper, we study 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+This paper is devoted to 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+The outline of this paper is as follows.
+ In Section
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection*
+Need to define:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M$
+\end_inset
+
+ is a closed rank 1 Riemannian manifold without focal point.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{t}:T^{1}M\to T^{1}M$
+\end_inset
+
+ is the geodesic flow.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Singular set
+\shape default
+ 
+\begin_inset Formula ${\rm Sing}:=\{v\in T^{1}M:\ E^{u}(v)\cap E^{u}(v)\neq\emptyset\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Regular set
+\shape default
+ 
+\begin_inset Formula ${\rm Reg}:=T^{1}M\backslash{\rm Sing}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thmx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a rank 1 Riemannian manifold without focal points and 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ be the geodesic flow over 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\vphi:\ut\to\R$
+\end_inset
+
+ is a Hölder continuous function and 
+\begin_inset Formula $P({\rm Sing},\vphi)<P(\vphi)$
+\end_inset
+
+, then 
+\begin_inset Formula $\vphi$
+\end_inset
+
+ has a unique equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+.
+ 
+\color red
+Moreover, 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+ is fully supported, 
+\begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
+\end_inset
+
+, and is the weak
+\begin_inset Formula $^{*}$
+\end_inset
+
+ limit of the weighted regular periodic orbits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thmx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Corollary*
+Under the same assumpitons as in the above theorem and suppose that 
+\begin_inset Formula $M$
+\end_inset
+
+ is a surface.
+ Then the unique equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+ is Bernoulli.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thmx}
+\end_layout
+
+\end_inset
+
+ 
+\color red
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a rank 1 Riemannian manifold without focal points and 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ be the geodesic flow over 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $h_{top}({\rm Sing})<h_{top}({\cal F})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thmx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Acknowledgement*
+The author
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Preliminaries on non-uniform hyperbolic dynamics
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Need to define in this section
+\end_layout
+
+\begin_layout Itemize
+topological pressure
+\end_layout
+
+\begin_layout Itemize
+specification
+\end_layout
+
+\begin_layout Itemize
+Bowen property
+\end_layout
+
+\begin_layout Itemize
+Good, bad orbits
+\end_layout
+
+\begin_layout Itemize
+obstractions of expansivity
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Climenhaga-Thompson's criteria for uniqueness of equlirbirum states
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+cite{Climenhaga:2016ut}, Theorem A]
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $(X,{\cal F})$
+\end_inset
+
+ be a flow on a compact metric space, and 
+\begin_inset Formula $\vphi:X\to\R$
+\end_inset
+
+ be a continuous potential function.
+ Suppose that 
+\begin_inset Formula $P_{exp}^{\perp}(\vphi)<P(\vphi)$
+\end_inset
+
+ and 
+\begin_inset Formula $X\times[0,\infty)$
+\end_inset
+
+ admits a decomposition 
+\begin_inset Formula $({\cal P},{\cal G},{\cal S})$
+\end_inset
+
+ with the following properties: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item[(I)]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${\cal G}$
+\end_inset
+
+ has specification;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item[(II)]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\vphi$
+\end_inset
+
+ has Bowen property on 
+\begin_inset Formula ${\cal G}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item[(III)]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $P([{\cal P}]\cup[{\cal S}],\vphi)<P(\vphi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Then 
+\begin_inset Formula $(X,{\cal F},\vphi)$
+\end_inset
+
+ has a unique equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Preliminaries of geometry of manifolds without focal points
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection*
+Need to define in this section
+\end_layout
+
+\begin_layout Itemize
+Manifolds of no focal points
+\end_layout
+
+\begin_layout Itemize
+Jacobi fields and foliations 
+\begin_inset Formula ${\cal J}^{s},{\cal J}^{u},E^{u},E^{s},E^{cu},E^{cs},W^{u},W^{s},W^{cu},W^{cs}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Horospheres 
+\begin_inset Formula $H^{s}(v):=\pi W^{s}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $H^{u}(v):=\pi W^{u}(v)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W^{cs}(v):={\displaystyle \bigcup_{t\in\R}W^{s}(f_{t}(v))}$
+\end_inset
+
+; 
+\begin_inset Formula $W^{cu}(v):={\displaystyle \bigcup_{t\in\R}W^{u}(f_{t}(v))}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Busemann function 
+\begin_inset Formula $b_{v}(x):={\displaystyle \lim_{t\to\infty}d(x,\gamma_{v}(t))-t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\cal U}^{u}(-v):=-{\cal U}^{s}(v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d_{S}$
+\end_inset
+
+ Sasaki metric on 
+\begin_inset Formula $TM$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d_{K}(u,v):=\max\{d(\g_{u}(t),\g_{v}(t)):\ t\in[0,1]\}$
+\end_inset
+
+ Knieper metric on 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Bowen ball w.r.t.
+ 
+\begin_inset Formula $d_{K}$
+\end_inset
+
+: 
+\begin_inset Formula $B_{T}(v,\varepsilon):=\{w\in T^{1}M:\ d_{K}(f_{t}w,f_{t}v)<\varepsilon\ for\ all\ 0\leq t\leq T\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Intrinsic metric on 
+\begin_inset Formula $W^{s}(v)$
+\end_inset
+
+: 
+\begin_inset Formula $d^{s}(u,w):=\inf\{l(\pi\g):\ \g:[0,1]\to W^{s}(v),\ \g(0)=u,\ \g(1)=w\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Intrinsic metric on 
+\begin_inset Formula $W^{cs}(v):$
+\end_inset
+
+ locally, 
+\begin_inset Formula $d^{s}(u,w):=|t|+d^{s}(f_{t}u,w)$
+\end_inset
+
+ where 
+\begin_inset Formula $t$
+\end_inset
+
+ is the unique vaule so that 
+\begin_inset Formula $f_{t}u\in W^{s}(w)$
+\end_inset
+
+, which extends to whole 
+\begin_inset Formula $W^{cs}(v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+local stable leaf
+\shape default
+ through 
+\begin_inset Formula $v$
+\end_inset
+
+ of size 
+\begin_inset Formula $\rho$
+\end_inset
+
+: 
+\begin_inset Formula $W_{\rho}^{s}(v):=\{w\in W^{s}(s):\ d^{s}(u,v)\leq\rho\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d^{u}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{cu}$
+\end_inset
+
+, 
+\begin_inset Formula $W_{\rho}^{cs}(v),W_{\rho}^{cu}(v)$
+\end_inset
+
+ are defined in the same manner 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+When 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is small enough, the intrinsic metrics are uniformly equivalent to 
+\begin_inset Formula $d_{S}$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Manifolds without foucal points
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+cite{Eschenburg:1977kn,Pesin:1977vi}]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\ $
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Pesin:1977vi}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Theorem\ 4.7,6.4}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ 
+\begin_inset Formula $T_{v}(T^{1}M)=E^{s}(v)\oplus E^{u}(v)\oplus E^{c}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $\dim E^{u}(v)=E^{s}(v)=n-1$
+\end_inset
+
+, and 
+\begin_inset Formula $\dim E^{c}(v)=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Pesin:1977vi}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Theorem\ 4.11}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ The subbundles 
+\begin_inset Formula $E^{u}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $E^{s}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $E^{cu}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $E^{cs}(v)$
+\end_inset
+
+ are flow invariant.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Pesin:1977vi}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Theorem\ 6.1,6.4}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ The subbundles 
+\begin_inset Formula $E^{u}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $E^{s}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $E^{cu}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $E^{cs}(v)$
+\end_inset
+
+ are integrable to flow invarian foliations 
+\begin_inset Formula $W^{u}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $W{}^{s}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $W^{cu}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $W^{cs}(v)$
+\end_inset
+
+, respectively.
+ 
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Pesin:1977vi}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Theorem\ 6.4}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+W^{cs}(v)=\{w\in T^{1}M:\ \exists C>0{\rm \ such\ that\ }d(\g_{v}(t),\g_{w}(t))\leq C{\rm \ for}\ t>0\},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+W^{cu}(v)=\{w\in T^{1}M:\ \exists C>0{\rm \ such\ that\ }d(\g_{v}(t),\g_{w}(t))\leq C{\rm \ for}\ t<0\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Eschenburg:1977kn}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Lemma},\ p.246$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ 
+\begin_inset Formula $E^{u}(v)\cap E^{s}(v)\neq\emptyset$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $v\in{\rm Sing}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Eschenburg:1977kn}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Theorem\ 1\ (i)}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ The symmetric linear operator of 
+\begin_inset Formula ${\cal U}^{s}(v):T_{\pi v}H^{s}(v)\to T_{\pi v}H^{s}(v)$
+\end_inset
+
+ given by 
+\begin_inset Formula $v\mapsto\nabla_{v}N$
+\end_inset
+
+, i.e., the shape operator on 
+\begin_inset Formula $H^{s}(v)$
+\end_inset
+
+, is well-defined, where 
+\begin_inset Formula $N$
+\end_inset
+
+ is the unit normal vector field of 
+\begin_inset Formula $H^{s}(v)$
+\end_inset
+
+ towarding the same side as 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Moreover, we have 
+\begin_inset Formula ${\cal U}^{s}(v)=-\nabla_{v}\nabla b_{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Eschenburg:1977kn}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Theorem\ 2\ (i)}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ 
+\begin_inset Formula $H^{u}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $H^{s}(v)$
+\end_inset
+
+ are are 
+\begin_inset Formula $C^{2}$
+\end_inset
+
+-embedded hypersurfaces in 
+\begin_inset Formula $\widetilde{M}$
+\end_inset
+
+.
+ 
+\begin_inset Formula ${\cal U}^{u}$
+\end_inset
+
+ is positively semidefinite and and 
+\begin_inset Formula ${\cal U}^{s}$
+\end_inset
+
+ is negatively semidefinite.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+Both Eschenburg 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Eschenburg:1977kn}
+\end_layout
+
+\end_inset
+
+ and Pesin 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Pesin:1977vi}
+\end_layout
+
+\end_inset
+
+ proved that the stable foliation 
+\begin_inset Formula $E^{s}$
+\end_inset
+
+ and unstable folliation 
+\begin_inset Formula $E^{u}$
+\end_inset
+
+ are given by the stable and unstable Jacobi fields (as in Eberlein 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Eberlein:1973hu"
+
+\end_inset
+
+).
+ In both work recalled abvoe, they also showed when 
+\begin_inset Formula $M$
+\end_inset
+
+ has no focal points then 
+\begin_inset Formula $W^{s}(v)$
+\end_inset
+
+ (resp.
+ 
+\begin_inset Formula $W^{u}(v)$
+\end_inset
+
+) is indeed the stable (resp.
+ unstable) horosphere on 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+.
+ More precisely, 
+\begin_inset Formula 
+\[
+\widetilde{W^{s}}(v)=\{(x,-\nabla_{x}b_{v}^{+}):\ x\in H^{s}(v)\}\ {\rm and\ }\widetilde{W^{u}}(v)=\{(x,-\nabla_{x}b_{-v}):\ x\in H^{u}(v)\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Fact
+\begin_inset Formula $\ $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Hurley:1986km}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ The geodesic flow 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ is topologically transitive.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\rm (}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Gelfert:2017tx}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Lemma\ 6.8}$
+\end_inset
+
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
+ For surface cases, 
+\begin_inset Formula $h_{top}({\rm Sing})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $($
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Gelfert:2017tx}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Corollary\ 6.12}$
+\end_inset
+
+
+\begin_inset Formula $)$
+\end_inset
+
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a closed surface without focal points and 
+\begin_inset Formula $\mathcal{F}=(f_{t})_{t\in\mathbb{R}}$
+\end_inset
+
+ be the geodesic flow on 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $h_{top}(\mathcal{F})>0=h_{top}({\rm Sing)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ be the maximum eigenvalue of 
+\begin_inset Formula ${\cal U}^{u}(v)$
+\end_inset
+
+ for 
+\begin_inset Formula $v\in T^{1}M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+For 
+\begin_inset Formula $v\in T^{1}M$
+\end_inset
+
+, let 
+\begin_inset Formula $\lambda^{u}(v)$
+\end_inset
+
+ be minimum eigenvalue of 
+\begin_inset Formula ${\cal U}^{u}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda^{s}(v)=\lambda^{u}(-v)$
+\end_inset
+
+.
+ We define 
+\begin_inset Formula $\lambda(v)=\min(\lambda^{u}(v),\lambda^{s}(v)).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Decompositions for geodesic flow
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Need to define in this section
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lt(v):=\min(\lt^{u}(v),\lt^{s}(v))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{T}(\eta):=\{(v,t)\colon\ \frac{1}{t}\int_{0}^{t}\lambda_{T}(f_{s}v)ds<\eta\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{T}(\eta):=\{(v,t)\colon\ \frac{1}{\tau}\int_{0}^{\tau}\lambda_{T}(f_{s}v)ds\geq\eta{\rm \ {\rm and\ }}\frac{1}{\tau}\int_{0}^{\tau}\lambda_{T}(f_{-s}f_{t}v)ds\geq\eta\ \forall\tau\in[0,t]\}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\rm Reg}_{T}(\eta):=\{v\in T^{1}M:\ \lambda_{T}(v)\geq\eta\}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Fact
+\begin_inset Formula $\ $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${\rm Sing}$
+\end_inset
+
+ is closed and flow invariant.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${\rm Reg}_{T}(\eta)\subset T^{1}M$
+\end_inset
+
+ is compact.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $G_{T}(\eta)\subset T^{1}M\times\mathbb{R}$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${\rm Reg}$
+\end_inset
+
+ is dense in 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+.
+ (Need a lemma to prove it.) 
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\varphi:T^{1}M\to\mathbb{R}$
+\end_inset
+
+ be continuous, If 
+\begin_inset Formula $P({\rm Sing})<P(\varphi)$
+\end_inset
+
+, and for all 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+ the potential 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ has the Bowen property on 
+\begin_inset Formula 
+\[
+G_{T}(\eta)=\{(v,t)\colon\ \frac{1}{\tau}\int_{0}^{\tau}\lambda_{T}(f_{s}v)ds\geq\eta{\rm \ {\rm and\ }}\frac{1}{\tau}\int_{0}^{\tau}\lambda_{T}(f_{-s}f_{t}v)ds\geq\eta\ \forall\tau\in[0,t]\},
+\]
+
+\end_inset
+
+then the geodesic flow has a unique equilibrium stat for 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Pressure gap and 
+\begin_inset Formula $\lt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $T>0$
+\end_inset
+
+, we consider a linear map 
+\begin_inset Formula $U_{T}^{u}(v):T_{\pi v}H^{u}\rightarrow T_{\pi v}H^{u}$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\[
+{\cal U}_{T}^{u}(v)(w):=\Big(\int_{-T}^{T}{\cal U}^{u}(f_{t}v)dt\Big)(w)=\int_{-T}^{T}P_{-t}({\cal U}^{u}(f_{t}v)(P_{t}w))dt,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ denotes the parallel transport along 
+\begin_inset Formula $\gamma_{v}$
+\end_inset
+
+.
+ We then define 
+\begin_inset Formula $\lt^{u}(v)$
+\end_inset
+
+ to be the minimum eigenvalue of 
+\begin_inset Formula $U_{T}^{u}$
+\end_inset
+
+.
+ In the case of surface, it is equal to 
+\begin_inset Formula $\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsubsection
+Properties of 
+\begin_inset Formula $\lt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $v\in\text{Sing}$
+\end_inset
+
+ implies 
+\begin_inset Formula $\lt(v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Conversely, we have:
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:lamb_T_and_sing"
+
+\end_inset
+
+ If 
+\begin_inset Formula $\lt(v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $T$
+\end_inset
+
+, then 
+\begin_inset Formula $v\in\mathrm{Sing}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\lt(v)=\min(\lt^{u}(v),\lt^{s}(v)),$
+\end_inset
+
+ we may assume 
+\begin_inset Formula $\lambda_{t_{k}}^{u}(v)=0$
+\end_inset
+
+ for some 
+\begin_inset Formula $t_{k}\rightarrow\infty$
+\end_inset
+
+ (otherwise we choose 
+\begin_inset Formula $\lambda^{s}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\lambda^{u}$
+\end_inset
+
+).
+ For each 
+\begin_inset Formula $k$
+\end_inset
+
+, we can find 
+\begin_inset Formula $w_{k}\in T_{\pi v}H^{u}$
+\end_inset
+
+ with 
+\begin_inset Formula $||w_{k}||=1$
+\end_inset
+
+ such that 
+\begin_inset Formula $U_{t_{k}}^{u}(v)(w_{k})=0$
+\end_inset
+
+.
+ Notice that 
+\begin_inset Formula $U^{u}(v)$
+\end_inset
+
+ is positive semidefinite, so does 
+\begin_inset Formula $P_{-t}\circ U^{u}(f_{t}v)\circ P_{t}$
+\end_inset
+
+.
+ Hence we have 
+\begin_inset Formula 
+\[
+0=\langle U_{t_{k}}^{u}(v)(w_{k}),w_{k}\rangle=\int_{-t_{k}}^{t_{k}}\langle P_{-t}(U^{u}(f_{t}v)(P_{t}w_{k})),w_{k}\rangle dt\geq0.
+\]
+
+\end_inset
+
+Thus 
+\begin_inset Formula $\langle P_{-t}(U^{u}(f_{t}v)(P_{t}w_{k})),w_{k}\rangle=0$
+\end_inset
+
+ and 
+\begin_inset Formula $U^{u}(f_{t}v)(P_{t}w_{k})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in[-t_{k},t_{k}]$
+\end_inset
+
+.
+ The unstable Jacobi fields of 
+\begin_inset Formula $P_{t}w_{k}$
+\end_inset
+
+ coincide for 
+\begin_inset Formula $-t_{k}\leq t\leq t_{k}$
+\end_inset
+
+.
+ The common unstable Jacobi field satisfies 
+\begin_inset Formula $J(0)=w_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $J'(t)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $t\in[-t_{k},t_{k}]$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $t_{k}\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\{w_{k}\}$
+\end_inset
+
+ has an accumulate point 
+\begin_inset Formula $w$
+\end_inset
+
+ and the unstable Jacobi field of 
+\begin_inset Formula $w$
+\end_inset
+
+ is constant.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+The spefication property
+\end_layout
+
+\begin_layout Subsection*
+Need to define in this section
+\end_layout
+
+\begin_layout Itemize
+Local product structure
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+cite{BCFT2017}, Lemma 4.3]
+\end_layout
+
+\end_inset
+
+ Given 
+\begin_inset Formula $\kappa\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $\ep>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $T=T(\kappa,\ep)$
+\end_inset
+
+ such that if 
+\begin_inset Formula $W^{u}$
+\end_inset
+
+, 
+\begin_inset Formula $W^{cs}$
+\end_inset
+
+ has LPS at scale 
+\begin_inset Formula $\ep$
+\end_inset
+
+ with constant 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ at 
+\begin_inset Formula $v,w\in T^{1}M$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\bigcup_{0\leq t\leq T}f_{t}(W_{\ep}^{u}(v))\cap W_{\ep}^{cs}(w)\neq\emptyset.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Suppose 
+\begin_inset Formula $P({\rm Sing})<P(\varphi)$
+\end_inset
+
+, and for all 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $G_{T}(\eta)$
+\end_inset
+
+ has the specification property.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+The Bowen property
+\end_layout
+
+\begin_layout Subsection*
+Need to define in this section
+\end_layout
+
+\begin_layout Itemize
+Hölder potentials
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is Hölder continuous, then it has the Bowen properties with respect to
+ 
+\begin_inset Formula $G_{T}(\eta)$
+\end_inset
+
+ for any 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Proof of theorem A and ??
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+cite{BCFT2017}, Lemma 9.1]
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a closed rank 1 manifold without focal points and 
+\begin_inset Formula $\varphi:T^{1}M\to\mathbb{R}$
+\end_inset
+
+ continuous.
+ If 
+\begin_inset Formula 
+\[
+\sup_{v\in{\rm Sing}}\varphi(v)-\inf_{v\in T^{1}M}\varphi(v)<h_{top}(\mathcal{F})-h_{top}({\rm Sing})
+\]
+
+\end_inset
+
+ then 
+\begin_inset Formula $P({\rm Sing})<P(\varphi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Corollary
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a surface without focal points and 
+\begin_inset Formula $\vphi$
+\end_inset
+
+ is a constant function.
+ Then there exists a unique equilibrium 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+ for 
+\begin_inset Formula $\vphi$
+\end_inset
+
+.
+ Moreover 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+ is Bernoulli.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/nyima/Dropbox/TEX/Bibtex/BIB"
+options "amsalpha"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
