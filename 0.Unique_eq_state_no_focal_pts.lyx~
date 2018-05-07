@@ -326,7 +326,9 @@ Let
 \end_inset
 
 .
- Moreover, 
+ 
+\color red
+Moreover, 
 \begin_inset Formula $\mu_{\vphi}$
 \end_inset
 
@@ -400,7 +402,9 @@ begin{thmx}
 
 \end_inset
 
- Let 
+ 
+\color red
+Let 
 \begin_inset Formula $M$
 \end_inset
 
