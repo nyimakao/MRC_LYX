@@ -140,7 +140,7 @@ theorems-ams-extended
 \begin_body
 
 \begin_layout Title
-Uniqueness States for Geodesic Flows on Manifolds without Focal Points
+Uniqueness States for Geodesic Flows on Surfaces without Focal Points
 \end_layout
 
 \begin_layout Author
@@ -168,7 +168,20 @@ today
 \end_layout
 
 \begin_layout Abstract
-In this paper, we study 
+In this paper, we prove that for the geometric potential or a Hölder potential
+ without carrying full pressure over the singular set has a unique equilibrium
+ state.
+ This result generalizes, and is inspired by, Burns-Climenhaga-Fisher-Thompson's
+ work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BCFT2017"
+
+\end_inset
+
+ on the uniqueness of the equilibrium states for certain potentials over
+ geodesic flows on compact rank 1 manifolds.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -233,7 +246,7 @@ Need to define:
 \begin_inset Formula $M$
 \end_inset
 
- is a closed rank 1 Riemannian manifold without focal point.
+ is a closed rank 1 surface without focal points.
 \end_layout
 
 \begin_layout Itemize
@@ -300,7 +313,7 @@ Let
 \begin_inset Formula $M$
 \end_inset
 
- be a rank 1 Riemannian manifold without focal points and 
+ be a rank 1 surface without focal points and 
 \begin_inset Formula ${\cal F}$
 \end_inset
 
@@ -309,11 +322,11 @@ Let
 \end_inset
 
 .
- If 
+ Suppose 
 \begin_inset Formula $\vphi:\ut\to\R$
 \end_inset
 
- is a Hölder continuous function and 
+ is a Hölder continuous function satisfying 
 \begin_inset Formula $P({\rm Sing},\vphi)<P(\vphi)$
 \end_inset
 
@@ -365,20 +378,6 @@ end{thmx}
 
 \end_layout
 
-\begin_layout Corollary*
-Under the same assumpitons as in the above theorem and suppose that 
-\begin_inset Formula $M$
-\end_inset
-
- is a surface.
- Then the unique equilibrium state 
-\begin_inset Formula $\mu_{\vphi}$
-\end_inset
-
- is Bernoulli.
- 
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -400,21 +399,63 @@ begin{thmx}
 
 \end_inset
 
- Let 
-\begin_inset Formula $M$
-\end_inset
 
- be a rank 1 Riemannian manifold without focal points and 
+\end_layout
+
+\begin_layout Standard
+With the same 
 \begin_inset Formula ${\cal F}$
 \end_inset
 
- be the geodesic flow over 
+ and 
 \begin_inset Formula $M$
 \end_inset
 
-.
- Then 
-\begin_inset Formula $h_{top}({\rm Sing})<h_{top}({\cal F})$
+ as above.
+ Let 
+\begin_inset Formula $\varphi^{u}(v):={\displaystyle -\lim_{t\to\infty}\frac{1}{t}\log\det(}\left.df_{t}\right|_{E^{u}(v)})$
+\end_inset
+
+ be the geometric potential.
+ Suppose 
+\begin_inset Formula $\varphi=q\varphi^{u}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $P({\rm Sing},\vphi)<P(\vphi)$
+\end_inset
+
+ or 
+\begin_inset Formula $q\in(-\infty,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $\vphi$
+\end_inset
+
+ has a unique equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+ which is, fully supported, 
+\begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
+\end_inset
+
+, and is the weak
+\begin_inset Formula $^{*}$
+\end_inset
+
+ limit of the weighted regular periodic orbits.
+ Furthermore, the map 
+\begin_inset Formula $q\mapsto P(q\vphi^{u})$
+\end_inset
+
+ is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ for 
+\begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
 .
@@ -448,6 +489,32 @@ end{thmx}
 
 \end_layout
 
+\begin_layout Corollary*
+Under the same assumptions as in the above theorems.
+ We know that the unique equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+ is Bernoulli.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -465,7 +532,7 @@ The author
 \end_layout
 
 \begin_layout Section
-Preliminaries on non-uniform hyperbolic dynamics
+Preliminaries of non-uniform hyperbolic dynamics
 \end_layout
 
 \begin_layout --Separator--
@@ -477,7 +544,7 @@ Need to define in this section
 \end_layout
 
 \begin_layout Itemize
-topological pressure
+topological pressure for sets and for orbits
 \end_layout
 
 \begin_layout Itemize
@@ -493,7 +560,7 @@ Good, bad orbits
 \end_layout
 
 \begin_layout Itemize
-obstractions of expansivity
+obstructions of expansivity
 \end_layout
 
 \begin_layout --Separator--
@@ -513,7 +580,7 @@ obstractions of expansivity
 \end_layout
 
 \begin_layout Subsection
-Climenhaga-Thompson's criteria for uniqueness of equlirbirum states
+Climenhaga-Thompson's criteria for uniqueness of equilibrium states
 \end_layout
 
 \begin_layout --Separator--
@@ -669,7 +736,7 @@ Then
 \end_layout
 
 \begin_layout Section
-Preliminaries of geometry of manifolds without focal points
+Preliminaries of surfaces without focal points
 \end_layout
 
 \begin_layout --Separator--
@@ -693,7 +760,7 @@ Jacobi fields and foliations
 \end_layout
 
 \begin_layout Itemize
-Horospheres 
+Horoshperes 
 \begin_inset Formula $H^{s}(v):=\pi W^{s}(v)$
 \end_inset
 
@@ -797,7 +864,7 @@ Intrinsic metric on
 \begin_inset Formula $t$
 \end_inset
 
- is the unique vaule so that 
+ is the unique value so that 
 \begin_inset Formula $f_{t}u\in W^{s}(w)$
 \end_inset
 
@@ -888,7 +955,7 @@ When
 \end_layout
 
 \begin_layout Subsection
-Manifolds without foucal points
+Surfaces without focal points
 \end_layout
 
 \begin_layout --Separator--
@@ -959,20 +1026,11 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 4.7, 6.7"
+key "Pesin:1977vi"
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Pesin:1977vi}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset Formula ${\rm Theorem\ 4.7,6.4}$
 \end_inset
 
 
@@ -1013,20 +1071,11 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 4.11"
+key "Pesin:1977vi"
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Pesin:1977vi}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset Formula ${\rm Theorem\ 4.11}$
 \end_inset
 
 
@@ -1070,20 +1119,11 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 6.1, 6.4"
+key "Pesin:1977vi"
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Pesin:1977vi}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset Formula ${\rm Theorem\ 6.1,6.4}$
 \end_inset
 
 
@@ -1106,7 +1146,7 @@ cite{Pesin:1977vi}
 \begin_inset Formula $E^{cs}(v)$
 \end_inset
 
- are integrable to flow invarian foliations 
+ are integrable to flow invariant foliations 
 \begin_inset Formula $W^{u}(v)$
 \end_inset
 
@@ -1144,20 +1184,11 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 6.4"
+key "Pesin:1977vi"
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Pesin:1977vi}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset Formula ${\rm Theorem\ 6.4}$
 \end_inset
 
 
@@ -1201,22 +1232,16 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Eschenburg:1977kn}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma, p. 246"
+key "Eschenburg:1977kn"
 
 \end_inset
 
-, 
-\begin_inset Formula ${\rm Lemma},\ p.246$
-\end_inset
 
+\lang english
 
 \begin_inset Formula ${\rm )}$
 \end_inset
@@ -1250,22 +1275,16 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Eschenburg:1977kn}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 1 (i)"
+key "Eschenburg:1977kn"
 
 \end_inset
 
-, 
-\begin_inset Formula ${\rm Theorem\ 1\ (i)}$
-\end_inset
 
+\lang english
 
 \begin_inset Formula ${\rm )}$
 \end_inset
@@ -1290,7 +1309,7 @@ cite{Eschenburg:1977kn}
 \begin_inset Formula $H^{s}(v)$
 \end_inset
 
- towarding the same side as 
+ toward the same side as 
 \begin_inset Formula $w$
 \end_inset
 
@@ -1320,26 +1339,16 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Eschenburg:1977kn}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 2 (i)"
+key "Eschenburg:1977kn"
 
 \end_inset
 
-, 
-\begin_inset Formula ${\rm Theorem\ 2\ (i)}$
-\end_inset
 
-
-\begin_inset Formula ${\rm )}$
-\end_inset
-
+\lang english
  
 \begin_inset Formula $H^{u}(v)$
 \end_inset
@@ -1348,11 +1357,11 @@ cite{Eschenburg:1977kn}
 \begin_inset Formula $H^{s}(v)$
 \end_inset
 
- are are 
+ are 
 \begin_inset Formula $C^{2}$
 \end_inset
 
--embedded hypersurfaces in 
+-embedded hypersurface in 
 \begin_inset Formula $\widetilde{M}$
 \end_inset
 
@@ -1419,7 +1428,7 @@ cite{Pesin:1977vi}
 \begin_inset Formula $E^{s}$
 \end_inset
 
- and unstable folliation 
+ and unstable foliation 
 \begin_inset Formula $E^{u}$
 \end_inset
 
@@ -1431,7 +1440,7 @@ key "Eberlein:1973hu"
 \end_inset
 
 ).
- In both work recalled abvoe, they also showed when 
+ In both work recalled above, they also showed when 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1445,7 +1454,7 @@ key "Eberlein:1973hu"
 \end_inset
 
 ) is indeed the stable (resp.
- unstable) horosphere on 
+ unstable) horoshpere on 
 \begin_inset Formula $T^{1}M$
 \end_inset
 
@@ -1561,22 +1570,16 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Gelfert:2017tx}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 6.8"
+key "Gelfert:2017tx"
 
 \end_inset
 
-, 
-\begin_inset Formula ${\rm Lemma\ 6.8}$
-\end_inset
 
+\lang english
 
 \begin_inset Formula ${\rm )}$
 \end_inset
@@ -1606,22 +1609,16 @@ item
 \end_inset
 
 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Gelfert:2017tx}
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollay 6.12"
+key "Gelfert:2017tx"
 
 \end_inset
 
-, 
-\begin_inset Formula ${\rm Corollary\ 6.12}$
-\end_inset
 
+\lang english
 
 \begin_inset Formula $)$
 \end_inset
@@ -2039,7 +2036,7 @@ where
 
 .
  In the case of surface, it is equal to 
-\begin_inset Formula $\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
+\begin_inset Formula $\lambda_{T}(v):=\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
 \end_inset
 
 .
@@ -2241,7 +2238,7 @@ Thus
 \end_layout
 
 \begin_layout Section
-The spefication property
+The specification property
 \end_layout
 
 \begin_layout Subsection*
@@ -2385,6 +2382,10 @@ Need to define in this section
 Hölder potentials
 \end_layout
 
+\begin_layout Itemize
+geometric potentials
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -2402,8 +2403,7 @@ If
 \begin_inset Formula $\varphi$
 \end_inset
 
- is Hölder continuous, then it has the Bowen properties with respect to
- 
+ is Hölder continuous, then it has the Bowen property with respect to 
 \begin_inset Formula $G_{T}(\eta)$
 \end_inset
 
@@ -2426,6 +2426,26 @@ If
 
 \end_layout
 
+\begin_layout Theorem
+The geometric potential 
+\begin_inset Formula $\varphi^{u}$
+\end_inset
+
+ has the Bowen property with respect to 
+\begin_inset Formula $G_{T}(\eta)$
+\end_inset
+
+ for any 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -2435,7 +2455,27 @@ If
 \end_layout
 
 \begin_layout Section
-Proof of theorem A and ??
+Properties of the equilibrium
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Proof of theorem A and Theorem B
 \end_layout
 
 \begin_layout --Separator--
@@ -2447,15 +2487,10 @@ Proof of theorem A and ??
 \end_layout
 
 \begin_layout Corollary
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{BCFT2017}, Lemma 9.1]
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 9.1"
+key "BCFT2017"
 
 \end_inset
 
@@ -2463,7 +2498,7 @@ cite{BCFT2017}, Lemma 9.1]
 \begin_inset Formula $M$
 \end_inset
 
- be a closed rank 1 manifold without focal points and 
+ be a closed rank 1 surface without focal points and 
 \begin_inset Formula $\varphi:T^{1}M\to\mathbb{R}$
 \end_inset
 
