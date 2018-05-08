@@ -140,7 +140,7 @@ theorems-ams-extended
 \begin_body
 
 \begin_layout Title
-Uniqueness States for Geodesic Flows on Surfaces without Focal Points
+Unique Equilibrium States for Geodesic Flows on Surfaces without Focal Points
 \end_layout
 
 \begin_layout Author
@@ -168,20 +168,21 @@ today
 \end_layout
 
 \begin_layout Abstract
-In this paper, we prove that for the geometric potential or a Hölder potential
- without carrying full pressure over the singular set has a unique equilibrium
- state.
- This result generalizes, and is inspired by, Burns-Climenhaga-Fisher-Thompson's
- work 
+In this paper we study the uniqueness of the equilibrium states for potentials
+ over geodesics flows on compact rank 1 surface.
+ We prove that scalar multiples of the geometric potential and Hölder potentials
+ have unique equilibrium states provided they do not carry full pressure
+ on the singular set.
+ This result partially extends, and is inspired by, Burns-Climenhaga-Fisher-Thom
+pson's work 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BCFT2017"
 
 \end_inset
 
- on the uniqueness of the equilibrium states for certain potentials over
+ on the uniqueness of the equilibrium states for the same potentials over
  geodesic flows on compact rank 1 manifolds.
- 
 \end_layout
 
 \begin_layout --Separator--
@@ -544,7 +545,7 @@ Need to define in this section
 \end_layout
 
 \begin_layout Itemize
-topological pressure
+topological pressure for sets and for orbits
 \end_layout
 
 \begin_layout Itemize
@@ -1232,7 +1233,6 @@ item
 \end_inset
 
 
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Lemma, p. 246"
@@ -1240,8 +1240,6 @@ key "Eschenburg:1977kn"
 
 \end_inset
 
-
-\lang english
 
 \begin_inset Formula ${\rm )}$
 \end_inset
@@ -1275,7 +1273,6 @@ item
 \end_inset
 
 
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Theorem 1 (i)"
@@ -1283,8 +1280,6 @@ key "Eschenburg:1977kn"
 
 \end_inset
 
-
-\lang english
 
 \begin_inset Formula ${\rm )}$
 \end_inset
@@ -1339,7 +1334,6 @@ item
 \end_inset
 
 
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Theorem 2 (i)"
@@ -1347,8 +1341,6 @@ key "Eschenburg:1977kn"
 
 \end_inset
 
-
-\lang english
  
 \begin_inset Formula $H^{u}(v)$
 \end_inset
@@ -1570,7 +1562,6 @@ item
 \end_inset
 
 
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Lemma 6.8"
@@ -1578,8 +1569,6 @@ key "Gelfert:2017tx"
 
 \end_inset
 
-
-\lang english
 
 \begin_inset Formula ${\rm )}$
 \end_inset
@@ -1609,7 +1598,6 @@ item
 \end_inset
 
 
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Corollay 6.12"
@@ -1617,8 +1605,6 @@ key "Gelfert:2017tx"
 
 \end_inset
 
-
-\lang english
 
 \begin_inset Formula $)$
 \end_inset
@@ -2036,7 +2022,7 @@ where
 
 .
  In the case of surface, it is equal to 
-\begin_inset Formula $\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
+\begin_inset Formula $\lambda_{T}(v):=\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
 \end_inset
 
 .
