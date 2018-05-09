@@ -50,6 +50,7 @@ The Ohio State University, Columbus, OH 43210, USA}
 \def\lt{\lambda_{T}}
 \def\ut{T^1M}
 \def\gt{G_T}
+\def\Sing{\mathrm{Sing}}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -168,11 +169,11 @@ today
 \end_layout
 
 \begin_layout Abstract
-In this paper we study the uniqueness of the equilibrium states for potentials
- over geodesics flows on compact rank 1 surface.
- We prove that scalar multiples of the geometric potential and Hölder potentials
- have unique equilibrium states provided they do not carry full pressure
- on the singular set.
+In this paper we prove the uniqueness of the equilibrium states for a class
+ of nonzero potentials over geodesics flows on compact rank 1 surface.
+ This class includes scalar multiples of the geometric potential and Hölder
+ potentials have unique equilibrium states provided they do not carry full
+ pressure on the singular set.
  This result partially extends, and is inspired by, Burns-Climenhaga-Fisher-Thom
 pson's work 
 \begin_inset CommandInset citation
@@ -1719,6 +1720,18 @@ For
 
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Section
 Decompositions for geodesic flow
 \end_layout
@@ -1991,41 +2004,171 @@ For
 \begin_inset Formula $T>0$
 \end_inset
 
-, we consider a linear map 
-\begin_inset Formula $U_{T}^{u}(v):T_{\pi v}H^{u}\rightarrow T_{\pi v}H^{u}$
-\end_inset
-
- by 
-\begin_inset Formula 
-\[
-{\cal U}_{T}^{u}(v)(w):=\Big(\int_{-T}^{T}{\cal U}^{u}(f_{t}v)dt\Big)(w)=\int_{-T}^{T}P_{-t}({\cal U}^{u}(f_{t}v)(P_{t}w))dt,
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $P_{t}$
-\end_inset
-
- denotes the parallel transport along 
-\begin_inset Formula $\gamma_{v}$
-\end_inset
-
-.
- We then define 
-\begin_inset Formula $\lt^{u}(v)$
-\end_inset
-
- to be the minimum eigenvalue of 
-\begin_inset Formula $U_{T}^{u}$
-\end_inset
-
-.
- In the case of surface, it is equal to 
+, we consider 
 \begin_inset Formula $\lambda_{T}(v):=\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Recall: The following lemma works on no focal points setting.
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $($
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 3.3"
+key "BCFT2017"
+
+\end_inset
+
+
+\begin_inset Formula $)$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:3.3"
+
+\end_inset
+
+The following are equivalent for 
+\begin_inset Formula $v\in T^{1}M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $v\in{\rm Sing}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\lambda^{s}(f_{t}v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\lambda^{u}(f_{t}v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout --Separator--
@@ -2076,15 +2219,15 @@ name "lem:lamb_T_and_sing"
 
 \end_inset
 
- If 
-\begin_inset Formula $\lt(v)=0$
+ 
+\begin_inset Formula $\lt(v):=\int_{o}^{T}\lambda(f_{t}v)dt=0$
 \end_inset
 
  for all 
 \begin_inset Formula $T$
 \end_inset
 
-, then 
+ if and only if 
 \begin_inset Formula $v\in\mathrm{Sing}$
 \end_inset
 
@@ -2097,114 +2240,318 @@ name "lem:lamb_T_and_sing"
 \end_layout
 
 \begin_layout Proof
-Since 
-\begin_inset Formula $\lt(v)=\min(\lt^{u}(v),\lt^{s}(v)),$
+The if direction is clear.
+ In the following we prove the only if direction.
+ 
+\end_layout
+
+\begin_layout Proof
+First we notice that since 
+\begin_inset Formula $\lambda\geq0$
 \end_inset
 
- we may assume 
-\begin_inset Formula $\lambda_{t_{k}}^{u}(v)=0$
-\end_inset
-
- for some 
-\begin_inset Formula $t_{k}\rightarrow\infty$
-\end_inset
-
- (otherwise we choose 
-\begin_inset Formula $\lambda^{s}$
-\end_inset
-
- instead of 
-\begin_inset Formula $\lambda^{u}$
-\end_inset
-
-).
- For each 
-\begin_inset Formula $k$
-\end_inset
-
-, we can find 
-\begin_inset Formula $w_{k}\in T_{\pi v}H^{u}$
-\end_inset
-
- with 
-\begin_inset Formula $||w_{k}||=1$
-\end_inset
-
- such that 
-\begin_inset Formula $U_{t_{k}}^{u}(v)(w_{k})=0$
-\end_inset
-
-.
- Notice that 
-\begin_inset Formula $U^{u}(v)$
-\end_inset
-
- is positive semidefinite, so does 
-\begin_inset Formula $P_{-t}\circ U^{u}(f_{t}v)\circ P_{t}$
-\end_inset
-
-.
- Hence we have 
-\begin_inset Formula 
-\[
-0=\langle U_{t_{k}}^{u}(v)(w_{k}),w_{k}\rangle=\int_{-t_{k}}^{t_{k}}\langle P_{-t}(U^{u}(f_{t}v)(P_{t}w_{k})),w_{k}\rangle dt\geq0.
-\]
-
-\end_inset
-
-Thus 
-\begin_inset Formula $\langle P_{-t}(U^{u}(f_{t}v)(P_{t}w_{k})),w_{k}\rangle=0$
-\end_inset
-
- and 
-\begin_inset Formula $U^{u}(f_{t}v)(P_{t}w_{k})=0$
+ and is continuous, 
+\begin_inset Formula $\lt(v)=0$
 \end_inset
 
  for all 
-\begin_inset Formula $t\in[-t_{k},t_{k}]$
+\begin_inset Formula $T\in\R$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\lambda(f_{t}v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
 \end_inset
 
 .
- The unstable Jacobi fields of 
-\begin_inset Formula $P_{t}w_{k}$
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Claim:
+\series default
+ There are only three possible cases such that 
+\begin_inset Formula $\lambda(f_{t}v)=0$
 \end_inset
 
- coincide for 
-\begin_inset Formula $-t_{k}\leq t\leq t_{k}$
+ for all 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item[(i)]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\lambda^{s}(f_{t}v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
 \end_inset
 
 .
- The common unstable Jacobi field satisfies 
-\begin_inset Formula $J(0)=w_{k}$
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item[(ii)]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\lambda^{u}(f_{t}v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item[(iii)]
+\end_layout
+
+\end_inset
+
+ There exists 
+\begin_inset Formula $t_{0}\in\R$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lambda^{s}(f_{t_{0}}v)=\lambda^{u}(f_{t_{0}}v)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+It is clear from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:3.3"
+
+\end_inset
+
+ that both 
+\begin_inset Formula $({\rm i})$
 \end_inset
 
  and 
-\begin_inset Formula $J'(t)=0$
+\begin_inset Formula $({\rm ii})$
 \end_inset
 
- for 
-\begin_inset Formula $t\in[-t_{k},t_{k}]$
+ give 
+\begin_inset Formula $v\in{\rm Sing}$
 \end_inset
 
 .
- As 
-\begin_inset Formula $t_{k}\rightarrow\infty$
+ To see 
+\begin_inset Formula $({\rm iii})$
+\end_inset
+
+ also implies 
+\begin_inset Formula $v\in{\rm Sing}$
+\end_inset
+
+, we recall that, for 
+\begin_inset Formula $\sigma=s$
+\end_inset
+
+ or 
+\begin_inset Formula $u$
 \end_inset
 
 , 
-\begin_inset Formula $\{w_{k}\}$
+\begin_inset Formula $\lambda^{\sigma}(f_{t_{0}}v)=0$
 \end_inset
 
- has an accumulate point 
-\begin_inset Formula $w$
+ implies that there exists 
+\begin_inset Formula $0\neq w^{\sigma}\in T_{\pi(f_{t_{o}}v)}H^{\sigma}(f_{t_{o}}v)$
 \end_inset
 
- and the unstable Jacobi field of 
-\begin_inset Formula $w$
+ such that 
+\begin_inset Formula ${\cal U}^{\sigma}(w^{\sigma})=0$
 \end_inset
 
- is constant.
- 
+ .
+ Since 
+\begin_inset Formula $w^{u},w^{s}$
+\end_inset
+
+ are tangent to 
+\begin_inset Formula $f_{t_{0}}v$
+\end_inset
+
+ and 
+\begin_inset Formula $\dim M=2$
+\end_inset
+
+, we know 
+\begin_inset Formula $w^{u}=w^{s}$
+\end_inset
+
+ (by taking unit length).
+ It is not hard to see that the 
+\begin_inset Formula $H^{u}(f_{t_{o}}v)-$
+\end_inset
+
+ Jacobi field matches the 
+\begin_inset Formula $H^{s}(f_{t_{o}}v)-$
+\end_inset
+
+ Jacobi field.
+ Thus we have 
+\begin_inset Formula $f_{t_{0}}v\in\Sing$
+\end_inset
+
+, and because 
+\begin_inset Formula $\Sing$
+\end_inset
+
+ is flow invariant we have 
+\begin_inset Formula $v\in\Sing.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+To see the claim, let 
+\begin_inset Formula $U:=\{t\in\R:\ \lambda^{u}(f_{t}v)=0\}$
+\end_inset
+
+ and 
+\begin_inset Formula $S:=\{t\in\R:\ \lambda^{s}(f_{t}v)=0\}$
+\end_inset
+
+.
+ Since both 
+\begin_inset Formula $\lambda^{u},\lambda^{s}$
+\end_inset
+
+ are continuous, 
+\begin_inset Formula $U$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ are closed sets in 
+\begin_inset Formula $\R$
+\end_inset
+
+.
+ Notice that if 
+\begin_inset Formula $U\cap S=\emptyset$
+\end_inset
+
+ then 
+\begin_inset Formula $U=\R\backslash S$
+\end_inset
+
+; thus 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ are clopen sets.
+ Since 
+\begin_inset Formula $\R$
+\end_inset
+
+ is connected, we have when 
+\begin_inset Formula $U\cap S=\emptyset$
+\end_inset
+
+ then 
+\begin_inset Formula $U=\R$
+\end_inset
+
+ or 
+\begin_inset Formula $S=\R$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
