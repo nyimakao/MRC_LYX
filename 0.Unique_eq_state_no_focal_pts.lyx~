@@ -51,6 +51,7 @@ The Ohio State University, Columbus, OH 43210, USA}
 \def\ut{T^1M}
 \def\gt{G_T}
 \def\Sing{\mathrm{Sing}}
+\def\vp{\varphi}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -264,7 +265,7 @@ Need to define:
 Singular set
 \shape default
  
-\begin_inset Formula ${\rm Sing}:=\{v\in T^{1}M:\ E^{u}(v)\cap E^{u}(v)\neq\emptyset\}$
+\begin_inset Formula ${\rm Sing}:=\{v\in T^{1}M:\ {\rm rank}(v)>1\}=\{v\in T^{1}M:\ E^{u}(v)\cap E^{u}(v)\neq\emptyset\}$
 \end_inset
 
 .
@@ -546,7 +547,19 @@ Need to define in this section
 \end_layout
 
 \begin_layout Itemize
-topological pressure for sets and for orbits
+topological pressure for orbit segments and for sets
+\end_layout
+
+\begin_layout Itemize
+finite orbit segments 
+\begin_inset Formula ${\cal C}\subset X\times[0,\infty)$
+\end_inset
+
+ and 
+\begin_inset Formula $[{\cal C}]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -583,6 +596,18 @@ obstructions of expansivity
 
 \begin_layout Subsection
 Climenhaga-Thompson's criteria for uniqueness of equilibrium states
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout --Separator--
@@ -2005,7 +2030,7 @@ For
 \end_inset
 
 , we consider 
-\begin_inset Formula $\lambda_{T}(v):=\int\limits _{-T}^{T}\lambda^{u}(f_{t}v)dt$
+\begin_inset Formula $\lambda_{T}(v):=\int\limits _{-T}^{T}\lambda(f_{t}v)dt$
 \end_inset
 
 .
@@ -2220,7 +2245,7 @@ name "lem:lamb_T_and_sing"
 \end_inset
 
  
-\begin_inset Formula $\lt(v):=\int_{o}^{T}\lambda(f_{t}v)dt=0$
+\begin_inset Formula $\lt(v):=\int_{-T}^{T}\lambda(f_{t}v)dt=0$
 \end_inset
 
  for all 
@@ -2442,7 +2467,7 @@ reference "lem:3.3"
 \end_inset
 
  implies that there exists 
-\begin_inset Formula $0\neq w^{\sigma}\in T_{\pi(f_{t_{o}}v)}H^{\sigma}(f_{t_{o}}v)$
+\begin_inset Formula $0\neq w^{\sigma}\in T_{\pi(f_{t_{0}}v)}H^{\sigma}(f_{t_{0}}v)$
 \end_inset
 
  such that 
@@ -2450,7 +2475,7 @@ reference "lem:3.3"
 \end_inset
 
  .
- Since 
+ Since both 
 \begin_inset Formula $w^{u},w^{s}$
 \end_inset
 
@@ -2466,16 +2491,28 @@ reference "lem:3.3"
 \begin_inset Formula $w^{u}=w^{s}$
 \end_inset
 
- (by taking unit length).
+ (by taking same length).
  It is not hard to see that the 
-\begin_inset Formula $H^{u}(f_{t_{o}}v)-$
+\begin_inset Formula $H^{u}(f_{t_{0}}v)-$
 \end_inset
 
- Jacobi field matches the 
-\begin_inset Formula $H^{s}(f_{t_{o}}v)-$
+ Jacobi field 
+\begin_inset Formula $J^{u}$
 \end_inset
 
- Jacobi field.
+ matches the 
+\begin_inset Formula $H^{s}(f_{t_{0}}v)-$
+\end_inset
+
+ Jacobi field 
+\begin_inset Formula $J^{s}$
+\end_inset
+
+, that implies, 
+\begin_inset Formula $E^{u}(f_{t_{0}}v)\cap E^{v}(f_{t_{0}}v)\neq0$
+\end_inset
+
+.
  Thus we have 
 \begin_inset Formula $f_{t_{0}}v\in\Sing$
 \end_inset
@@ -2777,6 +2814,235 @@ The geometric potential
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Pressure gap and its consequences
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 5.1"
+key "BCFT2017"
+
+\end_inset
+
+ Suppose 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is a continuous function, then 
+\begin_inset Formula 
+\[
+P({\cal C},\vp)\leq\sup_{\mu\in{\cal M}({\cal C})}P_{\mu}(\vp)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $P_{\mu}(\vp)=h_{\mu}+\int\mu d\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+The following lemma is a direct consequence of the flat strip theorem.
+ Since the flat strip theorem is available in the no focal points setting
+ (see 
+\color red
+???
+\color inherit
+), the proof in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{BCFT2017}
+\end_layout
+
+\end_inset
+
+ holds here.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 5.4"
+key "BCFT2017"
+
+\end_inset
+
+ For a continuous potential 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, 
+\begin_inset Formula $P_{{\rm exp}}^{\perp}(\vp)\leq P(\Sing,\vp)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+There exists 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+P([B_{T_{0}}(\eta)])<P(\varphi).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+To simplify our notation, we will denote 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ by 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ and fix this value once for all.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+For 
+\begin_inset Formula $T,\eta>0$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+P(\varphi)\leq P([B_{T}(\eta)]\cup[G_{T}(\eta)],\varphi)\leq P([B_{T}(\eta)],\varphi)+P([G_{T}(\eta)],\varphi).
+\]
+
+\end_inset
+
+ In particular, 
+\begin_inset Formula $P(G_{\Delta}(\eta),\varphi)>-\infty$
+\end_inset
+
+, and thus 
+\begin_inset Formula $G_{\Delta}(\eta)$
+\end_inset
+
+ contains arbitrary long orbit segments.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+The first inequality is clear since 
+\begin_inset Formula $B_{T}(\eta)\cup G_{T}(\eta)=T^{1}M\times[0,\infty)$
+\end_inset
+
+ (hence, 
+\begin_inset Formula $P(\varphi)=P(B_{T}(\eta)\cup G_{T}(\eta),\vp)$
+\end_inset
+
+, 
+\begin_inset Formula $B_{T}(\eta)\subset[B_{T}(\eta)]$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{T}(\eta)\subset[G_{T}(\eta)]$
+\end_inset
+
+.
+ The second inequality is a property of pressure which follows directly
+ from the definition (or see 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 9.7"
+key "Walters:2000vc"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout --Separator--
