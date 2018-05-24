@@ -174,7 +174,8 @@ today
 
 \begin_layout Abstract
 In this paper we prove the uniqueness of the equilibrium states for a class
- of nonzero potentials over geodesics flows on compact rank 1 surface.
+ of nonzero potentials over geodesics flows on compact rank 1 surface without
+ focal points.
  This class includes scalar multiples of the geometric potential and Hölder
  potentials have unique equilibrium states provided they do not carry full
  pressure on the singular set.
@@ -187,7 +188,7 @@ key "BCFT2017"
 \end_inset
 
  on the uniqueness of the equilibrium states for the same potentials over
- geodesic flows on compact rank 1 manifolds.
+ geodesic flows on compact rank 1 nonpositively curved manifolds.
 \end_layout
 
 \begin_layout --Separator--
@@ -200,6 +201,95 @@ LatexCommand tableofcontents
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section*
+
+\color red
+DISCUSSION OUTLINE
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Replace 
+\begin_inset Formula $d_{K}(v,w):=\max\{d(\g_{v}(t),\g_{w}(t)):\ t\in[0,1]\}$
+\end_inset
+
+ by 
+\begin_inset Formula $d_{K}(v,w):=\max\{d(\g_{v}(t),\g_{w}(t)):\ t\in[0,t_{1}]\}$
+\end_inset
+
+ where 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ will be determined by the expansion and contraction equations we need for
+ specification and closing lemma.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+In fact, 
+\begin_inset Formula $\lambda^{u}(v)={\cal U}^{u}(v)=k^{u}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda^{s}(v)=-{\cal U}^{s}(v)=k^{s}(v)$
+\end_inset
+
+ where, for 
+\begin_inset Formula $\sigma\in\{s,u\}$
+\end_inset
+
+, 
+\begin_inset Formula $k^{\sigma}(v)$
+\end_inset
+
+ is the geodesic curvature of the horocycle 
+\begin_inset Formula $H^{\sigma}(v)$
+\end_inset
+
+ at 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Do we keep using 
+\begin_inset Formula $\lambda^{\s}$
+\end_inset
+
+ or replace all of them by 
+\begin_inset Formula $k^{\sigma}$
+\end_inset
+
+? In other words, do we use the surface notations to replace our current
+ notations?
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
 
 \end_layout
 
@@ -378,7 +468,55 @@ Let
 \end_inset
 
 .
- Moreover, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{thmx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{thmx}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $\vp$
+\end_inset
+
+ satisfies the same assumptions in Theorem A.
+ Then the unique equilibrium state 
 \begin_inset Formula $\mu_{\vphi}$
 \end_inset
 
@@ -406,14 +544,6 @@ end{thmx}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout --Separator--
 
 \end_layout
 
@@ -664,7 +794,14 @@ cite{Climenhaga:2016ut}, Theorem A]
 
 \end_inset
 
- Let 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:C-T_criteria"
+
+\end_inset
+
+Let 
 \begin_inset Formula $(X,{\cal F})$
 \end_inset
 
@@ -674,7 +811,7 @@ cite{Climenhaga:2016ut}, Theorem A]
 
  be a continuous potential.
  Suppose that 
-\begin_inset Formula $P_{exp}^{\perp}(\vphi)<P(\vphi)$
+\begin_inset Formula $P_{{\rm exp}}^{\perp}(\vphi)<P(\vphi)$
 \end_inset
 
  and 
@@ -1529,6 +1666,33 @@ item
 
 \end_inset
 
+(copy from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gelfert:2017tx"
+
+\end_inset
+
+) The geodesic flow 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ is topologically mixing.
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
 
 \begin_inset Formula ${\rm (}$
 \end_inset
@@ -1733,7 +1897,7 @@ key "Eschenburg:1977kn"
 \end_inset
 
  toward the same side as 
-\begin_inset Formula $w$
+\begin_inset Formula $v$
 \end_inset
 
 .
@@ -1892,8 +2056,6 @@ Let
 \end_layout
 
 \begin_layout Lemma
-
-\color cyan
 \begin_inset ERT
 status open
 
@@ -1933,8 +2095,6 @@ cite{BCFT2017}, Lemma 2.9]
 
 \end_inset
 
-
-\color inherit
  
 \end_layout
 
@@ -1991,11 +2151,15 @@ name "alglem"
 \end_inset
 
  In particular, 
-\begin_inset Formula $0\leq\int_{0}^{t}\lambda_{T}(f_{s}v)ds\leq2T\int_{0}^{t}\lambda(f_{s}v)ds$
+\begin_inset Formula $0\leq\int_{0}^{t}\lambda_{T}^{\sigma}(f_{s}v)ds\leq2T\int_{0}^{t}\lambda^{\sigma}(f_{s}v)ds$
 \end_inset
 
  for all 
-\begin_inset Formula $t,T>0.$
+\begin_inset Formula $t,T>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma\in\{s,u\}.$
 \end_inset
 
 
@@ -2121,6 +2285,8 @@ Need To Define
 \end_layout
 
 \begin_layout Itemize
+
+\color green
 \begin_inset Formula $\lambda_{T}^{u}$
 \end_inset
 
@@ -2152,6 +2318,8 @@ the
 \end_layout
 
 \begin_layout Itemize
+
+\color green
 \begin_inset Formula $\lambda_{T}^{s}(v):=\lambda_{T}^{u}(-v)$
 \end_inset
 
@@ -2159,6 +2327,8 @@ the
 \end_layout
 
 \begin_layout Itemize
+
+\color green
 \begin_inset Formula $\lt(v):=\min\{\lt^{s}(v),\lt^{u}(v)\}$
 \end_inset
 
@@ -2174,8 +2344,6 @@ the
 \end_layout
 
 \begin_layout Lemma
-
-\color cyan
 \begin_inset ERT
 status open
 
@@ -2294,6 +2462,8 @@ Need To Define
 \end_layout
 
 \begin_layout Itemize
+
+\color green
 \begin_inset Formula ${\cal B_{T}}(\eta)={\cal P}_{T}(\eta)\cup{\cal S}_{T}(\eta)$
 \end_inset
 
@@ -2304,6 +2474,40 @@ Need To Define
 
 \color green
 \begin_inset Formula ${\cal G}_{T}(\eta):=\{(v,t)\colon\ \int_{0}^{\tau}\lambda_{T}(f_{s}v)ds\geq\tau\eta{\rm \ {\rm and\ }}\int_{0}^{\tau}\lambda_{T}(f_{-s}f_{t}v)ds\geq\tau\eta\ \forall\tau\in[0,t]\}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+We have the following decomposition: 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{G}:=\gt(\eta)~~\text{ and }~~\mathcal{P}\cup{\cal S}:={\cal B}_{T}(\eta).\label{eq: decomposition}
+\end{equation}
+
+\end_inset
+
+Given an orbit segment 
+\begin_inset Formula $(x,t)\in T^{1}S\times\mathbb{R}^{+}$
+\end_inset
+
+, there exists a unique 
+\begin_inset Formula $p,g,s\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $t=p+g+s$
+\end_inset
+
+, and 
+\begin_inset Formula 
+\[
+(x,p)\in{\cal P}_{T}(\eta),~~~(f^{p}x,g)\in{\cal G}_{T}(\eta),\text{ and }(f^{p+g}x,s)\in{\cal S}_{T}(\eta).
+\]
+
 \end_inset
 
 
@@ -2596,10 +2800,13 @@ For any
 \end_inset
 
  for 
-\begin_inset Formula $\sigma=\{s,u\}$
+\begin_inset Formula $\sigma\in\{s,u\}$
 \end_inset
 
 .
+ 
+\color red
+(Can be simplified!!!)
 \end_layout
 
 \begin_layout --Separator--
@@ -2715,6 +2922,9 @@ The following are equivalent for
 \end_inset
 
 .
+
+\color red
+ (Can be simplified!!!)
 \end_layout
 
 \begin_layout Lemma
@@ -2894,7 +3104,7 @@ To see
 \begin_inset Formula $\tau\in\R$
 \end_inset
 
- we have a untable Jacobi field 
+ we have a unstable Jacobi field 
 \begin_inset Formula $J_{\tau}^{u}(t)$
 \end_inset
 
@@ -3038,7 +3248,7 @@ name "lem:lamb_T_and_sing"
 \end_inset
 
  
-\begin_inset Formula $\lt(v)$
+\begin_inset Formula $\lt(v)=0$
 \end_inset
 
  for all 
@@ -3051,6 +3261,8 @@ name "lem:lamb_T_and_sing"
 
 .
  
+\color red
+(Can be simplified!!!)
 \end_layout
 
 \begin_layout --Separator--
@@ -3065,18 +3277,22 @@ The if direction is clear.
 
 \begin_layout Proof
 First we notice that since 
-\begin_inset Formula $\lambda\geq0$
+\begin_inset Formula $\lambda$
 \end_inset
 
- and is continuous, 
-\begin_inset Formula $\lt(v)=0$
+ is nonnegative, continuous, and 
+\begin_inset Formula $\lt(v)\geq\int_{-T}^{T}\lambda(f_{t}v)dt\geq0$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\lambda_{T}(v)=0$
 \end_inset
 
  for all 
 \begin_inset Formula $T\in\R$
 \end_inset
 
- implies that 
+ implies 
 \begin_inset Formula $\lambda(f_{t}v)=0$
 \end_inset
 
@@ -3085,7 +3301,6 @@ First we notice that since
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Proof
@@ -3248,11 +3463,7 @@ reference "lem:3.3"
 \end_inset
 
 , we recall that, for 
-\begin_inset Formula $\sigma=s$
-\end_inset
-
- or 
-\begin_inset Formula $u$
+\begin_inset Formula $\sigma\in\{s,u\}$
 \end_inset
 
 , 
@@ -3524,9 +3735,7 @@ name "lem:312"
 
 \end_inset
 
- 
-\color cyan
-Given 
+ Given 
 \begin_inset Formula $\eta,T,\delta$
 \end_inset
 
@@ -3583,8 +3792,6 @@ d^{u}(f_{\tau}w,f_{\tau}w')\leq d^{u}(f_{t}w,f_{t}w')e^{-\frac{\eta}{4T}(t-\tau)
 \end_layout
 
 \begin_layout Proof
-
-\color cyan
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4006,6 +4213,20 @@ name "lem: spec bracket"
  
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+
+\color red
+Need a proof?
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Standard
 We now sketch the proof of Proposition 
 \begin_inset CommandInset ref
@@ -4032,8 +4253,6 @@ reference "prop: specification"
 \end_layout
 
 \begin_layout Standard
-
-\color red
 Define the distance 
 \begin_inset Formula $d_{t}$
 \end_inset
@@ -4042,10 +4261,8 @@ Define the distance
 \end_layout
 
 \begin_layout Proof
-
-\color red
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Proof sketch of Proposition 
@@ -4104,6 +4321,8 @@ d^{u}(f_{t_{0}}w,f_{t_{0}}w')\geq\alpha d^{u}(w,w').
 
 \end_inset
 
+
+\color red
 The existence of such orbit segment is guaranteed because we can simply
  choose 
 \begin_inset Formula $(v_{0},t_{0})\in G_{T}(\eta)$
@@ -4114,7 +4333,57 @@ The existence of such orbit segment is guaranteed because we can simply
 \end_inset
 
  sufficiently long.
- Comment of why we need 
+ 
+\color green
+To see existence of such a orbit segment, we notice that for 
+\begin_inset Formula $v$
+\end_inset
+
+ such that 
+\begin_inset Formula $\g_{v}$
+\end_inset
+
+ is a rank 1 geodesic, we know 
+\begin_inset Formula $\lambda(v)\geq\eta>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $\eta.$
+\end_inset
+
+ Moreover, when we pick 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ small enough we have 
+\begin_inset Formula $\lambda^{u}(v')>\frac{\eta}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda^{s}(v')>\frac{\eta}{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $v'\in B_{t_{o}}(v)$
+\end_inset
+
+, then by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:39"
+
+\end_inset
+
+ there exists such 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Comment of why we need 
 \begin_inset Formula $v_{0}$
 \end_inset
 
@@ -4122,8 +4391,6 @@ The existence of such orbit segment is guaranteed because we can simply
 \end_layout
 
 \begin_layout Proof
-
-\color red
 Given any scale 
 \begin_inset Formula $\rho>0$
 \end_inset
@@ -4159,8 +4426,6 @@ reference "lem: spec bracket"
 \end_layout
 
 \begin_layout Proof
-
-\color red
 Let 
 \begin_inset Formula $(v_{1},t_{1}),\ldots,(v_{n},t_{n})\in\ct(\eta)$
 \end_inset
@@ -4202,8 +4467,6 @@ Let
 \end_layout
 
 \begin_layout Proof
-
-\color red
 Suppose 
 \begin_inset Formula $(w_{j},s_{j})$
 \end_inset
@@ -4350,8 +4613,6 @@ reference "lem: spec bracket"
 \end_layout
 
 \begin_layout Proof
-
-\color red
 We would be done if each 
 \begin_inset Formula $(w_{j},s_{j})$
 \end_inset
@@ -4665,9 +4926,9 @@ reference "lem:312"
 \begin_layout Proof
 \begin_inset Formula 
 \begin{align*}
-\left|\Phi(v,t)-\Phi(w,t)\right| & \leq\int_{0}^{t}\left|\varphi(f_{\sigma}v)-\varphi(f_{\sigma}w)\right|{\rm d}\sigma\leq\int_{0}^{t}C_{1}\cdot d^{s}(f_{\sigma}v,f_{\sigma}w)^{\theta}{\rm d}\sigma\\
- & \leq\int_{0}^{t}C_{1}\cdot\left(C_{2}\cdot d^{s}(v,w)\cdot e^{-\frac{\eta}{2T}\sigma}\right)^{\theta}{\rm d}\sigma\leq C_{1}\cdot C_{2}^{\theta}\cdot d^{s}(v,w)^{\theta}\int_{0}^{t}e^{\frac{-\eta\theta}{2T}\sigma}{\rm d}\sigma\\
- & \leq C_{1}C_{2}^{\theta}\delta^{\theta}\frac{2T}{\eta\theta}.
+\left|\Phi(v,t)-\Phi(w,t)\right| & \leq\int_{0}^{t}\left|\varphi(f_{\tau}v)-\varphi(f_{\tau}w)\right|{\rm d}\tau\leq\int_{0}^{t}C_{1}\cdot d^{s}(f_{\tau}v,f_{\tau}w)^{\theta}{\rm d}\tau\\
+ & \leq\int_{0}^{t}C_{1}\cdot\left(d^{s}(v,w)\cdot e^{-\frac{\eta}{4T}\tau}\right)^{\theta}{\rm d}\tau\leq C_{1}\cdot d^{s}(v,w)^{\theta}\int_{0}^{t}e^{\frac{-\eta\theta}{4T}\tau}{\rm d}\tau\\
+ & \leq C_{1}\delta^{\theta}\frac{4T}{\eta\theta}.
 \end{align*}
 
 \end_inset
@@ -4928,6 +5189,12 @@ reference "eq:7.1"
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Holder_Bowen"
+
+\end_inset
+
 If 
 \begin_inset Formula $\varphi$
 \end_inset
@@ -4958,6 +5225,10 @@ Bowen property for the geometric potential
 \begin_layout Standard
 
 \color red
+???Change Notation???
+\end_layout
+
+\begin_layout Standard
 We denote by 
 \begin_inset Formula $J_{v}^{u}$
 \end_inset
@@ -4988,7 +5259,7 @@ U'+U^{2}+K(f_{t}v)=0.
 \end_inset
 
 Notice that we also have 
-\begin_inset Formula $U_{v}^{u}(t)=\lambda_{u}(f_{t}v)$
+\begin_inset Formula $U_{v}^{u}(t)=\lambda^{u}(f_{t}v)$
 \end_inset
 
 .
@@ -5004,8 +5275,6 @@ Notice that we also have
 \end_layout
 
 \begin_layout Lemma
-
-\color red
 \begin_inset Argument 1
 status collapsed
 
@@ -5035,7 +5304,7 @@ name "prop:77"
 \end_inset
 
  and 
-\begin_inset Formula $w_{2}\in f_{-T_{0}}W_{\delta}^{s}(f_{T_{0}}v)$
+\begin_inset Formula $w_{2}\in f_{-T_{0}}W_{\delta}^{u}(f_{T_{0}}v)$
 \end_inset
 
 , for every 
@@ -5066,8 +5335,6 @@ name "prop:77"
 \end_layout
 
 \begin_layout Lemma
-
-\color red
 \begin_inset CommandInset label
 LatexCommand label
 name "lem:710711"
@@ -5093,7 +5360,7 @@ name "lem:710711"
  we have 
 \begin_inset Formula 
 \[
-|U_{v}^{u}(t)-U_{w}^{u}(t)|\leq Q\exp\left(-\frac{\eta t}{2T}\right)+Q\int_{0}^{t}\exp\left(-\frac{\eta(t-\tau)}{2T}\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau.
+|U_{v}^{u}(t)-U_{w}^{u}(t)|\leq Q\exp\left(-\frac{\eta t}{T}\right)+\int_{0}^{t}\exp\left(-\frac{\eta(t-\tau)}{4T}\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau.
 \]
 
 \end_inset
@@ -5102,8 +5369,6 @@ name "lem:710711"
 \end_layout
 
 \begin_layout Proof
-
-\color red
 \begin_inset Argument 1
 status collapsed
 
@@ -5132,8 +5397,6 @@ We may choose small
 \end_layout
 
 \begin_layout Proof
-
-\color red
 Since 
 \begin_inset Formula $w_{1}\in W_{\delta}^{s}(v)$
 \end_inset
@@ -5152,7 +5415,7 @@ reference "lem:312"
  implies 
 \begin_inset Formula 
 \[
-|K(f_{\tau}v)-K(f_{\tau}w_{1})|\leq Qd_{K}(f_{\tau}v,f_{\tau}w_{1})\leq Qd^{s}(f_{\tau}v,f_{\tau}w_{1})\leq Q\exp\left(-\frac{\eta\tau}{2T}\right),
+|K(f_{\tau}v)-K(f_{\tau}w_{1})|\leq Q'd_{K}(f_{\tau}v,f_{\tau}w_{1})\leq Q'd^{s}(f_{\tau}v,f_{\tau}w_{1})\leq Q\exp\left(-\frac{\eta\tau}{4T}\right),
 \]
 
 \end_inset
@@ -5172,7 +5435,7 @@ reference "lem:710711"
 : 
 \begin_inset Formula 
 \[
-|U_{v}^{u}(t)-U_{w_{1}}^{u}(t)|\leq Q\exp\left(-\frac{\eta t}{2T}\right)+Qt\exp\left(-\frac{\eta t}{2T}\right)\leq Qe^{-\xi t}.
+|U_{v}^{u}(t)-U_{w_{1}}^{u}(t)|\leq Q\exp\left(-\frac{\eta t}{T}\right)+Qt\exp\left(-\frac{\eta t}{4T}\right)\leq Qe^{-\xi t}.
 \]
 
 \end_inset
@@ -5190,10 +5453,8 @@ once we fix
 \end_layout
 
 \begin_layout Proof
-
-\color red
 For 
-\begin_inset Formula $w_{2}\in f_{-T_{0}}W_{\delta}^{s}(f_{T_{0}}v)$
+\begin_inset Formula $w_{2}\in f_{-T_{0}}W_{\delta}^{u}(f_{T_{0}}v)$
 \end_inset
 
 , we have the following estimation for 
@@ -5203,7 +5464,7 @@ For
 : 
 \begin_inset Formula 
 \[
-|K(f_{\tau}v)-K(f_{\tau}w_{2})|\leq Qd_{K}(f_{\tau}v,f_{\tau}w_{2})\leq Qd^{u}(f_{\tau-T_{0}}f_{T_{0}}v,f_{\tau-T_{0}}f_{T_{0}}w_{2})\leq Q\exp\left(-\frac{\eta(T_{0}-\tau)}{2T}\right)
+|K(f_{\tau}v)-K(f_{\tau}w_{2})|\leq Qd_{K}(f_{\tau}v,f_{\tau}w_{2})\leq Qd^{u}(f_{\tau-T_{0}}f_{T_{0}}v,f_{\tau-T_{0}}f_{T_{0}}w_{2})\leq Q\exp\left(-\frac{\eta(T_{0}-\tau)}{4T}\right)
 \]
 
 \end_inset
@@ -5223,8 +5484,8 @@ reference "lem:710711"
  again and get: 
 \begin_inset Formula 
 \begin{eqnarray*}
-|U_{v}^{u}(t)-U_{w_{2}}^{u}(t)| & \leq & Q\exp\left(-\frac{\eta t}{2T}\right)+Q\int_{0}^{t}\exp\left(-\frac{\eta(T_{0}-\tau)}{2T}\right)d\tau\\
- & \leq & Q\exp\left(-\frac{\eta t}{2T}\right)+Q\exp\left(-\frac{\eta(T_{0}-t)}{2T}\right)
+|U_{v}^{u}(t)-U_{w_{2}}^{u}(t)| & \leq & Q\exp\left(-\frac{\eta t}{2T}\right)+Q\int_{0}^{t}\exp\left(-\frac{\eta(T_{0}-\tau)}{4T}\right)d\tau\\
+ & \leq & Q\exp\left(-\frac{\eta t}{2T}\right)+Q\exp\left(-\frac{\eta(T_{0}-t)}{4T}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -5237,8 +5498,6 @@ reference "lem:710711"
 \end_layout
 
 \begin_layout Proof
-
-\color red
 \begin_inset Argument 1
 status collapsed
 
@@ -5297,7 +5556,7 @@ Since
 \end_inset
 
 , we have 
-\begin_inset Formula $U_{1}(t)\geq U_{v}^{u}(t)=\lambda_{u}(f_{t}v)$
+\begin_inset Formula $U_{1}(t)\geq U_{v}^{u}(t)=\lambda^{u}(f_{t}v)$
 \end_inset
 
  for all 
@@ -5308,7 +5567,7 @@ Since
  Hence 
 \begin_inset Formula 
 \[
-(U_{1}-U_{v}^{u})'=-(U_{1}-U_{v}^{u})(U_{1}+U_{v}^{u})\leq-2\lambda(f_{t}v)(U_{1}-U_{v}^{u}).
+(U_{1}-U_{v}^{u})'=-(U_{1}-U_{v}^{u})(U_{1}+U_{v}^{u})\leq-2\lambda^{u}(f_{t}v)(U_{1}-U_{v}^{u}).
 \]
 
 \end_inset
@@ -5328,8 +5587,8 @@ reference "lem:312"
  we have 
 \begin_inset Formula 
 \begin{eqnarray*}
-0 & \leq & U_{1}(t)-U_{v}^{u}(t)\leq(U_{w}^{u}(0)-U_{v}^{u}(0))\exp\left(-\int_{0}^{t}2\lambda(f_{s}v)ds\right)\\
- & \leq & Q\exp\left(-\frac{1}{T}\int_{0}^{t}\lambda_{T}(f_{s}v)ds\right)\leq Q\exp\left(-\frac{\eta t}{2T}\right).
+0 & \leq & U_{1}(t)-U_{v}^{u}(t)\leq(U_{w}^{u}(0)-U_{v}^{u}(0))\exp\left(-\int_{0}^{t}2\lambda^{u}(f_{s}v)ds\right)\\
+ & \leq & Q\exp\left(-\frac{1}{T}\int_{0}^{t}\lambda_{T}^{u}(f_{s}v)ds\right)\leq Q\exp\left(-\frac{\eta t}{T}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -5396,8 +5655,8 @@ reference "lem:312"
 \begin{eqnarray*}
 U_{1}(t)-U_{v}^{u}(t) & \leq & \exp\left(-\int_{s_{0}}^{t}2\lambda^{u}(f_{s}w)ds\right)\int_{s_{0}}^{t}\exp\left(\int_{s_{0}}^{\tau}2\lambda^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
  & = & \int_{s_{0}}^{t}\exp\left(-\int_{\tau}^{t}2\lambda^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
- & \leq & Q\int_{s_{0}}^{t}\exp\left(-\frac{1}{T}\int_{\tau}^{t}\lambda_{T}^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
- & \leq & Q\int_{0}^{t}\exp\left(-\frac{\eta(t-\tau)}{2T}\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau.
+ & \leq & \int_{s_{0}}^{t}\exp\left(-\frac{1}{T}\int_{\tau}^{t}\lambda_{T}^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
+ & \leq & \int_{0}^{t}\exp\left(-\frac{\eta(t-\tau)}{4T}\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau.
 \end{eqnarray*}
 
 \end_inset
@@ -5410,6 +5669,12 @@ U_{1}(t)-U_{v}^{u}(t) & \leq & \exp\left(-\int_{s_{0}}^{t}2\lambda^{u}(f_{s}w)ds
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:geometric-potential-Bowen"
+
+\end_inset
+
 The geometric potential 
 \begin_inset Formula $\varphi^{u}$
 \end_inset
@@ -5434,7 +5699,7 @@ The geometric potential
 \end_layout
 
 \begin_layout Section
-Pressure gap and its consequences
+Pressure gap and the proof of Theorem A
 \end_layout
 
 \begin_layout --Separator--
@@ -5553,7 +5818,14 @@ key "BCFT2017"
 
 \end_inset
 
- For a continuous potential 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:exp<sing"
+
+\end_inset
+
+For a continuous potential 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -5589,13 +5861,13 @@ There exists
 \end_inset
 
 , 
-\begin_inset Formula $\eta>0$
+\begin_inset Formula $\eta_{0}>0$
 \end_inset
 
  such that 
 \begin_inset Formula 
 \[
-P([B_{T_{0}}(\eta)])<P(\varphi).
+P([B_{T_{0}}(\eta_{0})])<P(\varphi).
 \]
 
 \end_inset
@@ -5679,19 +5951,19 @@ where
 
 .
  Hence, we can find 
-\begin_inset Formula $T_{0},\eta>0$
+\begin_inset Formula $T_{0},\eta_{0}>0$
 \end_inset
 
  such that 
 \begin_inset Formula 
 \[
-D(\mathcal{M}(\text{Sing}),\mathcal{M}_{\lt}(\eta))<\varepsilon.
+D(\mathcal{M}(\text{Sing}),\mathcal{M}_{\lambda_{T_{0}}}(\eta_{0}))<\varepsilon.
 \]
 
 \end_inset
 
 In particular, for any 
-\begin_inset Formula $\mu\in{\cal M}_{\lambda_{T}}(\eta)$
+\begin_inset Formula $\mu\in{\cal M}_{\lambda_{T}}(\eta_{0})$
 \end_inset
 
 , we have 
@@ -5707,7 +5979,7 @@ P_{\mu}(\varphi)<P(\text{Sing},\varphi)+\delta.
 
 \begin_layout Proof
 We can verify that for such choice of 
-\begin_inset Formula $\eta$
+\begin_inset Formula $\eta_{0}$
 \end_inset
 
  and 
@@ -5715,13 +5987,13 @@ We can verify that for such choice of
 \end_inset
 
 , the pressure gap 
-\begin_inset Formula $P([{\cal B}_{T_{0}}(\eta)],\varphi)<P(\varphi)$
+\begin_inset Formula $P([{\cal B}_{T_{0}}(\eta_{0})],\varphi)<P(\varphi)$
 \end_inset
 
  holds: 
 \begin_inset Formula 
 \[
-P([{\cal B}_{T_{0}}(\eta)],\varphi)\leq\sup\limits _{\mu\in{\cal M}([{\cal B}_{T_{0}}(\eta)])}P_{\mu}(\eta)\leq\sup\limits _{\mu\in{\cal M}_{\lambda_{T_{0}}}(\eta)}P_{\mu}(\varphi)\leq\delta+P(\text{Sing},\varphi)<P(\varphi).
+P([{\cal B}_{T_{0}}(\eta_{0})],\varphi)\leq\sup\limits _{\mu\in{\cal M}([{\cal B}_{T_{0}}(\eta_{0})])}P_{\mu}(\eta_{0})\leq\sup\limits _{\mu\in{\cal M}_{\lambda_{T_{0}}}(\eta_{0})}P_{\mu}(\varphi)\leq\delta+P(\text{Sing},\varphi)<P(\varphi).
 \]
 
 \end_inset
@@ -5749,51 +6021,182 @@ P([{\cal B}_{T_{0}}(\eta)],\varphi)\leq\sup\limits _{\mu\in{\cal M}([{\cal B}_{T
 
 \end_layout
 
-\begin_layout Standard
-
-\color green
-To simplify our notation, we will denote 
-\begin_inset Formula $T_{0}$
-\end_inset
-
- by 
-\begin_inset Formula $\Delta$
-\end_inset
-
- and fix this value once for all.
- We have the following decomposition: 
-\begin_inset Formula 
-\begin{equation}
-\mathcal{G}:=\gt(\eta)~~\text{ and }~~\mathcal{P}\cup{\cal S}:={\cal B}_{T}(\eta).\label{eq: decomposition}
-\end{equation}
-
-\end_inset
-
-Given an orbit segment 
-\begin_inset Formula $(x,t)\in T^{1}S\times\mathbb{R}^{+}$
-\end_inset
-
-, there exists a unique 
-\begin_inset Formula $p,g,s\geq0$
-\end_inset
-
- such that 
-\begin_inset Formula $t=p+g+s$
-\end_inset
-
-, and 
-\begin_inset Formula 
-\[
-(x,p)\in{\cal P}_{T}(\eta),~~~(f^{p}x,g)\in{\cal G}_{T}(\eta),\text{ and }(f^{p+g}x,s)\in{\cal S}_{T}(\eta).
-\]
-
-\end_inset
-
+\begin_layout --Separator--
 
 \end_layout
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Theorem A]
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a rank 1 surface without focal points and 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ be the geodesic flow over 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\vphi:\ut\to\R$
+\end_inset
+
+ be a Hölder continuous potential or 
+\begin_inset Formula $\vp=q\cdot\vp^{u}$
+\end_inset
+
+ for some 
+\begin_inset Formula $q\in\R$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $\vp$
+\end_inset
+
+ verifies the pressure gap property 
+\begin_inset Formula $P({\rm Sing},\vphi)<P(\vphi)$
+\end_inset
+
+, then 
+\begin_inset Formula $\vphi$
+\end_inset
+
+ has a unique equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+This follows from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+ (Climenhaga-Thompson's criteria for uniqueness of equilibrium states).
+ 
+\end_layout
+
+\begin_layout Proof
+We first notice that by Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:exp<sing"
+
+\end_inset
+
+, 
+\begin_inset Formula $\vp$
+\end_inset
+
+ satisfies the first assumption in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+.
+ We take the decomposition 
+\begin_inset Formula $({\cal P}_{T}(\eta),{\cal G}_{T}(\eta),{\cal S}_{T}(\eta))$
+\end_inset
+
+, then by Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop: specification"
+
+\end_inset
+
+, Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Holder_Bowen"
+
+\end_inset
+
+, and Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:geometric-potential-Bowen"
+
+\end_inset
+
+, conditions 
+\begin_inset Formula $({\rm I})$
+\end_inset
+
+ and 
+\begin_inset Formula $({\rm II})$
+\end_inset
+
+ of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+ are verified.
+ 
+\end_layout
+
+\begin_layout Proof
+Lastly, by Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:pressue_gap_bad_orbits"
+
+\end_inset
+
+, we know there exists 
+\begin_inset Formula $(T,\eta)=(T_{0},\eta_{0})$
+\end_inset
+
+ such that bad orbits has strictly less pressure than 
+\begin_inset Formula $\vp$
+\end_inset
+
+, that is, 
+\begin_inset Formula $P([{\cal B}_{T_{0}}(\eta_{0})])<P(\varphi)$
+\end_inset
+
+, which verifies the condition 
+\begin_inset Formula $({\rm III})$
+\end_inset
+
+ of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -5805,7 +6208,7 @@ Given an orbit segment
 \end_layout
 
 \begin_layout Section
-Properties of the equilibrium states
+Properties of the equilibrium states and the proof of Theorem B
 \end_layout
 
 \begin_layout --Separator--
@@ -5821,73 +6224,88 @@ Properties of the equilibrium states
 status open
 
 \begin_layout Plain Layout
-Theorem A
+Theorem B
 \end_layout
 
 \end_inset
 
-Let 
-\begin_inset Formula $M$
-\end_inset
-
- be a rank 1 Riemannian manifold without focal points and 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
- be the geodesic flow over 
-\begin_inset Formula $M$
-\end_inset
-
-.
- If 
+ Let 
 \begin_inset Formula $\vphi:\ut\to\R$
 \end_inset
 
- is a Hölder continuous function and 
+ be a Hölder continuous function or 
+\begin_inset Formula $\vp=q\cdot\vp^{u}$
+\end_inset
+
+ satisfying 
 \begin_inset Formula $P({\rm Sing},\vphi)<P(\vphi)$
 \end_inset
 
-, then 
-\begin_inset Formula $\vphi$
+.
+ Then the equilibrium state 
+\begin_inset Formula $\mu_{\vphi}$
 \end_inset
 
- has a unique equilibrium state 
-\begin_inset Formula $\mu_{\vphi}$
+ is fully supported, 
+\begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
+\end_inset
+
+, Bernoulli, and is the weak
+\begin_inset Formula $^{*}$
+\end_inset
+
+ limit of the weighted regular periodic orbits.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+The proof is separated into following propositions, namely, Proposition
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:full_measure"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:weight_average_regular_orbits"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:fully_supported"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:Bernoulli"
+
 \end_inset
 
 .
- Moreover, 
-\begin_inset Formula $\mu_{\vphi}$
-\end_inset
-
- is fully supported, 
-\begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
-\end_inset
-
-, Bernoulli, and is the weak
-\begin_inset Formula $^{*}$
-\end_inset
-
- limit of the weighted regular periodic orbits.
 \end_layout
 
-\begin_layout Standard
-In this section, we aim to prove that the remaining parts, i.e., 
-\begin_inset Formula $\mu_{\vphi}$
-\end_inset
+\begin_layout --Separator--
 
- is fully supported, 
-\begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
-\end_inset
-
-, Bernoulli, and is the weak
-\begin_inset Formula $^{*}$
-\end_inset
-
- limit of the weighted regular periodic orbits.
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:full_measure"
+
+\end_inset
+
+
 \begin_inset Formula $\mu_{\vphi}({\rm Reg})=1$
 \end_inset
 
@@ -6860,6 +7278,12 @@ P(G^{M},\vphi)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambda(G^{M}
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:weight_average_regular_orbits"
+
+\end_inset
+
 The unique equilibrium state 
 \begin_inset Formula $\mu_{\varphi}$
 \end_inset
@@ -6961,6 +7385,12 @@ reference "prop:pressure_match"
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:fully_supported"
+
+\end_inset
+
 The unique equilibrium state 
 \begin_inset Formula $\mu_{\varphi}$
 \end_inset
@@ -6970,8 +7400,6 @@ The unique equilibrium state
 \end_layout
 
 \begin_layout Proof
-
-\color red
 \begin_inset Argument 1
 status collapsed
 
@@ -6998,8 +7426,6 @@ Since
 \end_layout
 
 \begin_layout Proof
-
-\color red
 Since 
 \begin_inset Formula $v\in\text{Reg}$
 \end_inset
@@ -7012,15 +7438,7 @@ Since
 \begin_inset Formula $\lambda(f_{t}v)>0$
 \end_inset
 
- [for this, we probably need to use 
-\begin_inset Formula $\lambda$
-\end_inset
-
- from BCFT, not our 
-\begin_inset Formula $\lambda_{T}$
-\end_inset
-
-].
+.
  Given be an arbitrary neighborhood 
 \begin_inset Formula $V$
 \end_inset
@@ -7170,6 +7588,12 @@ y from the good orbit onto the orbit constructed from the specification.
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:Bernoulli"
+
+\end_inset
+
 The unique equilibrium state 
 \begin_inset Formula $\mu_{\varphi}$
 \end_inset
@@ -7200,7 +7624,7 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Section
-Proof of theorem A and Theorem B
+The proof of Theorem C and examples
 \end_layout
 
 \begin_layout --Separator--
@@ -7209,74 +7633,6 @@ Proof of theorem A and Theorem B
 
 \begin_layout --Separator--
 
-\end_layout
-
-\begin_layout Theorem
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[Theorem A]
-\end_layout
-
-\end_inset
-
-Let 
-\begin_inset Formula $M$
-\end_inset
-
- be a rank 1 surface without focal points and 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
- be the geodesic flow over 
-\begin_inset Formula $M$
-\end_inset
-
-.
- Suppose 
-\begin_inset Formula $\vphi:\ut\to\R$
-\end_inset
-
- is a Hölder continuous function satisfying 
-\begin_inset Formula $P({\rm Sing},\vphi)<P(\vphi)$
-\end_inset
-
-, then 
-\begin_inset Formula $\vphi$
-\end_inset
-
- has a unique equilibrium state 
-\begin_inset Formula $\mu_{\vphi}$
-\end_inset
-
-.
- Moreover, 
-\begin_inset Formula $\mu_{\vphi}$
-\end_inset
-
- is fully supported, 
-\begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
-\end_inset
-
-, Bernoulli, and is the weak
-\begin_inset Formula $^{*}$
-\end_inset
-
- limit of the weighted regular periodic orbits.
-\end_layout
-
-\begin_layout Proof
-The existence of the equilibrium states is proved in 
-\color green
-?????
-\color inherit
- and properties of the unique equilibrium states are proved in 
-\color green
-????
-\color inherit
-.
 \end_layout
 
 \begin_layout --Separator--
@@ -7288,8 +7644,6 @@ The existence of the equilibrium states is proved in
 \end_layout
 
 \begin_layout Lemma
-
-\color red
 If 
 \begin_inset Formula $M$
 \end_inset
@@ -7306,133 +7660,23 @@ If
 \end_layout
 
 \begin_layout Proof
-
-\color red
-For any 
-\begin_inset Formula $\xi\in T_{v}T^{1}M$
-\end_inset
-
-, the Sasaki metric of 
-\begin_inset Formula $df_{t}(\xi)$
-\end_inset
-
- is given by 
-\begin_inset Formula 
-\[
-||df_{t}(\xi)||^{2}=J_{\xi}(t)^{2}+J'_{\xi}(t)^{2},
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $J_{\xi}$
-\end_inset
-
- is a Jacobi field with 
-\begin_inset Formula $J_{\xi}(0)$
-\end_inset
-
- and 
-\begin_inset Formula $J'_{\xi}(0)$
-\end_inset
-
- being the vertical and horizontal component of 
-\begin_inset Formula $\xi$
-\end_inset
-
-.
- If 
-\begin_inset Formula $\xi\in E_{v}^{u}$
-\end_inset
-
-, then 
-\begin_inset Formula $J_{\xi}$
-\end_inset
-
- is an unstable Jacobi field along 
-\begin_inset Formula $\gamma_{v}$
-\end_inset
-
- and we have 
-\begin_inset Formula $\lambda^{u}(f_{t}v)=J'_{\xi}(t)/J_{\xi}(t)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-
-\color red
-By definition we have 
-\begin_inset Formula 
-\begin{eqnarray*}
- &  & \varphi^{u}(v)=-\frac{d}{dt}\Big|_{t=0}\log|df_{t}|_{E_{v}^{u}}|=-\frac{1}{2}\frac{d}{dt}\Big|_{t=0}\log(||df_{t}(\xi)||^{2})\\
- & = & -\frac{J_{\xi}J'_{\xi}+J'_{\xi}J''_{\xi}}{J_{\xi}^{2}+(J'_{\xi})^{2}}(0)=-\frac{J_{\xi}J'_{\xi}(1-K(v))}{J_{\xi}^{2}+(J'_{\xi})^{2}}(0)=-\frac{\lambda^{u}(v)(1-K(v))}{1+\lambda^{u}(v)^{2}},
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\xi\in E_{v}^{u}$
-\end_inset
-
-.
- Since both 
-\begin_inset Formula $\lambda_{u}$
-\end_inset
-
- and 
-\begin_inset Formula $K$
-\end_inset
-
- are continuous and 
-\begin_inset Formula $\lambda_{u}(v)>0$
-\end_inset
-
- and 
-\begin_inset Formula $K(v)<1$
-\end_inset
-
- for some 
-\begin_inset Formula $v\in T^{1}M$
-\end_inset
-
-, for Liouville measure 
-\begin_inset Formula $\mu_{L}$
-\end_inset
-
- we have 
-\begin_inset Formula 
-\[
-\int_{T^{1}M}\varphi^{u}d\mu_{L}<0.
-\]
-
-\end_inset
-
-On the other hand, the Lyapunov exponent 
-\begin_inset Formula $\chi(v)$
+We know that the Lyapunov exponent 
+\begin_inset Formula $\chi^{+}(v)$
 \end_inset
 
  is the Birkhoff average of the function 
 \begin_inset Formula $-\varphi^{u}$
 \end_inset
 
-(
-\color green
-see Section 2.3 in Burns-Gelfert 
-\begin_inset Quotes eld
-\end_inset
-
-Lyapunov spectrum for geodesic flows of rank 1 surfaces
-\begin_inset Quotes erd
-\end_inset
-
-
+, therefore by Birkhoff Ergodic Theorem and Pesin entropy formula 
 \color red
-), therefore by Birkhoff Ergodic Theorem and Pesin entropy formula: 
+(cf.
+ Pesin's paper Characteristic Lyapounov exponents....[add to ref])
+\color inherit
+: 
 \begin_inset Formula 
 \[
-h_{\mu_{L}}=\int_{T^{1}M}\chi(v)d\mu_{L}=-\int_{T^{1}M}\varphi^{u}d\mu_{L}>0
+h_{\mu_{L}}=\int_{T^{1}M}\chi^{+}(v)d\mu_{L}=-\int_{T^{1}M}\varphi^{u}d\mu_{L}>0
 \]
 
 \end_inset
@@ -7449,39 +7693,7 @@ P(q\varphi^{u})\geq h_{\mu_{L}}+\int q\varphi^{u}d\mu_{L}=(q-1)\int\varphi^{u}d\
 
 \end_inset
 
-Notice that 
-\begin_inset Formula $h_{\text{top}}(\text{Sing})=0$
-\end_inset
 
- (Gelfert-Ruggiero) and 
-\begin_inset Formula $\varphi^{u}\equiv0$
-\end_inset
-
- on 
-\begin_inset Formula $\text{Sing}$
-\end_inset
-
-, so 
-\begin_inset Formula $P(\text{Sing},q\varphi^{u})=0$
-\end_inset
-
- for all 
-\begin_inset Formula $q\in\mathbb{R}$
-\end_inset
-
-.
- Upper semicontinuity of entropy gap is guaranteed by Liu-Wang, 
-\begin_inset Quotes eld
-\end_inset
-
-Entropy-expansiveness of Geodesic Flows on Closed Manifolds without Conjugate
- Points
-\begin_inset Quotes erd
-\end_inset
-
-.
- The remaining part is similar to BCFT.
- 
 \end_layout
 
 \begin_layout --Separator--
@@ -7494,7 +7706,7 @@ status open
 
 \begin_layout Plain Layout
 
-[Theorem B]
+[Theorem C]
 \end_layout
 
 \end_inset
@@ -7540,6 +7752,65 @@ If
 
 .
  
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+By the above lemma, Theorem A, and Theorem B, it remains to show 
+\begin_inset Formula $q\mapsto P(q\vp^{u})$
+\end_inset
+
+ is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ for 
+\begin_inset Formula $q\in(-\infty,1)$
+\end_inset
+
+.
+ Notice that 
+\begin_inset Formula $h_{\text{top}}(\text{Sing})=0$
+\end_inset
+
+ (Gelfert-Ruggiero) and 
+\begin_inset Formula $\varphi^{u}\equiv0$
+\end_inset
+
+ on 
+\begin_inset Formula $\text{Sing}$
+\end_inset
+
+, so 
+\begin_inset Formula $P(\text{Sing},q\varphi^{u})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $q\in\mathbb{R}$
+\end_inset
+
+.
+ Upper semicontinuity of entropy gap is guaranteed by Entropy-expansiveness
+ of geodesic flow 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ (cf.
+ Liu-Wang 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu:2016de"
+
+\end_inset
+
+).
+
+\color red
+ The remaining part is similar to BCFT.
+ [finish it] 
 \end_layout
 
 \begin_layout --Separator--
