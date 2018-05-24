@@ -1892,6 +1892,8 @@ Let
 \end_layout
 
 \begin_layout Lemma
+
+\color cyan
 \begin_inset ERT
 status open
 
@@ -1931,6 +1933,8 @@ cite{BCFT2017}, Lemma 2.9]
 
 \end_inset
 
+
+\color inherit
  
 \end_layout
 
@@ -1951,7 +1955,7 @@ cite{BCFT2017}, Lemma 2.9]
 \end_layout
 
 \begin_layout Standard
-A handy lemma for computation:
+A handy lemma for computation: 
 \end_layout
 
 \begin_layout --Separator--
@@ -1966,11 +1970,11 @@ name "alglem"
 \end_inset
 
  Let 
-\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\begin_inset Formula $\psi:\mathbb{R}\rightarrow\mathbb{R}$
 \end_inset
 
- be a non-negative continuous function and 
-\begin_inset Formula $f_{T}(t):=\int_{-T}^{T}f(t+\tau)d\tau$
+ be a non-negative integrable function and 
+\begin_inset Formula $\mbox{\psi}_{T}(t):=\int_{-T}^{T}\psi(t+\tau)d\tau$
 \end_inset
 
 .
@@ -1981,9 +1985,17 @@ name "alglem"
 , 
 \begin_inset Formula 
 \[
-\int_{a}^{b}f_{T}(t)dt\leq2T\int_{a-T}^{b+T}f(t)dt.
+\int_{a}^{b}\psi_{T}(t)dt\leq2T\int_{a-T}^{b+T}\psi(t)dt.
 \]
 
+\end_inset
+
+ In particular, 
+\begin_inset Formula $0\leq\int_{0}^{t}\lambda_{T}(f_{s}v)ds\leq2T\int_{0}^{t}\lambda(f_{s}v)ds$
+\end_inset
+
+ for all 
+\begin_inset Formula $t,T>0.$
 \end_inset
 
 
@@ -1997,10 +2009,10 @@ For
 , 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int_{a}^{b}f_{T}(t)dt & = & \int_{a}^{b}\int_{-T}^{T}f(t+\tau)d\tau dt\\
- & = & \int_{a-T}^{b-T}(\tau+T-a)f(\tau)d\tau+\int_{b-T}^{a+T}(b-a)f(\tau)d\tau+\int_{a+T}^{b+T}(b+T-\tau)f(\tau)d\tau\\
- & \leq & (b-a)\int_{a-T}^{b-T}f(\tau)d\tau+(b-a)\int_{b-T}^{a+T}f(\tau)d\tau+(b-a)\int_{a+T}^{b+T}f(\tau)d\tau\\
- & = & (b-a)\int_{a-T}^{b+T}f(\tau)d\tau\leq2T\int_{a-T}^{b+T}f(\tau)d\tau.
+\int_{a}^{b}\psi_{T}(t)dt & = & \int_{a}^{b}\int_{-T}^{T}\psi(t+\tau)d\tau dt\\
+ & = & \int_{a-T}^{b-T}(\tau+T-a)\psi(\tau)d\tau+\int_{b-T}^{a+T}(b-a)\psi(\tau)d\tau+\int_{a+T}^{b+T}(b+T-\tau)\psi(\tau)d\tau\\
+ & \leq & (b-a)\int_{a-T}^{b-T}\psi(\tau)d\tau+(b-a)\int_{b-T}^{a+T}\psi(\tau)d\tau+(b-a)\int_{a+T}^{b+T}\psi(\tau)d\tau\\
+ & = & (b-a)\int_{a-T}^{b+T}\psi(\tau)d\tau\leq2T\int_{a-T}^{b+T}\psi(\tau)d\tau.
 \end{eqnarray*}
 
 \end_inset
@@ -2012,9 +2024,9 @@ For
 , 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int_{a}^{b}f_{T}(t)dt & = & \int_{a}^{b}\int_{-T}^{T}f(t+\tau)d\tau dt\\
- & = & \int_{a-T}^{a+T}(\tau+T-a)f(\tau)d\tau+\int_{a+T}^{b-T}2Tf(\tau)d\tau+\int_{b-T}^{b+T}(s+T-\tau)f(\tau)d\tau\\
- & \leq & 2T\int_{a-T}^{a+T}f(\tau)d\tau+2T\int_{a+T}^{b-T}f(\tau)d\tau+2T\int_{b-T}^{b+T}f(\tau)d\tau=2T\int_{a-T}^{b+T}f(\tau)d\tau.
+\int_{a}^{b}\psi_{T}(t)dt & = & \int_{a}^{b}\int_{-T}^{T}\psi(t+\tau)d\tau dt\\
+ & = & \int_{a-T}^{a+T}(\tau+T-a)\psi(\tau)d\tau+\int_{a+T}^{b-T}2T\psi(\tau)d\tau+\int_{b-T}^{b+T}(s+T-\tau)\psi(\tau)d\tau\\
+ & \leq & 2T\int_{a-T}^{a+T}\psi(\tau)d\tau+2T\int_{a+T}^{b-T}\psi(\tau)d\tau+2T\int_{b-T}^{b+T}\psi(\tau)d\tau=2T\int_{a-T}^{b+T}\psi(\tau)d\tau.
 \end{eqnarray*}
 
 \end_inset
@@ -2040,10 +2052,14 @@ As in the paper, let
 \end_inset
 
 , and define 
-\begin_inset Formula $\tilde{\lambda}_{T}$
+\begin_inset Formula $\tilde{\lambda}=\max\{0,\lambda(v)-\frac{\eta}{2}\}$
 \end_inset
 
- analogously as well.
+ and 
+\begin_inset Formula $\tilde{\lambda}_{T}=\max\{0,\lambda_{T}(v)-\frac{\eta}{2}\}$
+\end_inset
+
+.
  If 
 \begin_inset Formula $w\in B_{t}(v,\delta)$
 \end_inset
@@ -2055,9 +2071,95 @@ As in the paper, let
  and 
 \begin_inset Formula 
 \[
-\int_{0}^{t}\lambda_{T}(f_{s}w)ds\geq\int_{0}^{t}\tilde{\lambda}_{T}(f_{s}v)ds\geq\int_{0}^{t}\lambda_{T}(f_{s}v)ds-\frac{\eta}{2}t.
+\int_{0}^{t}\lambda(f_{\tau}w)d\tau\geq\int_{0}^{t}\widetilde{\lambda}(f_{\tau}v)d\tau\geq\int_{0}^{t}\lambda(f_{\tau}v)d\tau-\frac{\eta}{2}t.
 \]
 
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{0}^{t}\lambda_{T}^{u}(f_{\tau}w)d\tau\geq\int_{0}^{t}\widetilde{\lambda_{T}^{u}}(f_{\tau}v)d\tau\geq\int_{0}^{t}\lambda_{T}^{u}(f_{\tau}v)d\tau-\frac{\eta}{2}t.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{t}\lambda_{T}^{s}(f_{\tau}w)d\tau\geq\int_{0}^{t}\widetilde{\lambda_{T}^{s}}(f_{\tau}v)d\tau\geq\int_{0}^{t}\lambda_{T}^{s}(f_{\tau}v)d\tau-\frac{\eta}{2}t.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{0}^{t}\lambda_{T}(f_{\tau}w)d\tau\geq\int_{0}^{t}\tilde{\lambda}_{T}(f_{\tau}v)d\tau\geq\int_{0}^{t}\lambda_{T}(f_{\tau}v)d\tau-\frac{\eta}{2}t.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+
+\color green
+Need To Define
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda_{T}^{u}$
+\end_inset
+
+ be the minimal eigenvalue (in surface case, it is 
+\begin_inset Quotes eld
+\end_inset
+
+the
+\begin_inset Quotes erd
+\end_inset
+
+ eigenvalue) of the operator 
+\begin_inset Formula ${\cal U}_{T}^{u}(v):T_{\pi v}H^{u}(v)\to T_{\pi v}H^{u}(v)$
+\end_inset
+
+ by 
+\begin_inset Formula $T_{\pi v}H^{u}(v)\ni w\mapsto\int_{-T}^{T}P_{-\tau}{\cal U}^{u}(f_{\tau}v)(P_{\tau}v)\in T_{\pi v}H^{u}(v)$
+\end_inset
+
+ where 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ is the parallel transportation along the geodesic 
+\begin_inset Formula $\gamma_{v}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda_{T}^{s}(v):=\lambda_{T}^{u}(-v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lt(v):=\min\{\lt^{s}(v),\lt^{u}(v)\}$
 \end_inset
 
 
@@ -2072,14 +2174,29 @@ As in the paper, let
 \end_layout
 
 \begin_layout Lemma
-\begin_inset CommandInset label
-LatexCommand label
-name "lem:38"
+
+\color cyan
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+cite{BCFT2017}, Lemma 3.8]
+\end_layout
 
 \end_inset
 
- Given 
-\begin_inset Formula $\eta,T,\delta$
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:3.8BCFT"
+
+\end_inset
+
+Given 
+\begin_inset Formula $\eta,\delta$
 \end_inset
 
  as above, 
@@ -2091,13 +2208,13 @@ name "lem:38"
 \end_inset
 
 , we have the following for every 
-\begin_inset Formula $s\geq0$
+\begin_inset Formula $t\geq0$
 \end_inset
 
 : 
 \begin_inset Formula 
 \[
-d^{s}(f_{s+2T}w,f_{s+2T}w')\leq d^{s}(w,w')\exp\left(-\frac{1}{2T}\int_{T}^{s+T}\tilde{\lambda}_{T}(f_{\tau}v)d\tau\right).
+d^{s}(f_{t}w,f_{t}w')\leq d^{s}(w,w')e^{-\int_{0}^{t}\widetilde{\lambda^{s}}(f_{\tau}v)d\tau}.
 \]
 
 \end_inset
@@ -2107,42 +2224,14 @@ Similarly, if
 \end_inset
 
 , then for any 
-\begin_inset Formula $s\geq0$
+\begin_inset Formula $t\geq0$
 \end_inset
 
 , 
 \begin_inset Formula 
 \[
-d^{u}(f_{-s-2T}w,f_{-s-2T}w')\leq d^{u}(w,w')\exp\left(-\frac{1}{2T}\int_{T}^{s+T}\tilde{\lambda}_{T}(f_{-\tau}v)d\tau\right).
+d^{u}(f_{-t}w,f_{-t}w')\leq d^{u}(w,w')e^{-\int_{0}^{t}\widetilde{\lambda^{u}}(f_{-\tau}v)d\tau}.
 \]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-
-\color green
-We define 
-\begin_inset Formula $J_{r}$
-\end_inset
-
- as in the proof of Lemma 3.8(BCFT)
-\color inherit
- By Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "alglem"
-
-\end_inset
-
- we have 
-\begin_inset Formula 
-\begin{eqnarray*}
- &  & ||J_{r}(s+2T)||\leq||J_{r}(0)||\exp\left(-\int_{0}^{s+2T}\lambda(\dot{\zeta}_{r}(\tau))d\tau\right)\\
- & \leq & ||J_{r}(0)||\exp\left(-\frac{1}{2T}\int_{T}^{s+T}\lambda_{T}(\dot{\zeta}_{r}(\tau))d\tau\right)\leq||J_{r}(0)||\exp\left(-\frac{1}{2T}\int_{T}^{s+T}\tilde{\lambda}_{T}(f_{\tau}v)d\tau\right).
-\end{eqnarray*}
 
 \end_inset
 
@@ -2184,15 +2273,6 @@ Decompositions for geodesic flow
 
 \color green
 Need To Define
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula $\lambda_{T}(v):=\int\limits _{-T}^{T}\lambda(f_{t}v)dt.$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -2502,6 +2582,118 @@ then the geodesic flow has a unique equilibrium stat for
 
 \end_layout
 
+\begin_layout Lemma
+For any 
+\begin_inset Formula $T>0$
+\end_inset
+
+ and 
+\begin_inset Formula $v\in T^{1}M$
+\end_inset
+
+, we have 
+\begin_inset Formula $\lt^{\sigma}(v)=\int_{-T}^{T}\lambda^{\sigma}(f_{\tau}v)d\tau$
+\end_inset
+
+ for 
+\begin_inset Formula $\sigma=\{s,u\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+Let us only check for 
+\begin_inset Formula $\lt^{u}$
+\end_inset
+
+, and for 
+\begin_inset Formula $\lt^{s}$
+\end_inset
+
+ follows similarly.
+ It is enough to show 
+\begin_inset Formula $\int_{-T}^{T}\lambda^{u}(f_{\tau}v)d\tau$
+\end_inset
+
+ that is the eigenvalue of 
+\begin_inset Formula ${\cal U}_{T}^{u}(v)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+To see this, we first notice that since 
+\begin_inset Formula $\dim M=2$
+\end_inset
+
+ we have, for all 
+\begin_inset Formula $\tau>0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in T_{\pi v}H^{u}(v)$
+\end_inset
+
+ with 
+\begin_inset Formula $||w||=1$
+\end_inset
+
+, 
+\begin_inset Formula $P_{\tau}(w)\in T_{\pi f_{\tau}v}H^{u}(f_{\tau}v)=\dot{\gamma}_{v}^{\perp}(\tau)$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{\tau}(w)$
+\end_inset
+
+ is the eigenvector of 
+\begin_inset Formula ${\cal U}^{u}(f_{\tau}v)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula 
+\[
+P_{-\tau}{\cal U}^{u}(f_{\tau}v)P_{\tau}(w)=\lambda^{u}(f_{\tau}v)w.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Hence, 
+\begin_inset Formula 
+\begin{align*}
+{\cal U}_{T}^{u}(v)(w) & =\int_{-T}^{T}P_{-\tau}{\cal U}^{u}(f_{\tau}v)P_{-\tau}(w)d\tau\\
+ & =\left(\int_{-T}^{T}\lambda^{u}(f_{\tau}v)d\tau\right)\cdot w.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -2512,22 +2704,6 @@ Recall: The following lemma works on no focal points setting.
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Formula $($
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Lemma 3.3"
-key "BCFT2017"
-
-\end_inset
-
-
-\begin_inset Formula $)$
-\end_inset
-
- 
 \begin_inset CommandInset label
 LatexCommand label
 name "lem:3.3"
@@ -2604,7 +2780,7 @@ item
 \end_inset
 
  
-\begin_inset Formula $\lambda^{s}(f_{t}v)=0$
+\begin_inset Formula $\lambda^{u}(f_{t}v)=0$
 \end_inset
 
  for all 
@@ -2628,7 +2804,7 @@ item
 \end_inset
 
  
-\begin_inset Formula $\lambda^{u}(f_{t}v)=0$
+\begin_inset Formula $\lambda^{v}(f_{t}v)=0$
 \end_inset
 
  for all 
@@ -2658,8 +2834,192 @@ end{enumerate}
 
 \end_layout
 
+\begin_layout Proof
+It is clear that 
+\begin_inset Formula $(1)\implies(2)$
+\end_inset
+
+ and 
+\begin_inset Formula $(1)\implies(3)$
+\end_inset
+
+.
+ We will prove 
+\begin_inset Formula $(2)\implies(1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(3)\implies(2)$
+\end_inset
+
+ follows similarly.
+\end_layout
+
+\begin_layout Proof
+To see 
+\begin_inset Formula $(2)\implies(1)$
+\end_inset
+
+, it is enough to show 
+\begin_inset Formula $J^{u}$
+\end_inset
+
+ is a parallel Jacobi field where 
+\begin_inset Formula $J^{u}(t)$
+\end_inset
+
+ is a unstable Jacobi field along 
+\begin_inset Formula $\gamma_{v}(t)$
+\end_inset
+
+.
+ Notice that 
+\begin_inset Formula $J^{u}(t)$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $J^{u}(0)=w\in T_{\pi v}H^{u}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $(J^{u})^{'}(0)=0$
+\end_inset
+
+ (because 
+\begin_inset Formula $\lambda^{u}(v)=0$
+\end_inset
+
+).
+ Similarly, for any 
+\begin_inset Formula $\tau\in\R$
+\end_inset
+
+ we have a untable Jacobi field 
+\begin_inset Formula $J_{\tau}^{u}(t)$
+\end_inset
+
+ along 
+\begin_inset Formula $\gamma_{f_{\tau}v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $J_{\tau}^{u}(0)=w_{\tau}=P_{\tau}w\in T_{\pi f_{\tau}v}H^{u}(f_{\tau}v)$
+\end_inset
+
+ and 
+\begin_inset Formula $(J_{\tau}^{u})^{'}(0)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Claim:
+\series default
+ 
+\begin_inset Formula $J_{\tau}^{u}(t)=J^{u}(\tau+t)$
+\end_inset
+
+ for any 
+\begin_inset Formula $\tau,t\in\R$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+We first recall that 
+\begin_inset Formula $J^{u}$
+\end_inset
+
+ satisfies the equation 
+\begin_inset Formula $(J^{u})^{'}(t)={\cal U}^{u}(t)J^{u}(t)$
+\end_inset
+
+ where 
+\begin_inset Formula ${\cal U}^{u}(t)$
+\end_inset
+
+ is the second fundamental form of 
+\begin_inset Formula $H^{u}(v)$
+\end_inset
+
+, and similarly we have 
+\begin_inset Formula $(J_{\tau}^{u})^{'}(t)={\cal U}^{u}(\tau+t)J_{\tau}^{u}(t)$
+\end_inset
+
+.
+ This shows that 
+\begin_inset Formula $J^{u}(t+\tau)$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{\tau}^{u}(t)$
+\end_inset
+
+ satisfies the same equation 
+\begin_inset Formula $\frac{J'(x)}{J(x)}={\cal U}^{u}(x)$
+\end_inset
+
+; moreover, since 
+\begin_inset Formula $\dim M=2$
+\end_inset
+
+ we also know 
+\begin_inset Formula $J^{u}(\tau)=P_{\tau}w=J_{\tau}^{u}(0)$
+\end_inset
+
+.
+ Thus, we have 
+\begin_inset Formula $J_{\tau}^{u}(t)=J^{u}(\tau+t)$
+\end_inset
+
+ for any 
+\begin_inset Formula $\tau,t\in\R$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+By the claim, we have 
+\begin_inset Formula $(J{}^{u})''(t)=(J_{t}^{u})''(0)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+It is also not hard to see that 
+\begin_inset Formula $v\in\Sing\implies K(\pi v)=0$
+\end_inset
+
+ where 
+\begin_inset Formula $K$
+\end_inset
+
+ is the Gaussian curvature.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -2678,7 +3038,7 @@ name "lem:lamb_T_and_sing"
 \end_inset
 
  
-\begin_inset Formula $\lt(v):=\int_{-T}^{T}\lambda(f_{t}v)dt=0$
+\begin_inset Formula $\lt(v)$
 \end_inset
 
  for all 
@@ -2708,15 +3068,19 @@ First we notice that since
 \begin_inset Formula $\lambda\geq0$
 \end_inset
 
- and is continuous, 
-\begin_inset Formula $\lt(v)=0$
+, is continuous, and 
+\begin_inset Formula $\lt(v)\geq\int_{-T}^{T}\lambda(f_{t}v)dt\geq0$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\lambda_{T}(v)=0$
 \end_inset
 
  for all 
 \begin_inset Formula $T\in\R$
 \end_inset
 
- implies that 
+ implies 
 \begin_inset Formula $\lambda(f_{t}v)=0$
 \end_inset
 
@@ -2725,7 +3089,6 @@ First we notice that since
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Proof
@@ -3136,154 +3499,13 @@ Distance on
 
 \end_layout
 
-\begin_layout Standard
-
-\color green
-??????WHERE DO WE USE THE FOLLOWING TWO LEMMAS???? 
-\end_layout
-
-\begin_layout Standard
-
-\color green
-Define 
-\begin_inset Formula $\tilde{\lambda}(v):=\max(0,\lambda(v)-\frac{\eta}{2})$
-\end_inset
-
- as in BCFT.
- Probably, the lemma in the form that I might find convenient to work with;
- 
-\end_layout
-
-\begin_layout Lemma
-
-\color green
-\begin_inset CommandInset label
-LatexCommand label
-name "lem:38'"
-
-\end_inset
-
- Given 
-\begin_inset Formula $\eta,T,\delta$
-\end_inset
-
- as above, and 
-\begin_inset Formula $(v,t)\in\gt(\eta)$
-\end_inset
-
-, then every 
-\begin_inset Formula $v'\in B_{t}(v,\delta)$
-\end_inset
-
- satisfy 
-\begin_inset Formula $(v',t)\in\gt(\frac{\eta}{2})$
-\end_inset
-
-.
- Moreover, there exists 
-\begin_inset Formula $C>0$
-\end_inset
-
- such that for every 
-\begin_inset Formula $l\in[0,T]$
-\end_inset
-
-, 
-\begin_inset Formula $s\in[0,t+T]$
-\end_inset
-
-, and 
-\begin_inset Formula $w,w'\in W_{\delta}^{s}(f_{-l}v)$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-d^{s}(f_{s+l}w,f_{s+l}w')\leq\min\Big(d^{s}(w,w'),C\cdot d^{s}(w,w')e^{-\frac{\eta}{2T}s}\Big).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-
-\color green
-When 
-\begin_inset Formula $s\in[0,t]$
-\end_inset
-
-, then proceed as below (like lemma in Bowen property section).
- When 
-\begin_inset Formula $s\in[t,t+T]$
-\end_inset
-
-, then we increase 
-\begin_inset Formula $C$
-\end_inset
-
- to take into account of extra length beyond 
-\begin_inset Formula $t$
-\end_inset
-
-; something like 
-\begin_inset Formula $C'=C\cdot e^{\frac{\eta}{2T}\cdot T}$
-\end_inset
-
-.
- 
-\begin_inset Newline newline
-\end_inset
-
- Or, we could put 
-\begin_inset Formula $\max(s,t)$
-\end_inset
-
- in place of 
-\begin_inset Formula $s$
-\end_inset
-
- in the inequality; perhaps this might be more convenient, because most
- cases we will only use 
-\begin_inset Formula $l=0$
-\end_inset
-
- and 
-\begin_inset Formula $s=t$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Corollary
-
-\color green
-In the setting of lemma above, when 
-\begin_inset Formula $l=0$
-\end_inset
-
- and 
-\begin_inset Formula $s=t$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-d^{s}(f_{t}w,f_{t}w')\leq C\cdot d^{s}(w,w')e^{-\frac{\eta}{2T}t}.
-\]
-
-\end_inset
-
+\begin_layout --Separator--
 
 \end_layout
 
 \begin_layout Lemma
-
-\color red
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Lemma 3.9
@@ -3298,127 +3520,15 @@ name "lem:39"
 
 \end_inset
 
- Given 
-\begin_inset Formula $\eta,T,\delta$
-\end_inset
 
- as above, and 
-\begin_inset Formula $(v,t)$
-\end_inset
-
- in 
-\begin_inset Formula $\gt(\eta)$
-\end_inset
-
-, then every 
-\begin_inset Formula $w\in B_{t}(v,\delta)$
-\end_inset
-
- has 
-\begin_inset Formula $(w,t)\in\gt(\frac{\eta}{2})$
-\end_inset
-
-.
- Moreover, for every 
-\begin_inset Formula $w,w'\in W_{\delta}^{s}(f_{-T}v)$
-\end_inset
-
- and 
-\begin_inset Formula $0\leq s\leq t$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-d^{s}(f_{s+2T}w,f_{s+2T}w')\leq d^{s}(w,w')\exp\left(-\frac{\eta s}{4T}\right),
-\]
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:312"
 
 \end_inset
 
-For every 
-\begin_inset Formula $w,w'\in f_{-t-2T}W_{\delta}^{u}(f_{t+T}v)$
-\end_inset
-
- and 
-\begin_inset Formula $0\leq s\leq t$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-d^{u}(f_{s}w,f_{s}w')\leq d^{u}(f_{t+2T}w,f_{t+2T}w')\exp\left(-\frac{\eta(t-s)}{4T}\right).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-
-\color red
-Since 
-\begin_inset Formula $w,w'\in W_{\delta}^{s}(f_{-T}v)$
-\end_inset
-
-, 
-\begin_inset Formula 
-\begin{eqnarray*}
- &  & d^{s}(f_{s+2T}w,f_{s+2T}w')\leq d^{s}(w,w')\exp\left(-\frac{1}{2T}\int_{0}^{s}\tilde{\lambda}_{T}(f_{\tau}v)d\tau\right)\\
- & \leq & d^{s}(w,w')\exp\left(-\frac{1}{2T}\int_{0}^{s}\lambda_{T}(f_{\tau}v)d\tau+\frac{\eta s}{4T}\right)\leq d^{s}(w,w')\exp\left(-\frac{\eta s}{4T}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-
-\color red
-For 
-\begin_inset Formula $w,w'\in f_{-t-2T}W_{\delta}^{u}(f_{t+T}v)$
-\end_inset
-
-, 
-\begin_inset Formula 
-\begin{eqnarray*}
- &  & d^{u}(f_{s}w,f_{s}w')\leq d^{u}(f_{t+2T}w,f_{t+2T}w')\exp\left(-\frac{1}{2T}\int_{T}^{t-s+T}\tilde{\lambda}_{T}(f_{-\tau}f_{t+T}v)d\tau\right)\\
- & \leq & d^{u}(f_{t+2T}w,f_{t+2T}w')\exp\left(-\frac{1}{2T}\int_{0}^{t-s}\tilde{\lambda}_{T}(f_{t-\tau}v)d\tau\right)\leq d^{u}(f_{t+2T}w,f_{t+2T}w')e^{-\frac{\eta(t-s)}{4T}}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Probably only use 
-\begin_inset Formula $s=t$
-\end_inset
-
- case for specification.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Standard
-
-\color green
-COMBINE THESE TWO
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Lemma
-
-\color red
+ 
+\color cyan
 Given 
 \begin_inset Formula $\eta,T,\delta$
 \end_inset
@@ -3436,11 +3546,7 @@ Given
 \end_inset
 
 .
- Moreover, there exists 
-\begin_inset Formula $C>0$
-\end_inset
-
- such that for any 
+ Moreover, for any 
 \begin_inset Formula $(v,t)\in\gt(\eta)$
 \end_inset
 
@@ -3449,29 +3555,29 @@ Given
 \end_inset
 
 , and any 
-\begin_inset Formula $0\leq s\leq t$
+\begin_inset Formula $0\leq\tau\leq t$
 \end_inset
 
 , 
 \begin_inset Formula 
 \[
-d^{s}(f_{s}w,f_{s}w')\leq C\cdot d^{s}(w,w')e^{-\frac{\eta}{2T}s}.
+d^{s}(f_{\tau}w,f_{\tau}w')\leq d^{s}(w,w')e^{-\frac{\eta}{4T}\tau}.
 \]
 
 \end_inset
 
 Similarly, for 
-\begin_inset Formula $w,w'\in f_{-s}W^{u}(f_{s}v)$
+\begin_inset Formula $w,w'\in f_{-\tau}W^{u}(f_{\tau}v)$
 \end_inset
 
  and 
-\begin_inset Formula $0\leq s\leq t$
+\begin_inset Formula $0\leq\tau\leq t$
 \end_inset
 
 , we have 
 \begin_inset Formula 
 \[
-d^{u}(f_{s}w,f_{s}w')\leq C\cdot d^{u}(f_{t}w,f_{t}w')e^{-\frac{\eta}{2T}(t-s)}.
+d^{u}(f_{\tau}w,f_{\tau}w')\leq d^{u}(f_{t}w,f_{t}w')e^{-\frac{\eta}{4T}(t-\tau)}.
 \]
 
 \end_inset
@@ -3481,36 +3587,32 @@ d^{u}(f_{s}w,f_{s}w')\leq C\cdot d^{u}(f_{t}w,f_{t}w')e^{-\frac{\eta}{2T}(t-s)}.
 
 \begin_layout Proof
 
-\color red
-Let 
-\begin_inset Formula $K$
+\color cyan
+By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alglem"
+
 \end_inset
 
- be the maximum of 
-\begin_inset Formula $\lambda$
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:3.8BCFT"
+
 \end_inset
 
-.
- Then, 
+, we have 
 \begin_inset Formula 
 \begin{align*}
-\int_{0}^{s}\lambda(f_{s}v)ds & =\int_{-T}^{s+T}\lambda(f_{s}v)d\eta-\int_{-T}^{0}\lambda(f_{s}v)ds-\int_{s}^{s+T}\lambda(f_{s}v)ds,\\
- & \geq\frac{1}{2T}\int_{0}^{s}\lambda_{T}(f_{l})dl-2KT,\\
- & \geq\frac{s\eta}{2T}-2KT.
+d^{s}(f_{\tau}w,f_{\tau}w') & \leq d^{s}(w,w')e^{-\int_{0}^{\tau}\widetilde{\lambda^{s}}(f_{s}v)ds}\leq d^{s}(w,w')e^{\frac{-1}{2T}\int_{0}^{\tau}\widetilde{\lambda_{T}^{s}}(f_{s}v)ds}\\
+ & \leq d^{s}(w,w')e^{\frac{-1}{2T}(\int_{0}^{\tau}\lambda_{T}^{s}(f_{s}v)ds-\frac{\eta\tau}{2})} & \because v\in\gt(\eta)\\
+ & \leq d^{s}(w,w')e^{\frac{-\eta\tau}{2T}+\frac{\eta\tau}{4T}}=d^{s}(w,w')e^{\frac{-\eta\tau}{4T}}
 \end{align*}
 
 \end_inset
 
-Then, 
-\begin_inset Formula $C:=e^{2KT}$
-\end_inset
-
- is the required constant 
-\begin_inset Formula $C$
-\end_inset
-
-.
- 
+Similarly, we have the other inequality.
 \end_layout
 
 \begin_layout --Separator--
@@ -5701,188 +5803,6 @@ Given an orbit segment
 
 \end_layout
 
-\begin_layout Lemma
-
-\color yellow
-For 
-\begin_inset Formula $T,\eta>0$
-\end_inset
-
- we have 
-\begin_inset Formula 
-\[
-P(\varphi)\leq P([P_{T}(\eta)]\cup[G_{T}(\eta)]\cup[S_{T}(\eta)],\varphi)\leq2P([B_{T}(\eta)],\varphi)+P([G_{T}(\eta)],\varphi).
-\]
-
-\end_inset
-
- In particular, 
-\begin_inset Formula $P(G_{\Delta}(\eta),\varphi)>-\infty$
-\end_inset
-
-, and thus 
-\begin_inset Formula $G_{\Delta}(\eta)$
-\end_inset
-
- contains arbitrary long orbit segments.
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proof
-
-\color yellow
-The first inequality is clear since 
-\begin_inset Formula $P_{T}(\eta)\cup G_{T}(\eta)\cup S_{T}(\eta)=T^{1}M\times[0,\infty)$
-\end_inset
-
- (hence, 
-\begin_inset Formula $P(\varphi)=P(P_{T}(\eta)\cup G_{T}(\eta)\cup S_{T}(\eta),\vp)$
-\end_inset
-
-, 
-\begin_inset Formula $P_{T}(\eta)\subset[P_{T}(\eta)]$
-\end_inset
-
-, 
-\begin_inset Formula $G_{T}(\eta)\subset[G_{T}(\eta)]$
-\end_inset
-
-, and 
-\begin_inset Formula $S_{T}(\eta)\subset[S_{T}(\eta)]$
-\end_inset
-
-.
- The second inequality is a property of pressure which follows directly
- from the definition.
- More precisely, let 
-\begin_inset Formula $X_{t}:=\{v\in T^{1}M:\ (v,t)\in T^{1}M\times[0,\infty)\}$
-\end_inset
-
-, 
-\begin_inset Formula $P_{t}:=\{v\in T^{1}M:\ (v,t)\in[P_{T}(\eta)]\}$
-\end_inset
-
-, 
-\begin_inset Formula $G_{t}:=\{v\in T^{1}M:\ (v,t)\in[G_{T}(\eta)]\}$
-\end_inset
-
-, and 
-\begin_inset Formula $S_{t}:=\{v\in T^{1}M:\ (v,t)\in S_{T}(\eta)\}$
-\end_inset
-
-.
- Then 
-\begin_inset Formula 
-\[
-\Lambda(\vp,t,\delta)=\sup\{\sum_{E}e^{\int_{0}^{t}\vp(f_{s}v)ds}:\ E\subset X_{t}\mbox{{\rm \ is a} }(t,\delta)-{\rm separated}\ {\rm set}\},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\Lambda([P_{T}(\eta)],\vp,t,\delta)=\sup\{\sum_{E}e^{\int_{0}^{t}\vp(f_{s}v)ds}:\ E\subset P_{t}\mbox{{\rm \ is a} }(t,\delta)-{\rm separated}\ {\rm set}\},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\Lambda([G_{T}(\eta)],\vp,t,\delta)=\sup\{\sum_{E}e^{\int_{0}^{t}\vp(f_{s}v)ds}:\ E\subset G_{t}\mbox{{\rm \ is a} }(t,\delta)-{\rm separated}\ {\rm set}\},{\rm \ and}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\Lambda([S_{T}(\eta)],\vp,t,\delta)=\sup\{\sum_{E}e^{\int_{0}^{t}\vp(f_{s}v)ds}:\ E\subset S_{t}\mbox{{\rm \ is a} }(t,\delta)-{\rm separated}\ {\rm set}\}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-
-\color yellow
-Since for any 
-\begin_inset Formula $(v,t)\in T^{1}M\times[0,\infty)$
-\end_inset
-
- we can decompose it to 
-\begin_inset Formula $(v,t_{1})\in P_{T}(\eta),$
-\end_inset
-
- 
-\begin_inset Formula $(f_{t_{1}}v,t_{2})\in G_{T}(\eta),$
-\end_inset
-
- and 
-\begin_inset Formula $(f_{t_{1}+t_{2}}v,t_{3})\in S_{T}(\eta)$
-\end_inset
-
- where 
-\begin_inset Formula $t_{i}\geq0$
-\end_inset
-
- for 
-\begin_inset Formula $i=1,2,3$
-\end_inset
-
- and 
-\begin_inset Formula $t_{1}+t_{2}+t_{3}=t$
-\end_inset
-
-, we have 
-\begin_inset Formula $X_{t}\subset[P_{t}]\cup[G_{t}]\cup[S_{t}]$
-\end_inset
-
- and thus 
-\begin_inset Formula $\Lambda(\vp,t,\delta)\leq\Lambda([P_{T}(\eta)],\vp,t,\delta)\cdot\Lambda([G_{T}(\eta)],\vp,t,\delta)\cdot\Lambda([S_{T}(\eta)],\vp,t,\delta)$
-\end_inset
-
- for all 
-\begin_inset Formula $t,\delta$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-
-\color yellow
-For the last assertion, it follows from Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "prop:pressue_gap_bad_orbits"
-
-\end_inset
-
- and the fact that 
-\begin_inset Formula $P(\varphi)<\infty$
-\end_inset
-
- (because 
-\begin_inset Formula $\vp$
-\end_inset
-
- is bounded).
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -6143,6 +6063,8 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Lemma
+
+\color red
 \begin_inset Argument 1
 status collapsed
 
@@ -6190,6 +6112,8 @@ Given
 \end_layout
 
 \begin_layout Proof
+
+\color red
 The proof almost follows verbatim the proof of 
 \begin_inset CommandInset citation
 LatexCommand cite
