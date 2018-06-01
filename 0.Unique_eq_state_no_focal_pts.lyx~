@@ -222,69 +222,6 @@ LatexCommand tableofcontents
 DISCUSSION OUTLINE
 \end_layout
 
-\begin_layout Itemize
-
-\color red
-Replace 
-\begin_inset Formula $d_{K}(v,w):=\max\{d(\g_{v}(t),\g_{w}(t)):\ t\in[0,1]\}$
-\end_inset
-
- by 
-\begin_inset Formula $d_{K}(v,w):=\max\{d(\g_{v}(t),\g_{w}(t)):\ t\in[0,t_{1}]\}$
-\end_inset
-
- where 
-\begin_inset Formula $t_{1}$
-\end_inset
-
- will be determined by the expansion and contraction equations we need for
- specification and closing lemma.
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-In fact, 
-\begin_inset Formula $\lambda^{u}(v)={\cal U}^{u}(v)=k^{u}(v)$
-\end_inset
-
- and 
-\begin_inset Formula $\lambda^{s}(v)=-{\cal U}^{s}(v)=k^{s}(v)$
-\end_inset
-
- where, for 
-\begin_inset Formula $\sigma\in\{s,u\}$
-\end_inset
-
-, 
-\begin_inset Formula $k^{\sigma}(v)$
-\end_inset
-
- is the geodesic curvature of the horocycle 
-\begin_inset Formula $H^{\sigma}(v)$
-\end_inset
-
- at 
-\begin_inset Formula $v$
-\end_inset
-
-.
- Do we keep using 
-\begin_inset Formula $\lambda^{\s}$
-\end_inset
-
- or replace all of them by 
-\begin_inset Formula $k^{\sigma}$
-\end_inset
-
-? In other words, do we use the surface notations to replace our current
- notations?
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -347,6 +284,15 @@ Need To Define
 \end_inset
 
  is a closed rank 1 surface without focal points.
+ 
+\end_layout
+
+\begin_layout Itemize
+Rank 1 = genus 
+\begin_inset Formula $\geq2$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -620,6 +566,7 @@ With the same
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1132,6 +1079,36 @@ local stable leaf
 \end_inset
 
  are defined in the same manner 
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+\begin_inset Formula $v\in\Sing\iff K(\pi f_{t}v)<$
+\end_inset
+
+0 for some 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+ (by 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 3.3, 3.6"
+key "Eberlein:1973hu"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Rank 1 
+\begin_inset Formula $\iff g\geq2$
+\end_inset
+
+ for surface by D.
+ Burago (closed flat g=1 => conjugate point)
 \end_layout
 
 \begin_layout --Separator--
@@ -1763,6 +1740,61 @@ key "Gelfert:2017tx"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+
+\color green
+
+\begin_inset Formula $v\in\Sing\iff K(\pi f_{t}v)<0$
+\end_inset
+
+ for some 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+ (by 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 3.3, 3.6"
+key "Eberlein:1973hu"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ Rank 1 
+\begin_inset Formula $\iff g\geq2$
+\end_inset
+
+ for surface by D.
+ Burago (closed flat g=1 => conjugate point)
 \end_layout
 
 \begin_layout Fact
@@ -4798,6 +4830,64 @@ is uniformly bounded depending only on
 
 \end_layout
 
+\begin_layout Lemma
+
+\color green
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Closing Lemma; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BCFT2017"
+
+\end_inset
+
+, Lemma 4.7
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:closing_lem"
+
+\end_inset
+
+For 
+\begin_inset Formula $\ep,\eta>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $s=s(\ep)>0$
+\end_inset
+
+ such that for 
+\begin_inset Formula $(v,t)\in\gt(\eta)$
+\end_inset
+
+ there are 
+\begin_inset Formula $w\in B_{t}(v,\ep)$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau\in[0,s(\ep)]$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $f_{t+\tau}w=w$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Section
 The Bowen property
 \end_layout
@@ -6954,60 +7044,6 @@ key "Pollicott:1996jq"
  
 \end_layout
 
-\begin_layout Lemma
-
-\color green
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Closing Lemma; 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BCFT2017"
-
-\end_inset
-
-, Lemma 4.7
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "lem:closing_lem"
-
-\end_inset
-
-For 
-\begin_inset Formula $\ep,\eta>0$
-\end_inset
-
-, there exists 
-\begin_inset Formula $s=s(\ep)>0$
-\end_inset
-
- such that for 
-\begin_inset Formula $(v,t)\in G_{T}(\eta)$
-\end_inset
-
- there are 
-\begin_inset Formula $w\in B_{t}(v,\ep)$
-\end_inset
-
- and 
-\begin_inset Formula $\tau\in[0,s(\ep)]$
-\end_inset
-
- satisfying 
-\begin_inset Formula $f_{t+\tau}w=w$
-\end_inset
-
-.
- 
-\end_layout
-
 \begin_layout Standard
 
 \color green
@@ -7656,7 +7692,21 @@ If
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
+; in particular 
+\begin_inset Formula $h_{{\rm top}}(\Sing)=0$
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Proof
+
+\color red
+Claim:
+\begin_inset Formula $\int_{T^{1}M}\varphi^{u}d\mu_{L}>0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -7668,12 +7718,7 @@ We know that the Lyapunov exponent
 \begin_inset Formula $-\varphi^{u}$
 \end_inset
 
-, therefore by Birkhoff Ergodic Theorem and Pesin entropy formula 
-\color red
-(cf.
- Pesin's paper Characteristic Lyapounov exponents....[add to ref])
-\color inherit
-: 
+, therefore by Birkhoff Ergodic Theorem and Pesin entropy formula: 
 \begin_inset Formula 
 \[
 h_{\mu_{L}}=\int_{T^{1}M}\chi^{+}(v)d\mu_{L}=-\int_{T^{1}M}\varphi^{u}d\mu_{L}>0
@@ -7694,6 +7739,72 @@ P(q\varphi^{u})\geq h_{\mu_{L}}+\int q\varphi^{u}d\mu_{L}=(q-1)\int\varphi^{u}d\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+To see 
+\begin_inset Formula $P(q\varphi^{u})>0$
+\end_inset
+
+ for 
+\begin_inset Formula $q\in(-\infty,1)$
+\end_inset
+
+, it is enough to show 
+\begin_inset Formula $h_{{\rm top}}(\Sing)=0$
+\end_inset
+
+.
+ It is because that 
+\begin_inset Formula $h_{\text{top}}(\text{Sing})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi^{u}\equiv0$
+\end_inset
+
+ on 
+\begin_inset Formula $\text{Sing}$
+\end_inset
+
+ implies 
+\begin_inset Formula $P(\text{Sing},q\varphi^{u})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $q\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Claim: 
+\series default
+
+\begin_inset Formula $h_{{\rm top}}(\Sing)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+pf.
+ for any 
+\begin_inset Formula $\mu\in{\cal M}(\Sing)$
+\end_inset
+
+ , by Ruelle's inequality we have 
+\begin_inset Formula $h_{\mu}({\cal F})=0$
+\end_inset
+
+, then by the variational principle we get 
+\begin_inset Formula $h_{{\rm top}}(\Sing)=0$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -7751,7 +7862,6 @@ If
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout --Separator--
@@ -7772,27 +7882,6 @@ By the above lemma, Theorem A, and Theorem B, it remains to show
 \end_inset
 
 .
- Notice that 
-\begin_inset Formula $h_{\text{top}}(\text{Sing})=0$
-\end_inset
-
- (Gelfert-Ruggiero) and 
-\begin_inset Formula $\varphi^{u}\equiv0$
-\end_inset
-
- on 
-\begin_inset Formula $\text{Sing}$
-\end_inset
-
-, so 
-\begin_inset Formula $P(\text{Sing},q\varphi^{u})=0$
-\end_inset
-
- for all 
-\begin_inset Formula $q\in\mathbb{R}$
-\end_inset
-
-.
  Upper semicontinuity of entropy gap is guaranteed by Entropy-expansiveness
  of geodesic flow 
 \begin_inset Formula ${\cal F}$
@@ -7810,49 +7899,13 @@ key "Liu:2016de"
 
 \color red
  The remaining part is similar to BCFT.
- [finish it] 
+ [finish it]
+\color inherit
+ 
 \end_layout
 
 \begin_layout --Separator--
 
-\end_layout
-
-\begin_layout Fact
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Corollary 6.12 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Gelfert:2017tx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-Let 
-\begin_inset Formula $M$
-\end_inset
-
- be a closed surface without focal points and 
-\begin_inset Formula ${\mathcal{F}}=(f_{t})_{t\in\mathbb{R}}$
-\end_inset
-
- be the geodesic flow on 
-\begin_inset Formula $T^{1}M$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $h_{top}({\mathcal{F}})>0=h_{top}({\rm Sing)}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout --Separator--
