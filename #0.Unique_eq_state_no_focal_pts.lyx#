@@ -216,75 +216,6 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Section*
-
-\color red
-DISCUSSION OUTLINE
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-Replace 
-\begin_inset Formula $d_{K}(v,w):=\max\{d(\g_{v}(t),\g_{w}(t)):\ t\in[0,1]\}$
-\end_inset
-
- by 
-\begin_inset Formula $d_{K}(v,w):=\max\{d(\g_{v}(t),\g_{w}(t)):\ t\in[0,t_{1}]\}$
-\end_inset
-
- where 
-\begin_inset Formula $t_{1}$
-\end_inset
-
- will be determined by the expansion and contraction equations we need for
- specification and closing lemma.
-\end_layout
-
-\begin_layout Itemize
-
-\color red
-In fact, 
-\begin_inset Formula $\lambda^{u}(v)={\cal U}^{u}(v)=k^{u}(v)$
-\end_inset
-
- and 
-\begin_inset Formula $\lambda^{s}(v)=-{\cal U}^{s}(v)=k^{s}(v)$
-\end_inset
-
- where, for 
-\begin_inset Formula $\sigma\in\{s,u\}$
-\end_inset
-
-, 
-\begin_inset Formula $k^{\sigma}(v)$
-\end_inset
-
- is the geodesic curvature of the horocycle 
-\begin_inset Formula $H^{\sigma}(v)$
-\end_inset
-
- at 
-\begin_inset Formula $v$
-\end_inset
-
-.
- Do we keep using 
-\begin_inset Formula $\lambda^{\s}$
-\end_inset
-
- or replace all of them by 
-\begin_inset Formula $k^{\sigma}$
-\end_inset
-
-? In other words, do we use the surface notations to replace our current
- notations?
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -347,6 +278,15 @@ Need To Define
 \end_inset
 
  is a closed rank 1 surface without focal points.
+ 
+\end_layout
+
+\begin_layout Itemize
+Rank 1 = genus 
+\begin_inset Formula $\geq2$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -619,7 +559,20 @@ With the same
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
+; and 
+\begin_inset Formula $P(q\vp^{u})=0$
+\end_inset
+
+ for 
+\begin_inset Formula $q\in[0,1)$
+\end_inset
+
+ when 
+\begin_inset Formula $\Sing\neq\emptyset$
+\end_inset
+
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1132,6 +1085,36 @@ local stable leaf
 \end_inset
 
  are defined in the same manner 
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+\begin_inset Formula $v\in\Sing\iff K(\pi f_{t}v)<$
+\end_inset
+
+0 for some 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+ (by 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 3.3, 3.6"
+key "Eberlein:1973hu"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Rank 1 
+\begin_inset Formula $\iff g\geq2$
+\end_inset
+
+ for surface by D.
+ Burago (closed flat g=1 => conjugate point)
 \end_layout
 
 \begin_layout --Separator--
@@ -1773,6 +1756,61 @@ status open
 
 
 \backslash
+item
+\end_layout
+
+\end_inset
+
+
+\color green
+
+\begin_inset Formula $v\in\Sing\iff K(\pi f_{t}v)<0$
+\end_inset
+
+ for some 
+\begin_inset Formula $t\in\R$
+\end_inset
+
+ (by 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 3.3, 3.6"
+key "Eberlein:1973hu"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ Rank 1 
+\begin_inset Formula $\iff g\geq2$
+\end_inset
+
+ for surface by D.
+ Burago (closed flat g=1 => conjugate point)
+\end_layout
+
+\begin_layout Fact
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 end{enumerate}
 \end_layout
 
@@ -2068,7 +2106,14 @@ cite{BCFT2017}, Lemma 2.9]
 
 \end_inset
 
- Let 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:2.9"
+
+\end_inset
+
+Let 
 \begin_inset Formula $v\in T^{1}M$
 \end_inset
 
@@ -3646,6 +3691,131 @@ Let
 
 \end_layout
 
+\begin_layout Proof
+
+\color cyan
+Suppose not, i.e., 
+\begin_inset Formula ${\rm supp}(\mu)\nsubseteq\Sing$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is Borel, there exists an open set 
+\begin_inset Formula $U\subset T^{1}M$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mu(U)>0$
+\end_inset
+
+, 
+\begin_inset Formula $U\subset{\rm Reg}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda(v)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $\mu-a.e.$
+\end_inset
+
+ 
+\begin_inset Formula $v\in U$
+\end_inset
+
+.
+ We notice that since 
+\begin_inset Formula $U\subset{\rm Reg}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall v\in U$
+\end_inset
+
+ there exists 
+\begin_inset Formula $t_{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lambda(f_{t_{v}}v)>0$
+\end_inset
+
+ (otherwise 
+\begin_inset Formula $v\in\Sing$
+\end_inset
+
+ by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:lamb_T_and_sing"
+
+\end_inset
+
+).
+ By the continuity of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, there exists a neighborhood 
+\begin_inset Formula $N_{t_{v}}$
+\end_inset
+
+ of 
+\begin_inset Formula $f_{t_{v}}v$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left.\lambda\right|_{N_{t_{v}}}>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+Moreover, 
+\begin_inset Formula 
+\[
+U\subset\bigcup_{v\in U}f_{-t_{v}}(N_{t_{v}}),
+\]
+
+\end_inset
+
+and because 
+\begin_inset Formula $\mu(U)>0,$
+\end_inset
+
+ we know there exists a 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mu(f_{-t_{v_{0}}}(N_{t_{v_{0}}}))>0$
+\end_inset
+
+.
+ Moreover, since 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is invariant we know 
+\begin_inset Formula $\mu(N_{t_{v_{0}}})>0$
+\end_inset
+
+, which leads to a contradiction (because 
+\begin_inset Formula $\left.\lambda\right|_{N_{t_{v_{0}}}}>0)$
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -4909,12 +5079,9 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Lemma 7.3
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:holder_bowen_unstable_stable"
 
 \end_inset
 
@@ -4995,12 +5162,9 @@ reference "lem:312"
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Lemma 7.4
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Bowen_stable_unstable_all"
 
 \end_inset
 
@@ -5263,6 +5427,28 @@ If
 
  for any 
 \begin_inset Formula $\eta>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+It follows Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:holder_bowen_unstable_stable"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Bowen_stable_unstable_all"
+
 \end_inset
 
 .
@@ -5752,6 +5938,24 @@ The geometric potential
 
 \end_layout
 
+\begin_layout Proof
+It follows from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:77"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:710711"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -5812,7 +6016,7 @@ P({\cal C},\vp)\leq\sup_{\mu\in{\cal M}({\cal C})}P_{\mu}(\vp)
 \end_inset
 
  where 
-\begin_inset Formula $P_{\mu}(\vp)=h_{\mu}+\int\mu d\mu$
+\begin_inset Formula $P_{\mu}(\vp)=h_{\mu}+\int\vp d\mu$
 \end_inset
 
 .
@@ -6537,7 +6741,14 @@ key "BCFT2017"
 
 \begin_layout Lemma
 
-\color red
+\color blue
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:6.2"
+
+\end_inset
+
+
 \begin_inset Argument 1
 status collapsed
 
@@ -6586,7 +6797,7 @@ Given
 
 \begin_layout Proof
 
-\color red
+\color blue
 The proof almost follows verbatim the proof of 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -6613,12 +6824,212 @@ reference "lem:39"
  
 \end_layout
 
-\begin_layout Standard
-Recall that a fixed 
-\begin_inset Formula $\delta>0$
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\color blue
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:fully_supported"
+
 \end_inset
 
+The unique equilibrium state 
+\begin_inset Formula $\mu_{\varphi}$
+\end_inset
+
+ is fully supported.
  
+\end_layout
+
+\begin_layout Proof
+
+\color blue
+We follow the same idea as in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 6.3"
+key "BCFT2017"
+
+\end_inset
+
+.
+ We prove that for 
+\begin_inset Formula ${\rm Reg}$
+\end_inset
+
+, a dense set in 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+, 
+\begin_inset Formula $\forall v\in{\rm Reg}$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall r>0$
+\end_inset
+
+ we have 
+\begin_inset Formula $\mu_{\vp}(B(v,r))>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+
+\color blue
+Since 
+\begin_inset Formula $v\in\text{Reg}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $t_{0}\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lambda(f_{t_{0}}v)>0$
+\end_inset
+
+.
+ For convenience, let's denote 
+\begin_inset Formula $v'=f_{t_{0}}v$
+\end_inset
+
+.
+ By the continuous of 
+\begin_inset Formula $\lambda,$
+\end_inset
+
+ there exists a neighborhood 
+\begin_inset Formula $v'\in B(v',2\rho)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left.\lambda\right|_{B(v',2\rho)}>\eta$
+\end_inset
+
+ for some 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+, and we have 
+\begin_inset Formula $v'\in{\rm Reg}_{T}(\eta)$
+\end_inset
+
+.
+ By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:6.2"
+
+\end_inset
+
+, there exists 
+\begin_inset Formula $\eta_{0}>0$
+\end_inset
+
+ such that there is 
+\begin_inset Formula $w\in B(v',\rho)$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $(w,t)\in{\cal G}_{T}(\eta_{0})$
+\end_inset
+
+ for 
+\begin_inset Formula $t$
+\end_inset
+
+ big (depending on 
+\begin_inset Formula $\rho,\eta$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Proof
+
+\color blue
+Furthermore, the decomposition 
+\begin_inset Formula $({\cal B}_{T}(\eta_{0}),{\cal G}_{T}(\eta_{0}),{\cal \mathbf{S}}_{T}(\eta_{0}))$
+\end_inset
+
+ verifies Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+, thus by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:6.1"
+
+\end_inset
+
+ we know 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ satisfying the lower Gibbs property, i.e., 
+\begin_inset Formula 
+\[
+\mu_{\vp}(B(w',\rho))>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\color blue
+Last, by picking 
+\begin_inset Formula $\rho$
+\end_inset
+
+ small enough so that 
+\begin_inset Formula $f_{-t_{0}}B(v'\rho)\subset B(v,r)$
+\end_inset
+
+, and because 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ is flow invariant, we have 
+\begin_inset Formula 
+\[
+\mu_{\vp}(B(v,r))\geq\mu_{\vp}(B(v',2\rho))\geq\mu_{\vp}(B(w,\rho))>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Recall that 
 \end_layout
 
 \begin_layout Itemize
@@ -6641,12 +7052,12 @@ Recall that a fixed
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula ${\rm Per}(T-\delta,T)$
+\begin_inset Formula ${\rm Per}(T-1,T)$
 \end_inset
 
  the set of primitive periodic geometrically distinct geodesics of length
  in 
-\begin_inset Formula $[T-\delta,T)$
+\begin_inset Formula $[T-1,T)$
 \end_inset
 
  
@@ -6661,131 +7072,102 @@ Recall that a fixed
 \end_inset
 
  containing all regular geodesics of 
-\begin_inset Formula ${\rm Per(T)}$
+\begin_inset Formula ${\rm Per}(T)$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula ${\rm Per}(T-\delta,T,{\rm Reg})$
+\begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
 \end_inset
 
  is the subset of 
-\begin_inset Formula ${\rm Per}(T-\delta,T)$
+\begin_inset Formula ${\rm Per}(T-1,T)$
 \end_inset
 
  containing all regular geodesics of 
-\begin_inset Formula ${\rm Per}(T-\delta,T)$
+\begin_inset Formula ${\rm Per}(T-1,T)$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P_{Gur}(\varphi):={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T)}e^{\int_{\tau}\varphi}}$
+
+\color blue
+\begin_inset Formula $P_{Gur}(\varphi):={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T-1,T)}e^{\int_{\tau}\varphi}}$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P_{{\rm Reg}}^{*}(\varphi):={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T,{\rm Reg})}e^{\int_{\tau}\varphi}}$
+
+\color blue
+\begin_inset Formula $P_{{\rm Reg}}(\varphi):={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T-1,T,{\rm Reg})}e^{\int_{\tau}\varphi}}$
 \end_inset
 
  
 \end_layout
 
-\begin_layout Remark
-Notice that for any fixed 
-\begin_inset Formula $\delta>0$
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+
+\color blue
+Notice that when 
+\begin_inset Formula $P_{Gur}(\vp),P_{{\rm Reg}}(\vp)\geq0$
 \end_inset
 
  we have 
-\end_layout
+\begin_inset Formula 
+\begin{align*}
+P_{Gur}^{*}(\vp) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T)}e^{\int_{\tau}\varphi}}=P_{Gur}(\vp),\\
+P_{{\rm Reg}}^{*}(\varphi) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T,{\rm Reg})}e^{\int_{\tau}\varphi}=P_{{\rm Reg}}(\vp).}
+\end{align*}
 
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $P_{Gur}(\varphi)={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T-\delta,T)}e^{\int_{\tau}\varphi}}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $P_{{\rm Reg}}^{*}(\varphi)={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T-\delta,T,{\rm Reg})}e^{\int_{\tau}\varphi}}$
-\end_inset
-
+\begin_layout --Separator--
 
 \end_layout
 
-\end_deeper
 \begin_layout Remark
-It is a easy computation to show that when 
-\begin_inset Formula $P_{Gur}(\varphi)>0$
-\end_inset
 
- (respectively, 
-\begin_inset Formula $P_{{\rm Reg}}^{*}(\varphi)>0$
-\end_inset
-
-) the above two equalities hold.
- For general cases, recall that, for any 
-\begin_inset Formula $c\in\R$
-\end_inset
-
-, 
-\begin_inset Formula $P_{Gur}(\varphi+c)=P_{Gur}(\varphi)+c$
-\end_inset
-
- (same for 
-\begin_inset Formula $P_{{\rm Reg}}^{*}(\varphi)$
-\end_inset
-
-), thus pick 
-\begin_inset Formula $c\in\R$
-\end_inset
-
- so that 
-\begin_inset Formula $P_{Gur}(\varphi+c)>0$
-\end_inset
-
- (respectively, 
-\begin_inset Formula $P_{{\rm Reg}}^{*}(\varphi+c)>0$
-\end_inset
-
-) one can derive the equalities.
- Also, such 
+\color blue
+For any constant 
 \begin_inset Formula $c$
 \end_inset
 
- exists because 
-\begin_inset Formula $M$
+, we have for 
+\begin_inset Formula ${\cal P}(\cdot)=P_{Gur}(\cdot),P_{{\rm Reg}}(\cdot),P(\cdot),P({\cal G}^{M},\cdot)$
 \end_inset
 
- is compact, there exists 
-\begin_inset Formula $m$
-\end_inset
-
- such that 
-\begin_inset Formula $m\leq\varphi$
+ we have 
+\begin_inset Formula ${\cal P}(\vp+c)={\cal P}(\vp)+c$
 \end_inset
 
 .
- Thus we have 
-\begin_inset Formula $P_{Gur}(0)+m\leq P_{G}(\varphi)$
-\end_inset
-
- where 
-\begin_inset Formula $P_{Gur}(0)\geq0$
-\end_inset
-
- by definition (same for 
+ However, for 
 \begin_inset Formula $P_{{\rm Reg}}^{*}$
 \end_inset
 
-).
+ and 
+\begin_inset Formula $P_{Gur}^{*}$
+\end_inset
+
+ we don't necessary have this equality.
  
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout Standard
@@ -6809,7 +7191,7 @@ key "Gelfert:2014hn"
  ) proved that 
 \begin_inset Formula 
 \[
-P_{{\rm Reg}}^{*}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi).
+P_{{\rm Reg}}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi).
 \]
 
 \end_inset
@@ -6980,7 +7362,7 @@ For a compact rank one Riemannian manifold
  without focal points, we have 
 \begin_inset Formula 
 \[
-P_{{\rm Reg}}^{*}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi)
+P_{{\rm Reg}}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi)
 \]
 
 \end_inset
@@ -7012,38 +7394,19 @@ key "Pollicott:1996jq"
  
 \end_layout
 
-\begin_layout Standard
-
-\color green
-Assuming the above closing lemma, one has the following equidistribution
- result.
- We remark that the following two propositions generalize, partially, Theorem
- 1 and Corollary 1 of Amroun 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Amroun:2016uw"
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Proposition
+
+\color blue
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:pressure_match"
 
 \end_inset
 
-Let 
-\begin_inset Formula $\mu_{\vphi}$
-\end_inset
-
- be the unique equilibrium state given in Theorem A.
- Then 
+We have 
 \begin_inset Formula 
 \[
-P_{{\rm Reg}}^{*}(\vphi)=P(\varphi).
+P_{{\rm Reg}}(\vphi)=P(\varphi).
 \]
 
 \end_inset
@@ -7052,18 +7415,38 @@ P_{{\rm Reg}}^{*}(\vphi)=P(\varphi).
 \end_layout
 
 \begin_layout Proof
-The proof follows verbatim the proof of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BCFT2017"
 
+\color blue
+Since 
+\begin_inset Formula $P_{{\rm Reg}}(\vp+c)=P_{{\rm Reg}}(\vp)+c$
 \end_inset
 
-[Proposition 6.4].
+ and 
+\begin_inset Formula $P(\vp+c)=P(\vp)+c$
+\end_inset
+
+, w.o.l.g.
+ we may assume 
+\begin_inset Formula $P_{{\rm Reg}}(\vp),P(\vp)>0$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Proof
-More precisely, by Lemma 
+
+\color blue
+With the assumption 
+\begin_inset Formula $P_{{\rm Reg}}(\vp)>0$
+\end_inset
+
+ we have 
+\begin_inset Formula $P_{{\rm Reg}}(\vp)=P_{{\rm Reg}}^{*}(\vp)$
+\end_inset
+
+.
+ So, by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:6.1"
@@ -7090,7 +7473,7 @@ P(G^{M},\vphi)\leq P_{{\rm Reg}}^{*}(\vphi).
 
 \begin_layout Proof
 The see this, notice that for 
-\begin_inset Formula $(v,t)\in G^{M}$
+\begin_inset Formula $(v,t)\in{\cal G}^{M}$
 \end_inset
 
 , there exists 
@@ -7242,11 +7625,11 @@ In other words, for any
 \end_inset
 
 separated set 
-\begin_inset Formula $E\subset G_{t}^{M}:=\{(v,t)\in G^{M}\}$
+\begin_inset Formula $E\subset{\cal G}_{t}^{M}:=\{(v,t)\in{\cal G}^{M}\}$
 \end_inset
 
 , we have 
-\begin_inset Formula $E\subset{\rm Per}({\rm Reg},s+s(\ep'))$
+\begin_inset Formula $E\subset{\rm Per}(s+s(\ep'),{\rm Reg})$
 \end_inset
 
 .
@@ -7265,7 +7648,7 @@ separated set
 Thus we have 
 \begin_inset Formula 
 \[
-\limsup_{t\to\infty}\frac{1}{t}\log\Lambda(G^{M},\vphi,\delta,t)\leq P_{{\rm Reg}}^{*}(\vphi),
+\limsup_{t\to\infty}\frac{1}{t}\log\Lambda({\cal G}^{M},\vphi,\delta,t)\leq P_{{\rm Reg}}^{*}(\vphi),
 \]
 
 \end_inset
@@ -7273,7 +7656,7 @@ Thus we have
 and, hence, 
 \begin_inset Formula 
 \[
-P(G^{M},\vphi)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambda(G^{M},\vphi,\delta,t)\leq P_{{\rm Reg}}^{*}(\vphi).
+P({\cal G}^{M},\vphi)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambda({\cal G}^{M},\vphi,\delta,t)\leq P_{{\rm Reg}}^{*}(\vphi).
 \]
 
 \end_inset
@@ -7282,6 +7665,8 @@ P(G^{M},\vphi)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambda(G^{M}
 \end_layout
 
 \begin_layout Proposition
+
+\color blue
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:weight_average_regular_orbits"
@@ -7297,6 +7682,16 @@ The unique equilibrium state
 \end_inset
 
  limit of the weighted regular periodic orbits.
+ More precisely, 
+\begin_inset Formula 
+\[
+\mu_{\vp}=\lim_{T\to\infty}\frac{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}\delta_{\g}}{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}}
+\]
+
+\end_inset
+
+
+\color inherit
  
 \end_layout
 
@@ -7354,9 +7749,21 @@ separated set for
 \begin_inset Formula $\delta$
 \end_inset
 
- is small enoubth.
+ is small enough; hence, so is 
+\begin_inset Formula ${\rm Per}(T-1,T,\ {\rm Reg})$
+\end_inset
+
+.
  Although his setting was nonpositively curved manifolds, his proof works
- for the no focal points setting as well.
+ for the no focal points setting as well (because Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:geometric_conditions"
+
+\end_inset
+
+ implies each homotopy class only contains one geometrically distinct closed
+ geodesic).
 \end_layout
 
 \begin_layout Proof
@@ -7368,7 +7775,7 @@ reference "prop:pressure_match"
 \end_inset
 
  we have 
-\begin_inset Formula $P_{{\rm Reg}}^{*}(\varphi)=P(\varphi)$
+\begin_inset Formula $P_{{\rm Reg}}(\varphi)=P(\varphi)$
 \end_inset
 
 , thus the weak
@@ -7388,203 +7795,167 @@ reference "prop:pressure_match"
  
 \end_layout
 
-\begin_layout Proposition
-\begin_inset CommandInset label
-LatexCommand label
-name "prop:fully_supported"
+\begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Remark
+
+\color blue
+One can replace 
+\begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
 \end_inset
 
-The unique equilibrium state 
-\begin_inset Formula $\mu_{\varphi}$
+ by 
+\begin_inset Formula ${\rm Per}(T-\delta,T,{\rm Reg})$
 \end_inset
 
- is fully supported.
+ for any 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Proof
-\begin_inset Argument 1
-status collapsed
+\begin_layout --Separator--
 
-\begin_layout Plain Layout
-Proof.
- In words; will check and add more details soon
 \end_layout
 
-\end_inset
+\begin_layout --Separator--
 
-Since 
-\begin_inset Formula $\text{Reg}$
-\end_inset
-
- is dense (Keith), it suffice to show that any neighborhood around any 
-\begin_inset Formula $v\in\text{Reg}$
-\end_inset
-
- has positive 
-\begin_inset Formula $\mu_{\varphi}$
-\end_inset
-
- measure.
 \end_layout
 
-\begin_layout Proof
-Since 
-\begin_inset Formula $v\in\text{Reg}$
+\begin_layout Lemma
+
+\color cyan
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:0LE_implies_Sing"
+
 \end_inset
 
-, there exists 
-\begin_inset Formula $t\in\mathbb{R}$
+Let 
+\begin_inset Formula $\mu\in{\cal M}({\cal F})$
+\end_inset
+
+.
+ If for 
+\begin_inset Formula $\mu-$
+\end_inset
+
+a.e.
+ 
+\begin_inset Formula $v\in T^{1}S$
 \end_inset
 
  such that 
-\begin_inset Formula $\lambda(f_{t}v)>0$
+\begin_inset Formula $\chi^{+}(v)=0$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm supp}(\mu)\subset\Sing$
 \end_inset
 
 .
- Given be an arbitrary neighborhood 
-\begin_inset Formula $V$
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+We first recall that for 
+\begin_inset Formula $\xi\in T_{v}T^{1}M$
 \end_inset
 
- around 
+ we have 
+\begin_inset Formula $||J_{\xi}(t)||^{2}\leq||df_{t}\xi||^{2}\leq(1+\Lambda^{2})||J_{\xi}(t)||^{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mu\in{\cal M}({\cal F})$
+\end_inset
+
+ and w.l.o.g.
+ we may assume 
 \begin_inset Formula $v$
 \end_inset
 
-, we choose an open neighborhood 
-\begin_inset Formula $U$
+ is a Lyapunov regular vector, then for 
+\begin_inset Formula $\xi\in E_{v}^{u}$
 \end_inset
 
- around 
-\begin_inset Formula $w:=f_{t}v$
+ and suppose 
+\begin_inset Formula $\chi^{+}(v)=0$
 \end_inset
 
- contained in 
-\begin_inset Formula $f_{t}V$
+, then by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:2.9"
+
 \end_inset
 
-.
- By 
-\begin_inset Formula $f$
+ and the Birkhoff ergodic theorem 
+\begin_inset Formula 
+\begin{alignat*}{1}
+0 & =\chi^{+}(v)=\lim_{t\to\infty}\frac{1}{t}\log||df_{t}|_{E_{v}^{u}}||\\
+ & \geq\lim_{t\to\infty}\frac{1}{t}\log||J_{\xi}^{u}(t)||\\
+ & \geq\lim_{t\to\infty}\frac{1}{t}\log\left(e^{\int_{0}^{t}\lambda^{u}(f_{\tau}v)d\tau}||J_{\xi}^{u}(0)||\right)\\
+ & =\lim_{t\to\infty}\frac{1}{t}\int_{0}^{t}\lambda^{u}(f_{\tau}v)d\tau=\int\lambda^{u}(v)d\mu
+\end{alignat*}
+
 \end_inset
 
--invariance of 
-\begin_inset Formula $\mu_{\varphi}$
-\end_inset
-
-, it is sufficient to show that 
-\begin_inset Formula $U$
-\end_inset
-
- has positive 
-\begin_inset Formula $\mu_{\varphi}$
-\end_inset
-
- measure.
-\end_layout
-
-\begin_layout Proof
-
-\color red
-Lemma 6.1 from BCFT states that for any 
-\begin_inset Formula $\rho>0$
-\end_inset
-
- and 
-\begin_inset Formula $(v,t)\in G(\eta)$
-\end_inset
-
- [probably can replace to 
-\begin_inset Formula $G_{T}(\eta)$
+Therefore, 
+\begin_inset Formula $\lambda^{u}(v)=0$
 \end_inset
 
  for 
-\begin_inset Formula $T$
+\begin_inset Formula $\mu-a.e.$
 \end_inset
 
- fixed; will check before we next meet] with 
-\begin_inset Formula $t$
-\end_inset
-
- sufficiently large (depending on 
-\begin_inset Formula $\rho$
-\end_inset
-
-), then 
-\begin_inset Formula $\mu_{\varphi}(B(v,\rho))$
-\end_inset
-
- is positive.
- In particular, we would be done if we can show that for any open neighborhood
  
-\begin_inset Formula $U$
+\begin_inset Formula $v\in T^{1}S$
 \end_inset
 
- and any 
-\begin_inset Formula $w\in U$
+; hence, 
+\begin_inset Formula $\lambda(v)=0$
 \end_inset
 
- with 
-\begin_inset Formula $\lambda(w)>0$
+ for 
+\begin_inset Formula $\mu-a.e.$
 \end_inset
 
-, there exists 
-\begin_inset Formula $u\in U$
-\end_inset
-
-, 
-\begin_inset Formula $\eta_{0}>0$
-\end_inset
-
-, and 
-\begin_inset Formula $t$
-\end_inset
-
- sufficiently large (depending on 
-\begin_inset Formula $\eta_{0}$
-\end_inset
-
-) such that 
-\begin_inset Formula $(u,t)\in G_{T}(\eta_{0})$
-\end_inset
-
- and 
-\begin_inset Formula $B(u,\eta)\in U$
+ 
+\begin_inset Formula $v\in T^{1}S$
 \end_inset
 
 .
+ By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:supp_in_sing"
+
+\end_inset
+
+, we are done.
+ 
 \end_layout
 
-\begin_layout Proof
+\begin_deeper
+\begin_layout --Separator--
 
-\color red
-First, using continuity of 
-\begin_inset Formula $\lambda$
-\end_inset
+\end_layout
 
-, find 
-\begin_inset Formula $\tilde{\epsilon}>0$
-\end_inset
+\end_deeper
+\begin_layout --Separator--
 
- small such that 
-\begin_inset Formula $(u,\tilde{\epsilon})\in G_{T}(\eta/2)$
-\end_inset
-
-.
- Fix a good orbit (as in the specification argument) with some hyperbolicity,
- and start shadowing via specification; begin by 
-\begin_inset Formula $(u,\tilde{\epsilon})$
-\end_inset
-
-, and shadow the good orbit as many time as necessary to induce the hyperbolicit
-y from the good orbit onto the orbit constructed from the specification.
- Assuming the specification is performed at the scale small enough, this
- ensures that the new orbit is contained in 
-\begin_inset Formula $U$
-\end_inset
-
-, and has the desired property [detail to follow].
- This concludes the proof.
 \end_layout
 
 \begin_layout --Separator--
@@ -7592,6 +7963,8 @@ y from the good orbit onto the orbit constructed from the specification.
 \end_layout
 
 \begin_layout Proposition
+
+\color cyan
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:Bernoulli"
@@ -7606,21 +7979,76 @@ The unique equilibrium state
 \end_layout
 
 \begin_layout Proof
-A consequence of a result by Ledrappier, Lima, and Sarig 
+
+\color cyan
+By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:0LE_implies_Sing"
+
+\end_inset
+
+, we know if 
+\begin_inset Formula $\mu({\rm Reg})=1$
+\end_inset
+
+ then 
+\begin_inset Formula $\chi^{+}(\mu):=\int\chi^{+}(v)d\mu>0$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is hyperbolic.
+ Therefore, by Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:full_measure"
+
+\end_inset
+
+, we know that 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ is a hyperbolic measure, and by results in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Ledrappier:2016cn"
 
 \end_inset
 
- (also see section 9 
+, we have 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ is Bernoulli.
+ One remark that in Ledrappier-Lima-Sarig 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "BCFT2017"
+key "Ledrappier:2016cn"
 
 \end_inset
 
- for some comments).
+ the theorem requires 
+\begin_inset Formula $h_{\mu}({\cal F})>0$
+\end_inset
+
+; nevertheless, it has been improved in Lima-Sarig 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 1.3"
+key "Lima:2014tc"
+
+\end_inset
+
+ that one only needs to check 
+\begin_inset Formula $\chi^{+}(\mu)>0$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -7639,6 +8067,32 @@ The proof of Theorem C and examples
 
 \end_layout
 
+\begin_layout Standard
+
+\color green
+Need to define
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+Lyapunov exponent 
+\begin_inset Formula $\chi(v)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+positive Lyapunov exponent 
+\begin_inset Formula $\chi^{+}(v)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -7653,51 +8107,135 @@ If
 \end_inset
 
  is a closed rank 1 surface without focal points, Then 
-\begin_inset Formula $P(q\varphi^{u})>0=P(\Sing,\varphi)$
+\begin_inset Formula $P(q\varphi^{u})>0=P(\Sing,\varphi^{u})$
 \end_inset
 
  for each 
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
+; in particular 
+\begin_inset Formula $h_{{\rm top}}(\Sing)=0$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Proof
-We know that the Lyapunov exponent 
-\begin_inset Formula $\chi^{+}(v)$
+
+\color cyan
+It is a classical result proved in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem, p.6"
+key "Burns:1983dw"
+
 \end_inset
 
- is the Birkhoff average of the function 
-\begin_inset Formula $-\varphi^{u}$
+ that 
+\begin_inset Formula $\mu_{L}({\rm Reg})>0$
 \end_inset
 
-, therefore by Birkhoff Ergodic Theorem and Pesin entropy formula 
-\color red
-(cf.
- Pesin's paper Characteristic Lyapounov exponents....[add to ref])
-\color inherit
-: 
+.
+ Thus by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:0LE_implies_Sing"
+
+\end_inset
+
+ we get
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
 \begin_inset Formula 
 \[
-h_{\mu_{L}}=\int_{T^{1}M}\chi^{+}(v)d\mu_{L}=-\int_{T^{1}M}\varphi^{u}d\mu_{L}>0
+0<\chi^{+}(\mu_{L})=\int_{T^{1}M}\chi^{+}(v)d\mu_{L}=-\int_{T^{1}M}\varphi^{u}d\mu_{L}.
 \]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+Moreover, by Pesin's entropy formula, we have 
+\begin_inset Formula 
+\[
+h_{\mu_{L}}({\cal F})=\int_{T^{1}M}\chi^{+}(v)d\mu_{L}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
 Thus for 
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
- we have 
+ 
 \begin_inset Formula 
 \[
-P(q\varphi^{u})\geq h_{\mu_{L}}+\int q\varphi^{u}d\mu_{L}=(q-1)\int\varphi^{u}d\mu_{L}>0.
+P(q\varphi^{u})\geq h_{\mu_{L}}({\cal F})+\int q\varphi^{u}d\mu_{L}=(q-1)\int\varphi^{u}d\mu_{L}>0.
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\color cyan
+Claim: 
+\begin_inset Formula $P({\rm Sing},\vp^{u})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+pf.
+ for any 
+\begin_inset Formula $\mu\in{\cal M}(\Sing)$
+\end_inset
+
+, 
+\begin_inset Formula $P_{\mu}(\vp^{u}):=h_{\mu}({\cal F})+\int_{T^{1}M}\vp^{u}d\mu=h_{\mu}({\cal F})+\int_{\Sing}\vp^{u}d\mu=h_{\mu}({\cal F}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+By Ruelle's inequality we have 
+\begin_inset Formula $h_{\mu}({\cal F})\leq\int\chi^{+}(v)d\mu=0$
+\end_inset
+
+ (because 
+\begin_inset Formula $\left.\chi^{+}\right|_{\Sing}=0$
+\end_inset
+
+).
+ Therefore, 
+\begin_inset Formula $P(\Sing,\vp^{u})=\sup_{\mu\in{\cal M}(\Sing)}P_{\mu}(\vp^{u})=0$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -7754,8 +8292,21 @@ If
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
+; 
+\color cyan
+and 
+\begin_inset Formula $P(q\vp^{u})=0$
+\end_inset
+
+ for 
+\begin_inset Formula $q\in[1,\infty)$
+\end_inset
+
+ when 
+\begin_inset Formula $\Sing\neq\emptyset$
+\end_inset
+
 .
- 
 \end_layout
 
 \begin_layout --Separator--
@@ -7763,6 +8314,8 @@ If
 \end_layout
 
 \begin_layout Proof
+
+\color cyan
 By the above lemma, Theorem A, and Theorem B, it remains to show 
 \begin_inset Formula $q\mapsto P(q\vp^{u})$
 \end_inset
@@ -7775,88 +8328,157 @@ By the above lemma, Theorem A, and Theorem B, it remains to show
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
-.
- Notice that 
-\begin_inset Formula $h_{\text{top}}(\text{Sing})=0$
+ and 
+\begin_inset Formula $P(q\vp^{u})=0$
 \end_inset
 
- (Gelfert-Ruggiero) and 
-\begin_inset Formula $\varphi^{u}\equiv0$
+ for 
+\begin_inset Formula $q\geq1$
 \end_inset
 
- on 
-\begin_inset Formula $\text{Sing}$
-\end_inset
-
-, so 
-\begin_inset Formula $P(\text{Sing},q\varphi^{u})=0$
-\end_inset
-
- for all 
-\begin_inset Formula $q\in\mathbb{R}$
+ when 
+\begin_inset Formula $\Sing\neq\emptyset$
 \end_inset
 
 .
- Upper semicontinuity of entropy gap is guaranteed by Entropy-expansiveness
- of geodesic flow 
-\begin_inset Formula ${\cal F}$
+ We first notice that when 
+\begin_inset Formula $\Sing\neq\emptyset$
 \end_inset
 
- (cf.
- Liu-Wang 
+, we have 
+\begin_inset Formula $P(q\vp^{u})\geq0$
+\end_inset
+
+ because pick any invariant measure 
+\begin_inset Formula $\mu$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\rm supp}(\mu)\subset\Sing$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+h_{\mu}({\cal F})+\int_{T^{1}M}\vp^{u}d\mu=h_{\mu}({\cal F})+\int_{\Sing}\vp^{u}d\mu\geq0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+Moreover, we know the positive Lyapunov exponent 
+\begin_inset Formula $\chi^{+}$
+\end_inset
+
+ is the Birkhoff average of 
+\begin_inset Formula $-\vp^{u}$
+\end_inset
+
+; thus together with Ruelle's inequality we have for any invariant measure
+ 
+\begin_inset Formula $\nu\in{\cal M}({\cal F})$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+h_{\nu}({\cal F})\leq\int_{T^{1}M}\chi^{+}(v)d\nu
+\]
+
+\end_inset
+
+and for 
+\begin_inset Formula $q\geq1$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+h_{\nu}({\cal F})+\int\vp^{u}d\nu & =\underset{\leq0}{\underbrace{h_{\nu}({\cal F})-\int_{T^{1}M}\chi^{+}(v)d\nu}}\\
+ & \geq h_{\nu}({\cal F})-q\int_{T^{1}M}\chi^{+}(v)d\nu\\
+ & =h_{\nu}({\cal F})+q\int_{T^{1}M}\vp^{u}d\nu
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\color cyan
+Therefore, we have for 
+\begin_inset Formula $q\geq1$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+P(q\vp^{u})=\sup\{h_{\nu}({\cal F})+q\int_{T^{1}M}\vp^{u}d\nu:\ {\cal \nu\in{\cal M}}({\cal F})\}\leq0;
+\]
+
+\end_inset
+
+hence we have 
+\begin_inset Formula $P(q\vp^{u})=0$
+\end_inset
+
+ for 
+\begin_inset Formula $q\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Lastly, Liu-Wang 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Liu:2016de"
 
 \end_inset
 
-).
-
-\color red
- The remaining part is similar to BCFT.
- [finish it] 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Fact
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Corollary 6.12 
+ proved that the geodesic flow is entropy expansive for manifolds without
+ conjugates points.
+ So by Walters 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Gelfert:2017tx"
+key "Walters:1992et"
 
 \end_inset
 
-
-\end_layout
-
+, we know that 
+\begin_inset Formula $q\mapsto P(q\vp^{u})$
 \end_inset
 
-Let 
-\begin_inset Formula $M$
+ is 
+\begin_inset Formula $C^{1}$
 \end_inset
 
- be a closed surface without focal points and 
-\begin_inset Formula ${\mathcal{F}}=(f_{t})_{t\in\mathbb{R}}$
+ at where 
+\begin_inset Formula $q\vp^{u}$
 \end_inset
 
- be the geodesic flow on 
-\begin_inset Formula $T^{1}M$
+ has a unique equilibrium state.
+ In particular, we know 
+\begin_inset Formula $q\mapsto P(q\vp^{u})$
 \end_inset
 
-.
- Then 
-\begin_inset Formula $h_{top}({\mathcal{F}})>0=h_{top}({\rm Sing)}$
+ for 
+\begin_inset Formula $q<1$
 \end_inset
 
 .
  
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout --Separator--
@@ -7883,7 +8505,7 @@ key "BCFT2017"
  If 
 \begin_inset Formula 
 \[
-\sup_{v\in{\rm Sing}}\varphi(v)-\inf_{v\in T^{1}M}\varphi(v)<h_{top}(\mathcal{F})-h_{top}({\rm Sing})
+\sup_{v\in{\rm Sing}}\varphi(v)-\inf_{v\in T^{1}M}\varphi(v)<h_{{\rm top}}(\mathcal{F})
 \]
 
 \end_inset
@@ -7896,7 +8518,28 @@ key "BCFT2017"
  In particular, constant functions have the pressure gap property.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Proof
+It follows from the variational principle.
+ More precisely, 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sup_{v\in{\rm Sing}}\varphi(v)-\inf_{v\in T^{1}M}\varphi(v) & <h_{{\rm top}}(\mathcal{F})-\underset{=0}{\underbrace{h_{{\rm top}}({\rm Sing})}}\\
+\iff\sup_{v\in{\rm Sing}}\varphi(v)+h_{{\rm top}}(\Sing) & <h_{{\rm top}}(\mathcal{F})+\inf_{v\in T^{1}M}\varphi(v)
+\end{alignat*}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+P(\Sing,\vp)\leq h_{{\rm top}}(\Sing)+\sup_{v\in{\rm Sing}}\varphi(v)<h_{{\rm top}}(\mathcal{F})+\inf_{v\in T^{1}M}\varphi(v)\leq P(\vp).
+\]
+
+\end_inset
+
 
 \end_layout
 
