@@ -3784,7 +3784,11 @@ Moreover, there exists
 \end_inset
 
 ; hence 
-\begin_inset Formula $0=\mu(B(v,r))=\mu(f_{-t_{0}}(B(f_{t_{0}}v,r_{0})))=\mu(B(f_{t_{0}}v,r_{0})),$
+\begin_inset Formula 
+\[
+0=\mu(B(v,r))=\mu(f_{-t_{0}}(B(f_{t_{0}}v,r_{0})))=\mu(B(f_{t_{0}}v,r_{0})),
+\]
+
 \end_inset
 
  which leads a contradiction because 
