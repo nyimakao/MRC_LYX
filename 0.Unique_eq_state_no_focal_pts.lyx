@@ -3703,20 +3703,20 @@ Suppose not, i.e.,
 \begin_inset Formula $\mu$
 \end_inset
 
- is Borel, there exists an open set 
-\begin_inset Formula $U\subset T^{1}M$
+ is Borel, there exists 
+\begin_inset Formula $v\in{\rm Reg}$
 \end_inset
 
- such that 
-\begin_inset Formula $\mu(U)>0$
+ such that for all 
+\begin_inset Formula $r>0$
 \end_inset
 
-, 
-\begin_inset Formula $U\subset{\rm Reg}$
+ 
+\begin_inset Formula $\mu(B(v,r))>0$
 \end_inset
 
  and 
-\begin_inset Formula $\lambda(v)=0$
+\begin_inset Formula $\lambda(w)=0$
 \end_inset
 
  for 
@@ -3724,24 +3724,20 @@ Suppose not, i.e.,
 \end_inset
 
  
-\begin_inset Formula $v\in U$
+\begin_inset Formula $w\in B(v,r)$
 \end_inset
 
 .
  We notice that since 
-\begin_inset Formula $U\subset{\rm Reg}$
-\end_inset
-
-, 
-\begin_inset Formula $\forall v\in U$
+\begin_inset Formula $v\in{\rm Reg}$
 \end_inset
 
  there exists 
-\begin_inset Formula $t_{v}$
+\begin_inset Formula $t_{0}$
 \end_inset
 
  such that 
-\begin_inset Formula $\lambda(f_{t_{v}}v)>0$
+\begin_inset Formula $\lambda(f_{t_{0}}v)>0$
 \end_inset
 
  (otherwise 
@@ -3761,15 +3757,15 @@ reference "lem:lamb_T_and_sing"
 \end_inset
 
 , there exists a neighborhood 
-\begin_inset Formula $N_{t_{v}}$
+\begin_inset Formula $B(f_{t_{0}}v,r_{0})$
 \end_inset
 
  of 
-\begin_inset Formula $f_{t_{v}}v$
+\begin_inset Formula $f_{t_{0}}v$
 \end_inset
 
  such that 
-\begin_inset Formula $\left.\lambda\right|_{N_{t_{v}}}>0$
+\begin_inset Formula $\left.\lambda\right|_{B(f_{t_{0}}v,r_{0})}>0$
 \end_inset
 
 .
@@ -3779,37 +3775,24 @@ reference "lem:lamb_T_and_sing"
 \begin_layout Proof
 
 \color cyan
-Moreover, 
+Moreover, there exists 
+\begin_inset Formula $r>0$
+\end_inset
+
+ such 
+\begin_inset Formula $B(v,r)\supset f_{-t_{0}}(B(f_{t_{0}}v,r_{0}))$
+\end_inset
+
+; hence 
 \begin_inset Formula 
 \[
-U\subset\bigcup_{v\in U}f_{-t_{v}}(N_{t_{v}}),
+0=\mu(B(v,r))=\mu(f_{-t_{0}}(B(f_{t_{0}}v,r_{0})))=\mu(B(f_{t_{0}}v,r_{0})),
 \]
 
 \end_inset
 
-and because 
-\begin_inset Formula $\mu(U)>0,$
-\end_inset
-
- we know there exists a 
-\begin_inset Formula $v_{0}$
-\end_inset
-
- such that 
-\begin_inset Formula $\mu(f_{-t_{v_{0}}}(N_{t_{v_{0}}}))>0$
-\end_inset
-
-.
- Moreover, since 
-\begin_inset Formula $\mu$
-\end_inset
-
- is invariant we know 
-\begin_inset Formula $\mu(N_{t_{v_{0}}})>0$
-\end_inset
-
-, which leads to a contradiction (because 
-\begin_inset Formula $\left.\lambda\right|_{N_{t_{v_{0}}}}>0)$
+ which leads a contradiction because 
+\begin_inset Formula $\left.\lambda\right|_{B(f_{t_{0}}v,r_{0})}>0$
 \end_inset
 
 .
@@ -6016,7 +5999,7 @@ P({\cal C},\vp)\leq\sup_{\mu\in{\cal M}({\cal C})}P_{\mu}(\vp)
 \end_inset
 
  where 
-\begin_inset Formula $P_{\mu}(\vp)=h_{\mu}+\int\mbox{\vp}d\mu$
+\begin_inset Formula $P_{\mu}(\vp)=h_{\mu}+\int\vp d\mu$
 \end_inset
 
 .
@@ -6471,6 +6454,10 @@ reference "thm:C-T_criteria"
 
 \begin_layout Section
 Properties of the equilibrium states and the proof of Theorem B
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout --Separator--
@@ -7826,6 +7813,40 @@ One can replace
 
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+
+\color green
+Recall
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+Lyapunov exponent 
+\begin_inset Formula $\chi(v)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color green
+positive Lyapunov exponent 
+\begin_inset Formula $\chi^{+}(v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Lemma
 
 \color cyan
@@ -8060,36 +8081,6 @@ The proof of Theorem C and examples
 \end_layout
 
 \begin_layout --Separator--
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Standard
-
-\color green
-Need to define
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-Lyapunov exponent 
-\begin_inset Formula $\chi(v)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-positive Lyapunov exponent 
-\begin_inset Formula $\chi^{+}(v)$
-\end_inset
-
 
 \end_layout
 
