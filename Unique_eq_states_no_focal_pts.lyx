@@ -228,10 +228,6 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout --Separator--
-
-\end_layout
-
 \begin_layout Section
 Introduction
 \end_layout
@@ -246,7 +242,7 @@ This paper is devoted to
 
 \begin_layout Standard
 The outline of this paper is as follows.
- In Section...........................
+ In Section..
 \end_layout
 
 \begin_layout --Separator--
@@ -1087,10 +1083,11 @@ local stable leaf
  are defined in the same manner 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 
 \color green
-\begin_inset Formula $v\in\Sing\iff K(\pi f_{t}v)<$
+\begin_inset Formula $v\in{\rm Reg}\iff K(\pi f_{t}v)<$
 \end_inset
 
 0 for some 
