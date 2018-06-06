@@ -442,20 +442,8 @@ Need To Define
 \begin_layout Itemize
 
 \color green
-\begin_inset Formula $S$
-\end_inset
-
- is a closed surface genus bigger than 1 without focal points.
+focal points.
  
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula $f_{t}:T^{1}S\to T^{1}S$
-\end_inset
-
- is the geodesic flow.
 \end_layout
 
 \begin_layout Itemize
@@ -487,15 +475,6 @@ Regular set
 \begin_layout Itemize
 
 \color green
-\begin_inset Formula $X$
-\end_inset
-
- a compact metric space.
-\end_layout
-
-\begin_layout Itemize
-
-\color green
 geometric potential 
 \begin_inset Formula $\varphi^{u}(v):=-\lim_{t\to\infty}\frac{1}{t}{\displaystyle \log\det(}\left.df_{t}\right|_{E^{u}(v)})$
 \end_inset
@@ -512,7 +491,48 @@ geometric potential
 \end_layout
 
 \begin_layout Standard
-This paper is devoted to 
+This paper is devoted to
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Throughout the paper, 
+\begin_inset Formula $S=(S,g)$
+\end_inset
+
+ will be a closed (i.e., compact without boundary) 
+\begin_inset Formula $C^{\infty}$
+\end_inset
+
+ Riemannian surface genus bigger than one without focal points (see Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Preliminaries-of-geometry"
+
+\end_inset
+
+ for definition).
+ We will denote the geodesics flow over the unit tangent bundle 
+\begin_inset Formula $T^{1}S$
+\end_inset
+
+ by 
+\begin_inset Formula ${\cal F}=(f_{t})_{t\in R}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout --Separator--
@@ -645,7 +665,7 @@ Suppose
 \begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
 \end_inset
 
-, Bernoulli, and is the weak
+, Bernoulli, and the weak
 \begin_inset Formula $^{*}$
 \end_inset
 
@@ -723,7 +743,7 @@ With the same
 \begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
 \end_inset
 
-, Bernoulli, and is the weak
+, Bernoulli, and the weak
 \begin_inset Formula $^{*}$
 \end_inset
 
@@ -1051,6 +1071,13 @@ Then
 
 \begin_layout Section
 Preliminaries of surfaces without focal points
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Preliminaries-of-geometry"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -1067,39 +1094,7 @@ Need To Define
 
 \color green
 Jacobi fields and foliations 
-\begin_inset Formula ${\cal J}^{s},{\cal J}^{u},E^{u},E^{s},E^{cu},E^{cs},W^{u},W^{s},W^{cu},W^{cs}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-Horoshperes 
-\begin_inset Formula $H^{s}(v):=\pi W^{s}(v)$
-\end_inset
-
- and 
-\begin_inset Formula $H^{u}(v):=\pi W^{u}(v)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula ${\cal U}^{s},{\cal U}^{u}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula $\lambda$
+\begin_inset Formula $,E^{cu},E^{cs},W^{cu},W^{cs}$
 \end_inset
 
 
@@ -1116,16 +1111,6 @@ Horoshperes
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-Busemann function 
-\begin_inset Formula $b_{v}(x):={\displaystyle \lim_{t\to\infty}d(x,\gamma_{v}(t))-t}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -1247,35 +1232,6 @@ local stable leaf
  are defined in the same manner,
 \end_layout
 
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula $v\in{\rm Reg}\iff K(\pi f_{t}v)<$
-\end_inset
-
-0 for some 
-\begin_inset Formula $t\in\R$
-\end_inset
-
- (by 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Corollary 3.3, 3.6"
-key "Eberlein:1973hu"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Itemize
-Rank 1 
-\begin_inset Formula $\iff g\geq2$
-\end_inset
-
- for surface by Hopf 
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -1328,24 +1284,178 @@ Surfaces without focal points
 
 \end_layout
 
-\begin_layout Fact
-\begin_inset ERT
-status open
+\begin_layout --Separator--
 
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{Eschenburg:1977kn,Pesin:1977vi}]
 \end_layout
 
+\begin_layout Standard
+In this section, we recall relevant results in our setting, and most result
+ can be found in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Eberlein:1973hu,Pesin:1977vi,Eschenburg:1977kn,Burns:1983dw"
+
 \end_inset
 
+.
+\end_layout
 
-\begin_inset Formula $\ $
+\begin_layout Standard
+Throughout this section 
+\begin_inset Formula $S$
 \end_inset
 
+ denote a closed 
+\begin_inset Formula $C^{\infty}$
+\end_inset
+
+ Riemannian surface of genus bigger than one.
+ The 
+\shape italic
+geodesics flow
+\shape default
  
+\begin_inset Formula ${\cal F}=(f_{t})_{t\in\R}$
+\end_inset
+
+ over the tangent bundle 
+\begin_inset Formula $T^{1}S$
+\end_inset
+
+ is the flow given by 
+\begin_inset Formula $f_{t}(v)=\dot{\g}_{v}(t)$
+\end_inset
+
+ where 
+\begin_inset Formula $\gamma_{v}$
+\end_inset
+
+ is the (unit speed) geodesics determined by the initial vector 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+, that is, 
+\begin_inset Formula $\dot{\g}_{v}(0)=v$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A 
+\shape italic
+Jacobi field
+\shape default
+ 
+\begin_inset Formula $J(t)$
+\end_inset
+
+ along a geodesic 
+\begin_inset Formula $\g$
+\end_inset
+
+ is a vector field along 
+\begin_inset Formula $\g$
+\end_inset
+
+ which satisfies the following Jacobi equation 
+\begin_inset Formula 
+\[
+J''(t)+K(\g(t))\dot{\g}(t)=0
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $K$
+\end_inset
+
+ is the Gaussian curvature and 
+\begin_inset Formula $'$
+\end_inset
+
+ denotes the covariant derivative along 
+\begin_inset Formula $\g$
+\end_inset
+
+.
+ A Jacobi field is called 
+\shape italic
+orthogonal
+\shape default
+ if both 
+\begin_inset Formula $J$
+\end_inset
+
+ and 
+\begin_inset Formula $J'$
+\end_inset
+
+ are orthogonal to 
+\begin_inset Formula $\dot{\g}$
+\end_inset
+
+ at some 
+\begin_inset Formula $t_{0}\in\R$
+\end_inset
+
+ (and hence for all 
+\begin_inset Formula $t\in\R)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+A Riemannian surface 
+\begin_inset Formula $S$
+\end_inset
+
+ has 
+\shape italic
+no focal points
+\shape default
+ if for any initial vanishing orthogonal Jacobi field 
+\begin_inset Formula $J(t)$
+\end_inset
+
+, its length 
+\begin_inset Formula $\left\Vert J(t)\right\Vert $
+\end_inset
+
+ is strictly increasing.
+ We say 
+\begin_inset Formula $S$
+\end_inset
+
+ has
+\shape italic
+ no conjugate points
+\shape default
+ if any non-zero Jacobi field has at most one zero.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+There are other equivalent definitions for surface/manifolds without focal
+ points, and many geometric features are introduced in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doCarmo:2013tg"
+
+\end_inset
+
+.
+ The following results are classical and relevant in our setting: 
 \begin_inset ERT
 status open
 
@@ -1374,7 +1484,337 @@ normalfont]
  
 \end_layout
 
-\begin_layout Fact
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ Nonpositively curved 
+\begin_inset Formula $\subsetneq$
+\end_inset
+
+ no focal points
+\end_layout
+
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ No focal points 
+\begin_inset Formula $\subsetneq$
+\end_inset
+
+ no conjugate points
+\end_layout
+
+\begin_layout Remark
+....
+\end_layout
+
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+The 
+\shape italic
+rank
+\shape default
+ of a vector 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+ is the dimension of the space of parallel orthogonal Jacobi fields.
+ We call 
+\begin_inset Formula $S$
+\end_inset
+
+ is a 
+\shape italic
+rank 1
+\shape default
+ surface if it has at least one rank 1 vector.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+The 
+\shape italic
+singular set
+\shape default
+ 
+\begin_inset Formula $\Sing\subset T^{1}S$
+\end_inset
+
+ is the set of rank 2 vectors.
+ The 
+\shape italic
+regular set
+\shape default
+ 
+\begin_inset Formula $\Reg$
+\end_inset
+
+ is the complement of 
+\begin_inset Formula $\Sing.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+It is a classical result that one can identify the tangent space of 
+\begin_inset Formula $T^{1}S$
+\end_inset
+
+ with the space of orthogonal Jacobi fields 
+\begin_inset Formula ${\cal J}$
+\end_inset
+
+.
+ Moreover, one can use this relation to define three 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ invariant bundles 
+\begin_inset Formula $E^{u},E^{c},$
+\end_inset
+
+ and 
+\begin_inset Formula $E^{s}$
+\end_inset
+
+ on 
+\begin_inset Formula $TT^{1}S$
+\end_inset
+
+.
+ To be more precise, let us denote 
+\begin_inset Formula ${\cal J}(\g)$
+\end_inset
+
+ the space of space of orthogonal Jacobi fields along a geodesics 
+\begin_inset Formula $\g$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+, the identification between 
+\begin_inset Formula $T_{v}T^{1}S$
+\end_inset
+
+ and 
+\begin_inset Formula ${\cal J}(\g_{v})$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+T_{v}T^{1}S\ni\xi\mapsto J_{\xi}\in{\cal J}(\g_{v})
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $J_{\xi}$
+\end_inset
+
+ is the Jacobi field determined by the initial data 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ Moreover, we have 
+\begin_inset Formula 
+\[
+\left\Vert df_{t}(\xi)\right\Vert ^{2}=\left\Vert J_{\xi}(t)\right\Vert ^{2}+\left\Vert J'_{\xi}(t)\right\Vert ^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We define 
+\begin_inset Formula ${\cal J}^{s}(\g)$
+\end_inset
+
+ to be the space of 
+\shape italic
+stable (orthogonal) Jacobi fields
+\shape default
+ as 
+\begin_inset Formula 
+\[
+{\cal J}^{s}(\g)=\{J(t)\in{\cal J}(v):\ \left\Vert J(t)\right\Vert \ {\rm is}\ {\rm bounded\ for}\ t\geq0\},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula ${\cal J}^{u}(\g)$
+\end_inset
+
+ to be the space of 
+\shape italic
+unstable (orthogonal) Jacobi fields
+\shape default
+ as 
+\begin_inset Formula 
+\[
+{\cal J}^{s}(\g)=\{J(t)\in{\cal J}(v):\ \left\Vert J(t)\right\Vert \ {\rm is}\ {\rm bounded\ for}\ t\leq0\}.
+\]
+
+\end_inset
+
+Using these two linear space of 
+\begin_inset Formula ${\cal J}(\g)$
+\end_inset
+
+ and the identification, we can define two subbundles 
+\begin_inset Formula $E^{s}(v)$
+\end_inset
+
+ and 
+\begin_inset Formula $E^{u}(v)$
+\end_inset
+
+ of 
+\begin_inset Formula $T_{v}T^{1}S$
+\end_inset
+
+ as the following:
+\begin_inset Formula 
+\[
+E^{s}(v):=\{\xi\in T_{v}T^{1}S:\ J_{\xi}\in{\cal J}^{s}(v)\},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E^{u}(v):=\{\xi\in T_{v}T^{1}S:\ J_{\xi}\in{\cal J}^{u}(v)\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Last, we define the 
+\begin_inset Formula $E^{c}(v)$
+\end_inset
+
+ the be the bundle given by the flow direction.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+The following properties are classical for surfaces/manifolds without focal
+ points.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a Riemannian closed surfaces without focal points.
+ Then we have 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1404,11 +1844,11 @@ key "Pesin:1977vi"
 \end_inset
 
  
-\begin_inset Formula $T_{v}(T^{1}M)=E^{s}(v)\oplus E^{u}(v)\oplus E^{c}(v)$
+\begin_inset Formula $T_{v}(T^{1}S)=E^{s}(v)\oplus E^{u}(v)\oplus E^{c}(v)$
 \end_inset
 
 , 
-\begin_inset Formula $\dim E^{u}(v)=E^{s}(v)=n-1$
+\begin_inset Formula $\dim E^{u}(v)=\dim E^{s}(v)=1$
 \end_inset
 
 , and 
@@ -1419,7 +1859,7 @@ key "Pesin:1977vi"
  
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1467,7 +1907,7 @@ key "Pesin:1977vi"
  are flow invariant.
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1532,7 +1972,7 @@ key "Pesin:1977vi"
  
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1572,7 +2012,7 @@ key "Eschenburg:1977kn"
 .
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1580,127 +2020,44 @@ status open
 
 
 \backslash
-end{enumerate}
+item
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Remark
-Both Eschenburg 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Eschenburg:1977kn}
-\end_layout
-
+\begin_inset Formula ${\rm (}$
 \end_inset
 
- and Pesin 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Pesin:1977vi}
-\end_layout
-
-\end_inset
-
- proved that the stable foliation 
-\begin_inset Formula $E^{s}$
-\end_inset
-
- and unstable foliation 
-\begin_inset Formula $E^{u}$
-\end_inset
-
- are given by the stable and unstable Jacobi fields (as in Eberlein 
 \begin_inset CommandInset citation
 LatexCommand cite
+after "Corollary 3.3, 3.6"
 key "Eberlein:1973hu"
 
 \end_inset
 
-).
- In both work recalled above, they also showed when 
-\begin_inset Formula $S$
+
+\begin_inset Formula ${\rm )}$
 \end_inset
 
- has no focal points then 
-\begin_inset Formula $W^{s}(v)$
-\end_inset
-
- (resp.
  
-\begin_inset Formula $W^{u}(v)$
+\begin_inset Formula $v\in\Sing$
 \end_inset
 
-) is indeed the stable (resp.
- unstable) horoshpere on 
-\begin_inset Formula $T^{1}S$
+ if and only if 
+\begin_inset Formula $K(\pi f_{t}v)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\R$
 \end_inset
 
 .
- More precisely, 
-\begin_inset Formula 
-\[
-\widetilde{W^{s}}(v)=\{(x,-\nabla_{x}b_{v}^{+}):\ x\in H^{s}(v)\}\ {\rm and\ }\widetilde{W^{u}}(v)=\{(x,-\nabla_{x}b_{-v}):\ x\in H^{u}(v)\}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Remark
-
-\color cyan
-Above results also hold for manifolds (i.e., 
-\begin_inset Formula $\dim\geq2$
-\end_inset
-
-) without focal points.
  
 \end_layout
 
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Fact
-\begin_inset Formula $\ $
-\end_inset
-
-
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1708,28 +2065,27 @@ status open
 
 
 \backslash
-begin{enumerate}
+item
 \end_layout
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[font=
-\backslash
-normalfont]
-\end_layout
-
+ 
+\begin_inset Formula ${\rm (}$
 \end_inset
 
+Hopf ????
+\begin_inset Formula ${\rm )}$
+\end_inset
 
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ is rank 1 if and only if its genus is bigger than 1.
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1770,59 +2126,7 @@ cite{Hurley:1986km}
  is topologically transitive.
 \end_layout
 
-\begin_layout Fact
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $v\in\Reg\iff K(\pi f_{t}v)<0$
-\end_inset
-
- for some 
-\begin_inset Formula $t\in\R$
-\end_inset
-
- (by 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Corollary 3.3, 3.6"
-key "Eberlein:1973hu"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Fact
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\end_layout
-
-\end_inset
-
- Rank 1 
-\begin_inset Formula $\iff g\geq2$
-\end_inset
-
- for surface by Hopf)
-\end_layout
-
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1846,9 +2150,38 @@ end{enumerate}
 
 \end_layout
 
-\begin_layout Subsection
-A hyperbolicity index 
-\begin_inset Formula $\lambda$
+\begin_layout Standard
+Following the above property, one can define the 
+\shape italic
+stable horocycle
+\shape default
+ 
+\begin_inset Formula $H^{s}(v)\subset S$
+\end_inset
+
+ and the 
+\shape italic
+unstable horocycle
+\shape default
+ 
+\begin_inset Formula $H^{u}(v)\subset S$
+\end_inset
+
+ as 
+\begin_inset Formula $H^{s}(v)=\pi(W^{s}(v))$
+\end_inset
+
+ and 
+\begin_inset Formula $H^{u}(v)=\pi(W^{s}(v))$
+\end_inset
+
+ where 
+\begin_inset Formula $\pi:T^{1}S\to S$
+\end_inset
+
+ is the canonical projection.
+ We now summarize some useful properties of horocycles
+\begin_inset Quotes erd
 \end_inset
 
 
@@ -1858,24 +2191,34 @@ A hyperbolicity index
 
 \end_layout
 
-\begin_layout Fact
-\begin_inset ERT
-status open
+\begin_layout Standard
 
-\begin_layout Plain Layout
+\color green
+Need To Define: 
+\begin_inset Formula $k^{u}(v),k^{s}(v)$
+\end_inset
 
-[
-\backslash
-cite{Eschenburg:1977kn}]
+, and their relations 
+\begin_inset Formula $k^{u}(v)=k^{s}(-v)$
+\end_inset
+
+
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+Let 
+\begin_inset Formula $S$
 \end_inset
 
+ be a Riemannian closed surfaces without focal points.
+ Then we have
+\end_layout
 
-\begin_inset Formula $\ $
-\end_inset
-
- 
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1904,7 +2247,7 @@ normalfont]
  
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1933,6 +2276,8 @@ key "Eschenburg:1977kn"
 \begin_inset Formula ${\rm )}$
 \end_inset
 
+
+\color green
  The symmetric linear operator of 
 \begin_inset Formula ${\cal U}^{s}(v):T_{\pi v}H^{s}(v)\to T_{\pi v}H^{s}(v)$
 \end_inset
@@ -1958,14 +2303,9 @@ key "Eschenburg:1977kn"
 \end_inset
 
 .
- Moreover, we have 
-\begin_inset Formula ${\cal U}^{s}(v)=-\nabla_{v}\nabla b_{v}$
-\end_inset
-
-.
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -1990,10 +2330,16 @@ key "Eschenburg:1977kn"
 
 \end_inset
 
+
+\begin_inset Formula ${\rm )}$
+\end_inset
+
  
 \begin_inset Formula $H^{u}(v)$
 \end_inset
 
+
+\color green
 , 
 \begin_inset Formula $H^{s}(v)$
 \end_inset
@@ -2002,8 +2348,8 @@ key "Eschenburg:1977kn"
 \begin_inset Formula $C^{2}$
 \end_inset
 
--embedded hypersurface in 
-\begin_inset Formula $\widetilde{M}$
+-embedded convex curves in the universal covering 
+\begin_inset Formula $\widetilde{S}$
 \end_inset
 
 .
@@ -2018,7 +2364,7 @@ key "Eschenburg:1977kn"
  is negatively semidefinite.
 \end_layout
 
-\begin_layout Fact
+\begin_layout Proposition
 \begin_inset ERT
 status open
 
@@ -2031,6 +2377,60 @@ end{enumerate}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+
+\color green
+Need To Define distances 
+\begin_inset Formula $d_{K}$
+\end_inset
+
+ 
+\begin_inset Formula $d_{S}$
+\end_inset
+
+ 
+\begin_inset Formula $d^{s}$
+\end_inset
+
+ 
+\begin_inset Formula $d^{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+A hyperbolicity index 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
 
 \end_layout
 
@@ -2307,6 +2707,14 @@ Need To Define
 
 \color green
 \begin_inset Formula $\lt(v):=\min\{k_{T}^{s}(v),k_{T}^{u}(v)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+add Remark 
+\begin_inset Formula $\lambda_{T}(v)\geq\int_{-T}^{T}\lambda(f_{\tau}v)d\tau$
 \end_inset
 
 
@@ -2944,7 +3352,7 @@ item
 \end_inset
 
  
-\begin_inset Formula $\lambda^{u}(f_{t}v)=0$
+\begin_inset Formula $k^{u}(f_{t}v)=0$
 \end_inset
 
  for all 
@@ -2968,7 +3376,7 @@ item
 \end_inset
 
  
-\begin_inset Formula $\lambda^{v}(f_{t}v)=0$
+\begin_inset Formula $k^{v}(f_{t}v)=0$
 \end_inset
 
  for all 
@@ -3074,6 +3482,14 @@ To see
 \begin_inset Formula $(J_{\tau}^{u})^{'}(0)=0$
 \end_inset
 
+ where 
+\begin_inset Formula $P_{\tau}:T_{\pi v}H^{u}(v)\to T_{\pi f_{\tau}v}H^{u}(f_{\tau}v)$
+\end_inset
+
+ is the parallel transportation along 
+\begin_inset Formula $\g_{v}$
+\end_inset
+
 .
 \end_layout
 
@@ -3095,7 +3511,8 @@ Claim:
 \end_layout
 
 \begin_layout Proof
-We first recall that 
+pf.
+ We first recall that 
 \begin_inset Formula $J^{u}$
 \end_inset
 
@@ -3561,10 +3978,11 @@ Let
 \end_inset
 
  for 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\mu-$
 \end_inset
 
- almost every 
+a.e.
+ 
 \begin_inset Formula $v\in T^{1}S$
 \end_inset
 
@@ -3580,7 +3998,7 @@ Let
 \end_layout
 
 \begin_layout Proof
-Suppose not, i.e., 
+Suppose not, that is, 
 \begin_inset Formula ${\rm supp}(\mu)\nsubseteq\Sing$
 \end_inset
 
@@ -3593,11 +4011,11 @@ Suppose not, i.e.,
 \begin_inset Formula $v\in{\rm Reg}$
 \end_inset
 
- such that for all 
-\begin_inset Formula $r>0$
+ such that 
+\begin_inset Formula $\forall r>0$
 \end_inset
 
- 
+ we have 
 \begin_inset Formula $\mu(B(v,r))>0$
 \end_inset
 
@@ -3847,11 +4265,15 @@ reference "lem:3.8BCFT"
 
 \end_inset
 
-, we have 
+, because 
+\begin_inset Formula $v\in\gt(\eta)$
+\end_inset
+
+ we have 
 \begin_inset Formula 
 \begin{align*}
 d^{s}(f_{\tau}w,f_{\tau}w') & \leq d^{s}(w,w')e^{-\int_{0}^{\tau}\widetilde{k^{s}}(f_{\tau}v)d\tau}\leq d^{s}(w,w')e^{\frac{-1}{2T}\int_{0}^{\tau}\widetilde{k_{T}^{s}}(f_{\tau}v)d\tau}\\
- & \leq d^{s}(w,w')e^{\frac{-1}{2T}(\int_{0}^{\tau}k_{T}^{s}(f_{s}v)ds-\frac{\eta\tau}{2})} & \because v\in\gt(\eta)\\
+ & \leq d^{s}(w,w')e^{\frac{-1}{2T}(\int_{0}^{\tau}k_{T}^{s}(f_{s}v)ds-\frac{\eta\tau}{2})}\\
  & \leq d^{s}(w,w')e^{\frac{-\eta\tau}{2T}+\frac{\eta\tau}{4T}}=d^{s}(w,w')e^{\frac{-\eta\tau}{4T}}
 \end{align*}
 
@@ -4170,7 +4592,7 @@ d^{cs}(w_{2},[w_{1},w_{2}]) & \leq\k d_{K}(w_{1},w_{2}).
 
 \color green
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Closing Lemma; 
@@ -4731,16 +5153,6 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Prop 7.7
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:77"
@@ -5084,7 +5496,7 @@ Now we estimate
 \begin_inset Formula 
 \begin{eqnarray*}
 (U_{1}-U_{w}^{u})'(\tau) & = & -(U_{1}(\tau)-U_{w}^{u}(\tau))(U_{1}(\tau)+U_{w}^{u}(\tau))+K(f_{\tau}v)-K(f_{\tau}w)\\
- & \leq & -2\lambda^{u}(f_{\tau}w)(U_{1}-U_{w}^{u})(\tau)+|K(f_{\tau}v)-K(f_{\tau}w)|.
+ & \leq & -2k^{u}(f_{\tau}w)(U_{1}-U_{w}^{u})(\tau)+|K(f_{\tau}v)-K(f_{\tau}w)|.
 \end{eqnarray*}
 
 \end_inset
@@ -5403,7 +5815,7 @@ The existence of such
 \end_inset
 
  is upper semi-continuous 
-\begin_inset Formula ${\cal F}:T^{1}M\to T^{1}M$
+\begin_inset Formula ${\cal F}:T^{1}S\to T^{1}S$
 \end_inset
 
  is h-expansive (see Liu-Wang 
@@ -5788,7 +6200,14 @@ reference "prop:Bernoulli"
 \end_layout
 
 \begin_layout Subsection
-Regular set has full measure
+\begin_inset Formula $\mu_{\vp}(\Reg)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ is Bernulli 
 \end_layout
 
 \begin_layout --Separator--
