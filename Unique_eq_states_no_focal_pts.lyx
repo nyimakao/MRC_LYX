@@ -231,31 +231,6 @@ List of Notations:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $k_{T}^{u}(v):=\int_{-T}^{T}k^{u}(v)d\tau$
-\end_inset
-
-, 
-\begin_inset Formula $k_{T}^{s}:=\int_{-T}^{T}k^{s}(f_{\tau}v)d\tau$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\lambda_{T}(v):=\min\{k_{T}^{u}(v),k_{T}^{s}(v)\}\geq\int_{-T}^{T}\lambda(f_{\tau}v)d\tau$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\lambda(v):=\min\{k^{u}(v),k^{s}(v)\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\chi(v):=$
 \end_inset
 
@@ -266,75 +241,13 @@ List of Notations:
  positive Lyapunov exponent
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula ${\cal M}({\cal F}):=$
-\end_inset
-
- invariant Borel probability measure on 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $h_{{\rm top}}({\cal F})$
-\end_inset
-
-, 
-\begin_inset Formula $h_{\mu}({\cal F})$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P_{Gur}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t-1,t)}e^{\int_{\g}\vp}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P_{Gur}^{*}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t)}e^{\int_{\g}\vp}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P_{\Reg}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t-1,t,\Reg)}e^{\int_{\g}\vp}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P_{\Reg}^{*}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t,\Reg)}e^{\int_{\g}\vp}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $X$
-\end_inset
-
- general compact metric space for general theorems
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\vp^{u}$
-\end_inset
-
-: geometric potential 
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
 
 \begin_layout Section
+
+\color green
 Introduction
 \end_layout
 
@@ -726,7 +639,14 @@ The author
 \end_layout
 
 \begin_layout Section
-Preliminaries of non-uniform hyperbolic dynamics
+Preliminaries of dynamics
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Preliminaries-of-dynamics"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -734,57 +654,39 @@ Preliminaries of non-uniform hyperbolic dynamics
 \end_layout
 
 \begin_layout Standard
+In this section, we introduce necessary background in thermodynamics so
+ that readers can understand our results as well as the main tool used in
+ this work: the Climenhaga-Thompson criteria for the uniqueness of equilibrium
+ states.
+ A great reference for terminologies introduced in this section is Walters'
+ book 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Walters:2000vc"
 
-\color green
-Need To Define
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-topological pressure for orbit segments and for sets
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-finite orbit segments 
-\begin_inset Formula ${\cal C}\subset X\times[0,\infty)$
 \end_inset
 
- and 
-\begin_inset Formula $[{\cal C}]$
+.
+\end_layout
+
+\begin_layout Standard
+Throughout this section, 
+\begin_inset Formula $(X,d)$
 \end_inset
 
+ is a compact metric space, 
+\begin_inset Formula ${\cal F}=(f_{t})_{t\in\R}$
+\end_inset
 
-\end_layout
+ is a continuous flow on 
+\begin_inset Formula $X$
+\end_inset
 
-\begin_layout Itemize
+, and 
+\begin_inset Formula $\vp:X\to\R$
+\end_inset
 
-\color green
-specification
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-Bowen property
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-C-T decomposition terms
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-obstructions of expansivity
-\end_layout
-
-\begin_layout --Separator--
-
+ is a continuous potential (i.e., function).
 \end_layout
 
 \begin_layout --Separator--
@@ -796,7 +698,7 @@ obstructions of expansivity
 \end_layout
 
 \begin_layout Subsection
-Climenhaga-Thompson's criteria for uniqueness of equilibrium states
+Topological pressure
 \end_layout
 
 \begin_layout --Separator--
@@ -807,8 +709,1126 @@ Climenhaga-Thompson's criteria for uniqueness of equilibrium states
 
 \end_layout
 
+\begin_layout Standard
+For the convenience, we first define the following terms.
+ 
+\end_layout
+
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Definition
+For any 
+\begin_inset Formula $t,\delta>0$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in X$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ The 
+\shape italic
+Bowen ball
+\shape default
+ of radius 
+\begin_inset Formula $\delta$
+\end_inset
+
+ and order 
+\begin_inset Formula $t$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+B_{t}(x,\delta)=\{y\in X:\ d(f_{\tau}x,f_{\tau}y)<\delta\ {\rm for}\ 0\leq t\leq\tau\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ We say a set 
+\begin_inset Formula $E$
+\end_inset
+
+ is 
+\begin_inset Formula $(t,\delta)-$
+\end_inset
+
+
+\shape italic
+separated
+\shape default
+ if 
+\begin_inset Formula $\forall x,y\in E$
+\end_inset
+
+ and 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+ there exists 
+\begin_inset Formula $t_{0}\in[0,t]$
+\end_inset
+
+ such that 
+\begin_inset Formula $d(f_{t_{0}}x,f_{t_{0}}y)\geq\delta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Finite length orbit segments]
+\end_layout
+
+\end_inset
+
+ Any subset 
+\begin_inset Formula ${\cal C}\subset X\times[0,\infty)$
+\end_inset
+
+ can be identified with a collection of 
+\shape italic
+finite length orbit segments
+\shape default
+.
+ More precisely, 
+\begin_inset Formula 
+\[
+{\cal C}=\{(x,t)\in X\times[0,\infty)\}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $(x,t)$
+\end_inset
+
+ is identified with the orbit 
+\begin_inset Formula $\{f_{\tau}x:\ 0\leq\tau\leq t\}.$
+\end_inset
+
+ We denote 
+\begin_inset Formula $\Phi(x,t):=\int_{0}^{t}\vp(f_{\tau}x)d\tau$
+\end_inset
+
+ the integral of 
+\begin_inset Formula $\vp$
+\end_inset
+
+ along an orbit segment 
+\begin_inset Formula $(x,t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula ${\cal C}_{t}=\{x\in X:\ (x,t)\in{\cal C}\}$
+\end_inset
+
+ be the set of length 
+\begin_inset Formula $t$
+\end_inset
+
+ orbit segments in 
+\begin_inset Formula ${\cal C}$
+\end_inset
+
+.
+ We define 
+\begin_inset Formula 
+\[
+\Lambda({\cal C},\vp,\delta,t)=\sup\{\sum_{x\in E}e^{\Phi(x,t)}:\ E\subset{\cal C}_{t}\ {\rm is}\ (t,\delta)-{\rm separated}\}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Topological pressure]
+\end_layout
+
+\end_inset
+
+ The 
+\shape italic
+pressure
+\shape default
+ of 
+\begin_inset Formula $\vp$
+\end_inset
+
+ on 
+\begin_inset Formula ${\cal C}$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+P({\cal C},\vp)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambda({\cal C},\vp,\delta,t).
+\]
+
+\end_inset
+
+When 
+\begin_inset Formula ${\cal C=}X\times[0,\infty)$
+\end_inset
+
+, we denote the it by 
+\begin_inset Formula $P(\vp)$
+\end_inset
+
+ and is called the 
+\shape italic
+topological pressure
+\shape default
+ of 
+\begin_inset Formula $\vp$
+\end_inset
+
+ with respect to 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Alternatively, the topological pressure can be defined through the 
+\shape italic
+variational principle
+\shape default
+, that is, 
+\begin_inset Formula 
+\[
+P(\vp)=\sup_{\mu{\cal \in M}({\cal F})}\{h_{\mu}({\cal F})+\int\vp d\mu\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula ${\cal M}({\cal F})$
+\end_inset
+
+ is the set of 
+\begin_inset Formula ${\cal F}-$
+\end_inset
+
+invariant probability measures on 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{\mu}({\cal F})$
+\end_inset
+
+ is the measure-theoretic entropy of 
+\begin_inset Formula $(X,{\cal F},\mu)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+We call a measure 
+\begin_inset Formula $\mu\in{\cal M}({\cal F})$
+\end_inset
+
+ 
+\shape italic
+a equilibrium state
+\shape default
+ for 
+\begin_inset Formula $\vp$
+\end_inset
+
+ if 
+\begin_inset Formula 
+\[
+P(\vp)=h_{\mu}({\cal F})+\int\vp d\mu.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\ $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ When the entropy map 
+\begin_inset Formula $\mu\mapsto h_{\mu}$
+\end_inset
+
+ is upper semi-continuous, we know equilibrium states exist for every continuous
+ potentials.
+ 
+\end_layout
+
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ In our case, the geodesics flow on surfaces without focal point, the upper
+ semi-continuity of the entropy map is guaranteed by the entropy-expansivity
+ proved in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu:2016de"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Climenhaga-Thompson's criteria for the uniqueness of equilibrium states
+\end_layout
+
+\begin_layout Standard
+Climenhaga and Thompson have a series of successful works on uniqueness
+ of equilibrium states for various non-uniformly hyperbolic systems, for
+ example 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Climenhaga:2012ed,Climenhaga:2013gm,Climenhaga:2015ty,Climenhaga:2016ut,BCFT2017"
+
+\end_inset
+
+.
+ This work also following their idea, so called, the Climenhaga-Thompson
+ program.
+ In this subsection, we aim to briefly introduce terms using in the Climenhaga-T
+hompson program.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+One of the main idea in Climenhaga-Thompson program is to ask for the system
+ to have 
+\begin_inset Quotes eld
+\end_inset
+
+hyperbolic
+\begin_inset Quotes erd
+\end_inset
+
+ behavior and the potential to have 
+\begin_inset Quotes eld
+\end_inset
+
+good regularity
+\begin_inset Quotes erd
+\end_inset
+
+ in a collection of finite orbit segments 
+\begin_inset Formula ${\cal C}$
+\end_inset
+
+ rather than in the whole space.
+ This flexibility is essential for non-uniformly hyperbolic systems.
+ To be more precise, the 
+\begin_inset Quotes eld
+\end_inset
+
+hyperbolic
+\begin_inset Quotes erd
+\end_inset
+
+ behavior means 
+\shape italic
+specification
+\shape default
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+good regularity
+\begin_inset Quotes erd
+\end_inset
+
+ means the potential has the
+\shape italic
+ Bowen property, 
+\shape default
+which are defined below.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Specification]
+\end_layout
+
+\end_inset
+
+ We say 
+\begin_inset Formula ${\cal C}\subset X\times[0,\infty)$
+\end_inset
+
+ has 
+\shape italic
+specification
+\shape default
+ at scale 
+\begin_inset Formula $\rho>0$
+\end_inset
+
+ if there exists 
+\begin_inset Formula $\tau=\tau(\rho)$
+\end_inset
+
+ such that for every finite sub-collection of 
+\begin_inset Formula ${\cal C}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $(x_{1},t_{1})$
+\end_inset
+
+, 
+\begin_inset Formula $(x_{2},t_{2}),$
+\end_inset
+
+..., 
+\begin_inset Formula $(x_{N},t_{N})\in{\cal C}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ and transition times 
+\begin_inset Formula $\tau_{1},...,\tau_{N-1}\in\R$
+\end_inset
+
+ such that for 
+\begin_inset Formula $s_{0}=\tau_{0}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{j}=\sum_{i=1}^{j}t_{i}+\sum_{i=1}^{j-1}\tau_{i}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+f_{s_{j-1}+\tau_{j-1}}(y)\in B_{t_{j}}(x_{j},\rho)
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $j\in\{1,2,...,N\}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula ${\cal C}$
+\end_inset
+
+ has specification at all scales, then we say 
+\begin_inset Formula ${\cal C}$
+\end_inset
+
+ has 
+\shape italic
+specification
+\shape default
+ if it .
+ We call the flow has specification if 
+\begin_inset Formula ${\cal C}=X\times[0,\infty)$
+\end_inset
+
+ has specification.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Bowen property]
+\end_layout
+
+\end_inset
+
+ We say 
+\begin_inset Formula $\vp:X\to\R$
+\end_inset
+
+ a continuous potential has the 
+\shape italic
+Bowen property
+\shape default
+ on 
+\begin_inset Formula ${\cal C}\subset X\times[0,\infty)$
+\end_inset
+
+ if there are 
+\begin_inset Formula $\ep,K>0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $(x,t)\in{\cal C}$
+\end_inset
+
+ , we have 
+\begin_inset Formula 
+\[
+\sup_{y\in B_{t}(x,\ep)}\left|\Phi(x,t)-\Phi(y,t)\right|\leq K.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+We remark that the specification and Bowen property defined above is inspired
+ by Bowen's work in uniformly hyperbolic systems.
+ Moreover, when 
+\begin_inset Formula ${\cal C}=X\times[0,\infty)$
+\end_inset
+
+ these definitions coincide with Bowen's original version.
+ 
+\end_layout
+
+\begin_layout Standard
+One of the essential points in the Climenhaga-Thompson it to allow one to
+ ask these property only on 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ orbit segments.
+ In other words, we decompose every finite orbit segments into three parts
+ and only ask for these property to hold on the 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ part.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Decomposition of orbit segments]
+\end_layout
+
+\end_inset
+
+ A decomposition of 
+\begin_inset Formula $X\times[0,\infty)$
+\end_inset
+
+ is consisted of three collections 
+\begin_inset Formula ${\cal P}$
+\end_inset
+
+, 
+\begin_inset Formula ${\cal G}$
+\end_inset
+
+, 
+\begin_inset Formula ${\cal S}\subset X\times[0,\infty)$
+\end_inset
+
+ such that:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ There exist 
+\begin_inset Formula $p,g,s:X\times[0,\infty)\to\R$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $(x,t)\in X\times[0,\infty)$
+\end_inset
+
+, we have 
+\begin_inset Formula $t=p(x,t)+g(x,t)+s(x,t)$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(x,p(x,t))\in{\cal P}$
+\end_inset
+
+, 
+\begin_inset Formula $(f_{p(x,t)}v,g(x,t))\in{\cal G}$
+\end_inset
+
+, and 
+\begin_inset Formula $(f_{p(x,t)+g(x,t)}v,s(x,t))\in{\cal S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+In Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Decompositions-for-finite"
+
+\end_inset
+
+, we will give the precise construction of a decomposition 
+\begin_inset Formula $({\cal P},{\cal G},{\cal S})$
+\end_inset
+
+ and prove it has required properties in following sections.
+ Because of some technical reasons (see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Climenhaga:2016ut"
+
+\end_inset
+
+), we also need to work on collections slightly bigger than 
+\begin_inset Formula ${\cal P}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\cal S}$
+\end_inset
+
+, namely, 
+\begin_inset Formula 
+\begin{align*}
+[{\cal P}] & :=\{(x,n)\in X\times\N:\ (f_{-s}x,n+s+t)\in{\cal P}\ {\rm for}\ {\rm some}\ s,t\in[0,1]\},
+\end{align*}
+
+\end_inset
+
+and the same for 
+\begin_inset Formula $[S].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+The following three terms is the last piece needed for stating the Climenhaga-Th
+ompson criteria.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+For 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\ep>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\vp:X\to\R$
+\end_inset
+
+ a potential
+ 
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ The 
+\shape italic
+bi-infinite Bowen ball
+\shape default
+ 
+\begin_inset Formula $\G_{\ep}(x)$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+\G_{\ep}(x):=\{y\in X:\ d(f_{t}x,f_{t}y)\leq\ep\ {\rm for}\ {\rm all}\ t\in\R\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ The set of 
+\shape italic
+non-expansive points at scale
+\shape default
+ 
+\begin_inset Formula $\ep$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\[
+{\rm NE(\ep}):=\{x\in X:\ \G_{\ep}\nsubseteq f_{[-s,s]}(x)\ {\rm for\ }{\rm any}\ s>0\}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f_{[a,b]}(x)=\{f_{t}x:\ t\in[a,b]\}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\shape italic
+The pressure of obstructions to expansivity
+\shape default
+ for 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+P_{{\rm exp}}^{\perp}(\vp):=\lim_{\ep\to0}P_{\exp}^{\perp}(\vp,\ep)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+P_{\exp}^{\perp}(\vp,\ep):=\sup_{\mu\in{\cal M}^{e}({\cal F})}\{h_{\mu}(f_{1})+\int\vp d\mu:\ \mu({\rm NE}(\ep))=1\}
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula ${\cal M}^{e}({\cal F})$
+\end_inset
+
+ is the set of 
+\begin_inset Formula ${\cal F}-$
+\end_inset
+
+invariant ergodic probability measure on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Finally, the following theorem is the Climenhaga-Thompson criteria for the
+ uniqueness of equilibrium states.
+ We will use this theorem to prove Theorem A in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Pressure-gap-and_Thm_A"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -972,6 +1992,337 @@ Then
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Gurevich pressure 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+In this subsection, we introduce another well-studied pressure, the Gurevich
+ pressure, that is, the growth rate of weighted period orbits.
+ In the uniformly hyperbolic setting, the Gurevich pressure is nothing different
+ from the topological pressure.
+ However, it is not the case for non-uniformly hyperbolic systems (see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pollicott:1996jq"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gelfert:2014hn"
+
+\end_inset
+
+ for more details).
+ To make above discussion more precise, we shall define the following relevant
+ terms.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Gurevich pressure]
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a Riemannian manifold, 
+\begin_inset Formula ${\cal F}=(f_{t})_{t\in\R}$
+\end_inset
+
+ be the geodesic flow on 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+, and 
+\begin_inset Formula $\vp:T^{1}M\to\R$
+\end_inset
+
+ be a continuous potential.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ The 
+\shape italic
+Gurevich pressure
+\shape default
+ 
+\begin_inset Formula $P_{Gur}$
+\end_inset
+
+ is defined as 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+P_{Gur}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t-1,t)}e^{\int_{\g}\vp}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula ${\rm Per}(T-1,T)$
+\end_inset
+
+ the set of primitive periodic geometrically distinct orbits (i.e., geodesics)
+ of length in 
+\begin_inset Formula $[T-1,T)$
+\end_inset
+
+.
+
+\color green
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ The 
+\shape italic
+regular Gurevich pressure
+\shape default
+ 
+\begin_inset Formula $P_{\Reg}$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+P_{\Reg}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t-1,t,\Reg)}e^{\int_{\g}\vp}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
+\end_inset
+
+ is the subset of 
+\begin_inset Formula ${\rm Per}(T-1,T)$
+\end_inset
+
+ containing all regular orbits (i.e., geodesics) of 
+\begin_inset Formula ${\rm Per}(T-1,T)$
+\end_inset
+
+.
+
+\color green
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+In Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Prop_eq_states_Thm_B"
+
+\end_inset
+
+, using Pollicott's idea in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pollicott:1996jq"
+
+\end_inset
+
+ (as well as Gelfert-Schapira 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gelfert:2014hn"
+
+\end_inset
+
+), we will prove equalities 
+\begin_inset Formula $P_{\Reg}(\vp)\leq P_{Gur}(\vp)\leq P(\vp)$
+\end_inset
+
+ in our setting, Moreover, we will show that for those 
+\begin_inset Formula $\vp$
+\end_inset
+
+ has a unique equilibrium state we have 
+\begin_inset Formula $P_{\Reg}(\vp)=P(\vp)$
+\end_inset
+
+.
+ As pointed out in Gelfert-Schapira 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gelfert:2014hn"
+
+\end_inset
+
+, the equality 
+\begin_inset Formula $P_{\Reg}(\vp)=P(\vp)$
+\end_inset
+
+ implies that the unique equilibrium state 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ is the weak* limit of weighted regular period orbits.
+ To be more precise, we need the following definition.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+For a potential 
+\begin_inset Formula $\vp:T^{1}M\to\R$
+\end_inset
+
+, we say 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the weak* limit of 
+\begin_inset Formula $\vp-$
+\end_inset
+
+weighted regular period orbits, if 
+\begin_inset Formula 
+\[
+\mu=\lim_{T\to\infty}\frac{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}\delta_{\g}}{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\int_{\g}\vp=\int_{0}^{l(\g)}\vp(f_{s}x)ds$
+\end_inset
+
+ for some 
+\begin_inset Formula $x\in\g$
+\end_inset
+
+, 
+\begin_inset Formula $l(\g)$
+\end_inset
+
+ is the length of 
+\begin_inset Formula $\g$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta_{\g}$
+\end_inset
+
+ is the normalized Lebesgue measure around a period orbit 
+\begin_inset Formula $\g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Since in most of our discussion the potential 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is given and fixed, we will omit 
+\begin_inset Formula $\vp$
+\end_inset
+
+ and simply say 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is weak* limit of weighted regular period orbits.
 \end_layout
 
 \begin_layout --Separator--
@@ -1149,6 +2500,16 @@ orthogonal
 \end_layout
 
 \begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[No focal points]
+\end_layout
+
+\end_inset
+
 A Riemannian surface 
 \begin_inset Formula $S$
 \end_inset
@@ -1287,6 +2648,16 @@ end{enumerate}
 \end_layout
 
 \begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Rank]
+\end_layout
+
+\end_inset
+
 The 
 \shape italic
 rank
@@ -1313,6 +2684,16 @@ rank 1
 \end_layout
 
 \begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[Singular set and regular set]
+\end_layout
+
+\end_inset
+
 The 
 \shape italic
 singular set
@@ -3369,7 +4750,14 @@ d^{u}(f_{-t}w,f_{-t}w')\leq d^{u}(w,w')e^{-\int_{0}^{t}\widetilde{k^{u}}(f_{-\ta
 \end_layout
 
 \begin_layout Section
-Decompositions for geodesic flow
+A decompositions of finite orbit segments
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Decompositions-for-finite"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -3657,16 +5045,6 @@ reference "prop:no_focal_points"
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Lemma 3.10
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset label
 LatexCommand label
 name "lem: uniform angle"
@@ -4811,7 +6189,18 @@ Moreover, there exists
 \end_layout
 
 \begin_layout Section
+
+\color green
 The specification property
+\color inherit
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-specification-property"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4826,7 +6215,25 @@ Need To Define
 Closing lemma 
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Itemize
+\begin_inset Formula $w\in W^{cs}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $d_{K}(v,w)\leq d^{cs}(v,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w\in W^{u}(v)$
+\end_inset
+
+, 
+\begin_inset Formula $d_{K}(v,w)\leq e^{\Lambda}d^{u}(v,w)$
+\end_inset
+
 
 \end_layout
 
@@ -4834,88 +6241,8 @@ Closing lemma
 
 \end_layout
 
-\begin_layout Definition
-A collection 
-\begin_inset Formula ${\cal C}\subset X\times[0,\infty)$
-\end_inset
+\begin_layout --Separator--
 
- of orbit segments has 
-\shape italic
-specification
-\shape default
- at scale 
-\begin_inset Formula $\rho>0$
-\end_inset
-
- if there is 
-\begin_inset Formula $\tau=\tau(\rho)$
-\end_inset
-
- such that for every 
-\begin_inset Formula $(x_{1},t_{1}),\ldots,(x_{n},t_{n})\in{\cal C}$
-\end_inset
-
- there exists 
-\begin_inset Formula $y\in X$
-\end_inset
-
- and a sequence of jumping times 
-\begin_inset Formula $\tau_{1},\ldots,t_{n-1}\in[0,\tau]$
-\end_inset
-
- such that for 
-\begin_inset Formula $s_{0}=\tau_{0}=0$
-\end_inset
-
- and 
-\begin_inset Formula $s_{j}=\sum\limits _{i=1}^{j}t_{i}+\sum\limits _{i=1}^{j-1}\tau_{i}$
-\end_inset
-
-, we have 
-\begin_inset Formula 
-\[
-f_{s_{j-1}+\tau_{j-1}}(y)\in B_{(t_{j})}(x_{j},\rho)
-\]
-
-\end_inset
-
-for every 
-\begin_inset Formula $j\in\{1,\ldots,n\}$
-\end_inset
-
-.
- If 
-\begin_inset Formula $C$
-\end_inset
-
- has specification at all scale, then we say 
-\begin_inset Formula ${\cal C}$
-\end_inset
-
- has specification.
- 
-\end_layout
-
-\begin_layout Standard
-For any 
-\begin_inset Formula $T,\eta>0$
-\end_inset
-
-, we define 
-\begin_inset Formula ${\cal C}_{T}(\eta):=\{(v,t)\colon v,f_{t}v\in\text{Reg}_{T}(\eta)\}$
-\end_inset
-
-.
- We prove that 
-\begin_inset Formula ${\cal C}_{T}(\eta)$
-\end_inset
-
- has specification for all 
-\begin_inset Formula $\eta,T>0$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Proposition
@@ -5070,28 +6397,37 @@ For
 
 \begin_layout Section
 The Bowen property
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-Bowen-property"
 
-\begin_layout Standard
+\end_inset
 
-\color green
-Need To Define
-\end_layout
 
-\begin_layout Itemize
-
-\color green
-Hölder potentials
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-geometric potentials
 \end_layout
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Standard
+In this section, we prove the Bowen property for Hölder potentials and the
+ geometric potential 
+\begin_inset Formula $\vp^{u}$
+\end_inset
+
+.
+ Lemmas in this section are exactly the same as their corresponding in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BCFT2017"
+
+\end_inset
+
+.
+ The proofs follow verbatim.
+ However, for the completeness we still give proofs there.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -5106,18 +6442,151 @@ Bowen property for Hölder potentials
 
 \end_layout
 
-\begin_layout Standard
-Lemmas in this section are exactly the same as their corresponding in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BCFT2017"
+\begin_layout Definition
+A function 
+\begin_inset Formula $\vp:T^{1}S\to\R$
+\end_inset
 
+ is called 
+\shape italic
+Hölder along stable leaves
+\shape default
+ if there exist 
+\begin_inset Formula $C,\theta,\ep>0$
+\end_inset
+
+ such that for 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in W_{\delta}^{s}(v)$
+\end_inset
+
+, one has 
+\begin_inset Formula $|\vp(v)-\vp(w)|\leq Cd^{s}(v,w)^{\theta}$
 \end_inset
 
 .
- The proofs follow verbatim.
- However, for the completeness we still give proofs there.
+ Similarly, 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is called 
+\shape italic
+Hölder along unstable leaves 
+\shape default
+if there exist 
+\begin_inset Formula $C,\theta,\ep>0$
+\end_inset
+
+ such that for 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in W_{\delta}^{u}(v)$
+\end_inset
+
+, one has 
+\begin_inset Formula $|\vp(v)-\vp(w)|\leq Cd^{u}(v,w)^{\theta}$
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $d_{K}$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $d^{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $d^{s}$
+\end_inset
+
+ along unstable and stable leaves, we know 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is
+\shape italic
+ Hölder
+\shape default
+ if and only if 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is Hölder along stable and unstable leaves.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+A function 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is said to have the 
+\shape italic
+Bowen property along stable leaves
+\shape default
+ with respect to 
+\begin_inset Formula ${\cal C}\subset T^{1}S\times[0,\infty)$
+\end_inset
+
+ if there exist 
+\begin_inset Formula $\delta,K>0$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\sup\left\{ |\Phi(v,t)-\Phi(w,t)|:\ (v,t)\in{\cal C},\ w\in W_{\delta}^{s}(v)\right\} \leq K.
+\]
+
+\end_inset
+
+ Similarly, A function 
+\begin_inset Formula $\vp$
+\end_inset
+
+ is said to have the 
+\shape italic
+Bowen property along unstable leaves
+\shape default
+ with respect to 
+\begin_inset Formula ${\cal C}\subset T^{1}S\times[0,\infty)$
+\end_inset
+
+ if there exist 
+\begin_inset Formula $\delta,K>0$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\sup\left\{ |\Phi(v,t)-\Phi(w,t)|:\ (v,t)\in{\cal C},\ w\in f_{-t}W_{\delta}^{u}(f_{t}v)\right\} \leq K.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout Lemma
@@ -5200,6 +6669,10 @@ reference "lem:312"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout --Separator--
 
 \end_layout
 
@@ -5452,6 +6925,18 @@ reference "eq:7.1"
 
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Sum up the above two lemmas, we have the desired result for Hölder potentials:
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
@@ -5478,24 +6963,6 @@ If
 
 \end_layout
 
-\begin_layout Proof
-It follows Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:holder_bowen_unstable_stable"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:Bowen_stable_unstable_all"
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -5505,7 +6972,59 @@ reference "lem:Bowen_stable_unstable_all"
 \end_layout
 
 \begin_layout Subsection
-Bowen property for the geometric potential 
+The Bowen property for the geometric potential 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+The 
+\shape italic
+geometric potential
+\shape default
+ 
+\begin_inset Formula $\vp^{u}:T^{1}S\to\R$
+\end_inset
+
+ is defined as: for 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\varphi^{u}(v):=-\lim_{t\to\infty}\frac{1}{t}{\displaystyle \log\det(}\left.df_{t}\right|_{E^{u}(v)})=-\frac{d}{dt}{\displaystyle \log\det(}\left.df_{t}\right|_{E^{u}(v)}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+In general, we do not know if 
+\begin_inset Formula $\vp^{u}$
+\end_inset
+
+ is Hölder continuous.
+ There are some partial results under the nonpositively curved assumption;
+ however, not much is known in the no focal points setting.
+ Nevertheless, in this subsection we prove 
+\begin_inset Formula $\vp^{u}$
+\end_inset
+
+ has the Bowen property in 
+\begin_inset Formula $\gt(\eta)$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -5563,7 +7082,7 @@ key "BCFT2017"
 \begin_inset Formula $\varphi^{u}$
 \end_inset
 
- has Bowen property on 
+ has the Bowen property on 
 \begin_inset Formula $\mathcal{G}_{T}(\eta)$
 \end_inset
 
@@ -5954,6 +7473,18 @@ U_{1}(t)-U_{v}^{u}(t) & \leq & \exp\left(-\int_{s_{0}}^{t}2k^{u}(f_{s}w)ds\right
 
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Thus, from above lemmas, we have the following results:
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
@@ -5980,24 +7511,6 @@ The geometric potential
 
 \end_layout
 
-\begin_layout Proof
-It follows from Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "prop:77"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:710711"
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -6011,7 +7524,18 @@ reference "lem:710711"
 \end_layout
 
 \begin_layout Section
+
+\color green
 Pressure gap and the proof of Theorem A
+\color inherit
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Pressure-gap-and_Thm_A"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -6171,7 +7695,7 @@ name "prop:pressue_gap_bad_orbits"
 
 \end_inset
 
-There exists 
+there exist 
 \begin_inset Formula $T_{0}$
 \end_inset
 
@@ -6338,6 +7862,11 @@ P([{\cal B}_{T_{0}}(\eta_{0})],\varphi)\leq\sup\limits _{\mu\in{\cal M}([{\cal B
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Standard
+Now, we are ready to prove our first main theorem.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -6524,6 +8053,13 @@ reference "thm:C-T_criteria"
 
 \begin_layout Section
 Properties of the equilibrium states and the proof of Theorem B
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Prop_eq_states_Thm_B"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -6715,29 +8251,74 @@ which contradicts to the pressure gap condition.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout --Separator--
 
-\color green
-Recall
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+We recall that for 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
 
-\color green
-Lyapunov exponent 
+, the 
+\shape italic
+Lyapunov exponents
+\shape default
+ at 
+\begin_inset Formula $v$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\chi(v)=\lim_{t\to\pm\infty}\frac{1}{t}\log\left\Vert \left.df_{t}\right|_{E^{u}(v)}\right\Vert 
+\]
+
+\end_inset
+
+whenever the both limits exists and are equal.
+ For those 
+\begin_inset Formula $v\in T^{1}S$
+\end_inset
+
+ such that the Lyapunov exponent 
 \begin_inset Formula $\chi(v)$
 \end_inset
 
- 
-\end_layout
+ exists at 
+\begin_inset Formula $v$
+\end_inset
 
-\begin_layout Itemize
+ are called 
+\shape italic
+Lyapunov regular
+\shape default
+ vectors.
+ It is well-known (by Oseledec multiplicative ergodic theorem) that the
+ set of Lyapunov regular vectors has full measure for any 
+\begin_inset Formula ${\cal F}$
+\end_inset
 
-\color green
-positive Lyapunov exponent 
+-invariant probability measure.
+ We denote 
 \begin_inset Formula $\chi^{+}(v)$
 \end_inset
 
+ the 
+\shape italic
+positive Lyapunov exponent
+\shape default
+ at 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ 
+\color green
+(More explain???)
+\end_layout
+
+\begin_layout --Separator--
 
 \end_layout
 
@@ -6822,7 +8403,7 @@ reference "lem:2.9"
 0 & =\chi^{+}(v)=\lim_{t\to\infty}\frac{1}{t}\log||df_{t}|_{E_{v}^{u}}||\\
  & \geq\lim_{t\to\infty}\frac{1}{t}\log||J_{\xi}^{u}(t)||\\
  & \geq\lim_{t\to\infty}\frac{1}{t}\log\left(e^{\int_{0}^{t}k^{u}(f_{\tau}v)d\tau}||J_{\xi}^{u}(0)||\right)\\
- & =\lim_{t\to\infty}\frac{1}{t}\int_{0}^{t}k^{u}(f_{\tau}v)d\tau=\int k^{u}(v)d\mu
+ & =\lim_{t\to\infty}\frac{1}{t}\int_{0}^{t}k^{u}(f_{\tau}v)d\tau=\int k^{u}(v)d\mu.
 \end{alignat*}
 
 \end_inset
@@ -6972,19 +8553,123 @@ key "Lima:2014tc"
 \end_layout
 
 \begin_layout Standard
+In this subsection, unless stated otherwise, we fix the decomposition 
+\begin_inset Formula $({\cal P},$
+\end_inset
 
-\color green
-Recall that 
+ 
+\begin_inset Formula ${\cal G}$
+\end_inset
+
+, 
+\begin_inset Formula ${\cal S})$
+\end_inset
+
+ to be 
+\begin_inset Formula $({\cal P}_{T_{0}}(\eta_{0}),{\cal G}_{T_{0}}(\eta_{0}),{\cal S}_{T_{0}}(\eta_{0}))$
+\end_inset
+
+ where 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{0}$
+\end_inset
+
+ are given in Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:pressue_gap_bad_orbits"
+
+\end_inset
+
+.
+ We notice that this decomposition 
+\begin_inset Formula $({\cal P}_{T_{0}}(\eta_{0}),{\cal G}_{T_{0}}(\eta_{0}),{\cal S}_{T_{0}}(\eta_{0}))$
+\end_inset
+
+ satisfies the the Climenhaga-Thompson criteria for the uniqueness of equilibriu
+m states (i.e., Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+For any decomposition 
+\begin_inset Formula $({\cal P},$
+\end_inset
+
+ 
+\begin_inset Formula ${\cal G}$
+\end_inset
+
+, 
+\begin_inset Formula ${\cal S})$
+\end_inset
+
+ and 
+\begin_inset Formula $M>0$
+\end_inset
+
+, the collection 
 \begin_inset Formula ${\cal G}^{M}$
 \end_inset
 
- is the set of orbit segments whose bad parts are shorter than 
-\begin_inset Formula $M$
+ is defined as 
+\begin_inset Formula 
+\[
+{\cal G}^{M}:=\{(x,t):\ s(x,t),p(x,t)\leq M\}.
+\]
+
 \end_inset
 
 
-\color inherit
-.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+The following lemma shows that if the decomposition 
+\begin_inset Formula $({\cal P},$
+\end_inset
+
+ 
+\begin_inset Formula ${\cal G}$
+\end_inset
+
+, 
+\begin_inset Formula ${\cal S})$
+\end_inset
+
+ satisfies Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:C-T_criteria"
+
+\end_inset
+
+, then, when 
+\begin_inset Formula $M$
+\end_inset
+
+ is big enough, 
+\begin_inset Formula ${\cal G}^{M}$
+\end_inset
+
+ captures many thermodynamics information we need.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout Lemma
@@ -7014,7 +8699,7 @@ For
 \begin_inset Formula $M$
 \end_inset
 
- is large enough, 
+ is large enough, we have 
 \begin_inset Formula $P({\cal G}^{M},\vphi)=P(\vphi)$
 \end_inset
 
@@ -7032,8 +8717,8 @@ For
 \begin_inset Formula $\rho>0$
 \end_inset
 
-, there exists 
-\begin_inset Formula $Q,T,M>0$
+, there exist 
+\begin_inset Formula $Q,\tau,M>0$
 \end_inset
 
  such that for every 
@@ -7041,19 +8726,19 @@ For
 \end_inset
 
  with 
-\begin_inset Formula $t\geq T$
+\begin_inset Formula $t\geq\tau$
 \end_inset
 
 , 
 \begin_inset Formula 
 \[
-\mu_{\vphi}(B_{t}(v,\rho))\geq Qe^{-tP(\vphi)+\int_{0}^{T}\vphi(f_{s}v)\dd s}.
+\mu_{\vphi}(B_{t}(v,\rho))\geq Qe^{-tP(\vphi)+\int_{0}^{\tau}\vphi(f_{s}v)\dd s}.
 \]
 
 \end_inset
 
 Therefore, for 
-\begin_inset Formula $(v,t)\in\gt$
+\begin_inset Formula $(v,t)\in{\cal G}_{T_{0}}$
 \end_inset
 
  and 
@@ -7107,14 +8792,18 @@ Given
 \end_inset
 
 , there exists 
-\begin_inset Formula $\eta_{0}>0$
+\begin_inset Formula $\eta_{1}>0$
 \end_inset
 
- so that for any 
+ so that 
+\begin_inset Formula $\eta_{0}>\eta_{1}$
+\end_inset
+
+ and for any 
 \begin_inset Formula $v\in{\rm Reg}_{T}(\eta)$
 \end_inset
 
- and all 
+, 
 \begin_inset Formula $t>0$
 \end_inset
 
@@ -7127,10 +8816,21 @@ Given
 \end_inset
 
  such that 
-\begin_inset Formula $(w,s)\in\gt(\eta_{0})$
+\begin_inset Formula $(w,s)\in{\cal G}_{T}(\eta_{1})$
 \end_inset
 
- 
+ where 
+\begin_inset Formula $\eta_{0}$
+\end_inset
+
+ is given in Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:pressue_gap_bad_orbits"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Proof
@@ -7265,7 +8965,7 @@ reference "lem:6.2"
 \end_inset
 
 , there exists 
-\begin_inset Formula $\eta_{0}>0$
+\begin_inset Formula $\eta_{1}>0$
 \end_inset
 
  such that there is 
@@ -7273,7 +8973,7 @@ reference "lem:6.2"
 \end_inset
 
  satisfying 
-\begin_inset Formula $(w,t)\in{\cal G}_{T}(\eta_{0})$
+\begin_inset Formula $(w,t)\in{\cal G}$
 \end_inset
 
  for 
@@ -7285,12 +8985,11 @@ reference "lem:6.2"
 \end_inset
 
 ).
- 
 \end_layout
 
 \begin_layout Proof
 Furthermore, the decomposition 
-\begin_inset Formula $({\cal B}_{T}(\eta_{0}),{\cal G}_{T}(\eta_{0}),{\cal \mathbf{S}}_{T}(\eta_{0}))$
+\begin_inset Formula $({\cal P},{\cal G},{\cal S})=({\cal B}_{T_{0}}(\eta_{1}),{\cal G}_{T_{0}}(\eta_{1}),{\cal \mathbf{{\cal S}}}_{T_{0}}(\eta_{1}))$
 \end_inset
 
  verifies Theorem 
@@ -7365,148 +9064,8 @@ Last, by picking
 
 \end_layout
 
-\begin_layout Standard
-Recall that 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula ${\rm Per}$
-\end_inset
-
- the set of primitive periodic geometrically distinct geodesics 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula ${\rm Per}(T)$
-\end_inset
-
- the set of primitive periodic geometrically distinct geodesics of length
- smaller than 
-\begin_inset Formula $T$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula ${\rm Per}(T-1,T)$
-\end_inset
-
- the set of primitive periodic geometrically distinct geodesics of length
- in 
-\begin_inset Formula $[T-1,T)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula ${\rm Per}(T,{\rm Reg})$
-\end_inset
-
- is the subset of 
-\begin_inset Formula ${\rm Per(T)}$
-\end_inset
-
- containing all regular geodesics of 
-\begin_inset Formula ${\rm Per}(T)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
-\end_inset
-
- is the subset of 
-\begin_inset Formula ${\rm Per}(T-1,T)$
-\end_inset
-
- containing all regular geodesics of 
-\begin_inset Formula ${\rm Per}(T-1,T)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula $P_{Gur}(\varphi):={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T-1,T)}e^{\int_{\tau}\varphi}}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-\color green
-\begin_inset Formula $P_{{\rm Reg}}(\varphi):={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T-1,T,{\rm Reg})}e^{\int_{\tau}\varphi}}$
-\end_inset
-
- 
-\end_layout
-
 \begin_layout --Separator--
 
-\end_layout
-
-\begin_layout Lemma
-Notice that when 
-\begin_inset Formula $P_{Gur}(\vp),P_{{\rm Reg}}(\vp)\geq0$
-\end_inset
-
- we have 
-\begin_inset Formula 
-\begin{align*}
-P_{Gur}^{*}(\vp) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T)}e^{\int_{\tau}\varphi}}=P_{Gur}(\vp),\\
-P_{{\rm Reg}}^{*}(\varphi) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T,{\rm Reg})}e^{\int_{\tau}\varphi}=P_{{\rm Reg}}(\vp).}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Remark
-For any constant 
-\begin_inset Formula $c$
-\end_inset
-
-, we have for 
-\begin_inset Formula ${\cal P}(\cdot)=P_{Gur}(\cdot),P_{{\rm Reg}}(\cdot),P(\cdot),P({\cal G}^{M},\cdot)$
-\end_inset
-
- we have 
-\begin_inset Formula ${\cal P}(\vp+c)={\cal P}(\vp)+c$
-\end_inset
-
-.
- However, for 
-\begin_inset Formula $P_{{\rm Reg}}^{*}$
-\end_inset
-
- and 
-\begin_inset Formula $P_{Gur}^{*}$
-\end_inset
-
- we don't necessary have this equality.
- 
 \end_layout
 
 \begin_layout --Separator--
@@ -7737,6 +9296,109 @@ key "Pollicott:1996jq"
  
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+The following observation is very helpful for us to prove 
+\begin_inset Formula $P_{\Reg}(\vp)\geq P(\vp)$
+\end_inset
+
+ when 
+\begin_inset Formula $\vp$
+\end_inset
+
+ has a unique equilibrium state.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+Suppose 
+\begin_inset Formula $P_{Gur}(\vp),P_{{\rm Reg}}(\vp)\geq0$
+\end_inset
+
+, then we have 
+\begin_inset Formula 
+\begin{align*}
+P_{Gur}^{*}(\vp) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T)}e^{\int_{\tau}\varphi}}=P_{Gur}(\vp),\\
+P_{{\rm Reg}}^{*}(\varphi) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\tau\in{\rm Per}(T,{\rm Reg})}e^{\int_{\tau}\varphi}=P_{{\rm Reg}}(\vp)}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula ${\rm Per}(T)$
+\end_inset
+
+ (respectively, 
+\begin_inset Formula ${\rm Per}(T,\Reg)$
+\end_inset
+
+) the set of primitive (respectively, regular) periodic geometrically distinct
+ geodesics of length smaller than 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+For any constant 
+\begin_inset Formula $c$
+\end_inset
+
+ and for 
+\begin_inset Formula ${\cal P}(\cdot)=P_{Gur}(\cdot),P_{{\rm Reg}}(\cdot),P(\cdot),P({\cal G}^{M},\cdot)$
+\end_inset
+
+, we have 
+\begin_inset Formula ${\cal P}(\vp+c)={\cal P}(\vp)+c$
+\end_inset
+
+, where 
+\begin_inset Formula ${\cal G}={\cal G}_{T_{0}}(\eta_{0})$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\eta_{0}$
+\end_inset
+
+ are given in Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:pressue_gap_bad_orbits"
+
+\end_inset
+
+.
+ However, for 
+\begin_inset Formula $P_{{\rm Reg}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{Gur}^{*}$
+\end_inset
+
+ we don't necessary have this equality.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
@@ -7800,12 +9462,12 @@ reference "cor:pressure_ineq"
 , it is enough to show 
 \begin_inset Formula 
 \[
-P(G^{M},\vphi)\leq P_{{\rm Reg}}^{*}(\vphi).
+P({\cal G}^{M},\vphi)\leq P_{{\rm Reg}}^{*}(\vphi).
 \]
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Proof
@@ -7813,7 +9475,7 @@ The see this, notice that for
 \begin_inset Formula $(v,t)\in{\cal G}^{M}$
 \end_inset
 
-, there exists 
+, there exist 
 \begin_inset Formula $p,s>0$
 \end_inset
 
@@ -8159,6 +9821,13 @@ One can replace
 
 \begin_layout Section
 The proof of Theorem C and examples
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Thm_C_exampels"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -8167,6 +9836,21 @@ The proof of Theorem C and examples
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Standard
+In this section, we present the proof of Theorem C and also provide more
+ examples satisfying the pressure gap property.
+ The following lemmas shows that the scalar multiple 
+\begin_inset Formula $q\vp^{u}$
+\end_inset
+
+ of the geometric potential possesses the pressure property provided 
+\begin_inset Formula $q<1$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -8301,7 +9985,16 @@ By Ruelle's inequality we have
 
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Standard
+Now, we are ready to prove Theorem C.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem*
 \begin_inset ERT
 status open
 
@@ -8533,11 +10226,16 @@ key "Walters:1992et"
 
 \end_layout
 
+\begin_layout Standard
+The proposition below gives us an easy criteria for the pressure gap property.
+ 
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Corollary
+\begin_layout Proposition
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Lemma 9.1"
@@ -8600,8 +10298,8 @@ P(\Sing,\vp)\leq h_{{\rm top}}(\Sing)+\sup_{v\in{\rm Sing}}\varphi(v)<h_{{\rm to
 \end_layout
 
 \begin_layout Standard
-Following the above corollary, the following class of potentials also possesses
- the pressure gap property.
+Following the above proposition, the following class of potentials also
+ possesses the pressure gap property.
 \end_layout
 
 \begin_layout --Separator--
