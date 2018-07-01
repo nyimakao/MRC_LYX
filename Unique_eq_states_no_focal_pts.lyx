@@ -6,6 +6,7 @@
 \begin_preamble
 \input{general-preamble}          
 
+\usepackage{float}
 
 \address{Department of Mathematics,
 The Ohio State University, Columbus, OH 43210, USA} 
@@ -36,7 +37,7 @@ The Ohio State University, Columbus, OH 43210, USA}
 \def\l{\lambda}
 \def\L{\Lambda}
 
-\def\D{\mathbb{D}}
+\def\D{\Delta}
 \def\R{\mathbb{R}}
 \def\C{\mathbb{C}}
 \def\H{\mathbb{H}}
@@ -152,7 +153,22 @@ Unique Equilibrium States for Geodesic Flows over Surfaces without Focal
 \end_layout
 
 \begin_layout Author
-Dong Chen, Lien-Yung Kao, Kiho Park, Matthew Smith, and Régis Varão
+Dong Chen, Lien-Yung Kao, Kiho Park, Matthew Smith, and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+R
+\backslash
+'{e}gis Var
+\backslash
+~{a}o
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Date
@@ -183,7 +199,7 @@ In this paper, we study dynamics of geodesic flows over closed surfaces
  provided the scalar is less than 1.
  Moreover, we discuss ergodic properties of these unique equilibrium states.
  We show these unique equilibrium states are Bernoulli, and weighted regular
- period orbits are equidistributed with respect to these unique equilibrium
+ period orbits are equidistributed relative to these unique equilibrium
  states.
 \end_layout
 
@@ -208,6 +224,36 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Itemize
+
+\color red
+Switch 
+\begin_inset Formula $\lambda_{T}$
+\end_inset
+
+ to 
+\begin_inset Formula $\lambda_{T}(v):=\int_{-T}^{T}\lambda(f_{\sigma}v)d\sigma$
+\end_inset
+
+, so that can find a 
+\begin_inset Formula $v'=f_{s}v$
+\end_inset
+
+ for some 
+\begin_inset Formula $s\in[-T,T]$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lambda(v')>\eta$
+\end_inset
+
+ provided 
+\begin_inset Formula $v\in\Reg_{T}(\eta).$
+\end_inset
+
+ (Need this in the corollary of closing lemma).
+\end_layout
+
 \begin_layout --Separator--
 
 \end_layout
@@ -221,8 +267,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-
-\color green
 Introduction
 \end_layout
 
@@ -239,44 +283,57 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-This paper is devoted to the study of dynamics of geodesic flows over closed
- surfaces without no focal points.
- We focus on the thermodynamics of geodesic flows, especially, the uniqueness
- of equilibrium states and their ergodic properties.
- For uniform hyperbolic flows, as known as Anosov flows, thanks to fundamental
- works of Ruelle, Bowen, and Ratner, we know every Hölder potential has
- a unique equilibrium state, and which enjoys several nice ergodic features
- such as Bernoulli and equidistribution.
- However, the presence of zero and positive curvature on a manifold turns
- the geodesic flow into non-uniformly hyperbolic.
- The non-uniform hyperbolicity greatly increase the difficulty to study
+This paper is devoted to the study of dynamics of the geodesic flows over
+ closed surfaces without focal points.
+ We focus on the thermodynamics of the geodesic flows, especially, the uniquenes
+s of the equilibrium states and their ergodic properties.
+ For uniform hyperbolic flows, also known as Anosov flows, thanks to fundamental
+ works of Ruelle, Bowen, and Ratner, we know that every 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ potential has a unique equilibrium state which enjoys several ergodic features
+ such as possessing Bernoulli and equidistribution properties.
+ It is also well-known that the geodesic flow on a negatively curved manifold
+ is uniformly hyperbolic.
+ However, when the manifold contains subsets with zero or positive curvature,
+ the geodesic flow becomes non-uniformly hyperbolic.
+ The non-uniform hyperbolicity greatly increases the difficulty in understanding
  the thermodynamics of these flows.
- Nevertheless, geometry features of surfaces without focal points brings
+ Nevertheless, the geometric features of surfaces without focal points bring
  us hopes to investigate the dynamics of their geodesic flows.
- Several favorable geometric properties are available in this setting, for
- example, the flat strip theorem, 
+ There are several geometric properties are available in this setting such
+ as the flat strip theorem, 
 \begin_inset Formula $C^{2}$
 \end_inset
 
--regularity of the horocycles, and so on.
- These properties enable us to derive and extend similar results in closed
- rank 1 nonpositively curved manifolds, for instance, Knieper's seminar
- work 
+-regularity of the horocycles, and more.
+ These properties enable us to derive and extend the existence of unique
+ of measure of maximal entropy
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Knieper:1998ht"
 
 \end_inset
 
- about the uniqueness of the measure of maximum entropy, and a recent work
- of Burns-Climenhaga-Fisher-Thompson 
+ and the equilibrium state 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BCFT2017"
 
 \end_inset
 
- on the uniqueness of equilibrium states.
+ on closed rank 1 nonpositively curved manifolds to closed surfaces without
+ focal points and genus at least 2.
  
 \end_layout
 
@@ -285,24 +342,24 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Standard
-Combing the dynamics and geometric features of surfaces without focal point,
- in this paper, we are able to prove that there exists a large class of
- potentials with a unique equilibrium state, and each equilibrium state
- is Bernoulli and has the equidistribution property.
- These results also generlize Gelfert-Ruggiero's work 
+Combining the dynamical and geometric features of surfaces without focal
+ points, in this paper, we are able to prove the uniqueness of equilibrium
+ states for a large class of potentials and Bernoulli and equidistribution
+ properties for such equilibrium states.
+ These results also generlize Gelfert-Ruggiero's recent work 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Gelfert:2017tx"
 
 \end_inset
 
- in uniqueness of measure of maximum entropy for geodesics flows over surfaces
- without focal points.
+ on the uniqueness of measure of the maximum entropy for the geodesics flows
+ over surfaces without focal points.
 \end_layout
 
 \begin_layout Standard
-Putting our result in contexts, we shall first introduce some terminologies,
- briefly (please see Section 
+Putting our result in contexts below, we shall first introduce relevant
+ terminologies, briefly, (please see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Preliminaries-of-dynamics"
@@ -326,7 +383,7 @@ reference "sec:Preliminaries-of-geometry"
 \end_inset
 
  Riemannian surface of genus greater than or equal to 2 without focal points.
- We denote the geodesics flow over the unit tangent bundle 
+ We denote the geodesics flow on the unit tangent bundle 
 \begin_inset Formula $T^{1}S$
 \end_inset
 
@@ -343,8 +400,8 @@ reference "sec:Preliminaries-of-geometry"
 \end_layout
 
 \begin_layout Standard
-The thermodynamics object we study in this paper are the topological pressure
- and equilibrium states.
+The thermodynamical objects that we are interested in this paper are topological
+ pressure and equilibrium states.
  For a continuous potential (i.e., function) 
 \begin_inset Formula $\vp:T^{1}S\to\R$
 \end_inset
@@ -365,7 +422,11 @@ topological pressure
 \begin_inset Formula ${\cal F}$
 \end_inset
 
-, is given by 
+ can be described by the 
+\shape italic
+variational principle
+\shape default
+: 
 \begin_inset Formula 
 \[
 P(\vp)=\sup\{h_{\mu}({\cal F})+\int\vp d\mu:\ \mu{\rm \ is\ }a\mbox{\ }{\cal F}-{\rm invariant\ }{\rm Borel\ }{\rm probability\ }{\rm measure}\}
@@ -386,24 +447,28 @@ where
 \end_inset
 
 .
- An invariant Borel probability measure measure 
+ An invariant Borel probability measure 
 \begin_inset Formula $\mu$
 \end_inset
 
- is called an equilibrium state if it maximizes the free energy, i.e., 
-\begin_inset Formula $P(\vp)=h_{\mu}({\cal F})+\int\vp d\mu$
-\end_inset
-
+ achieving the supremum is called an 
+\shape italic
+equilibrium state
+\shape default
 .
  We notice that when 
-\begin_inset Formula $\vp=0$
+\begin_inset Formula $\vp$
+\end_inset
+
+ is identically equal to 
+\begin_inset Formula $0$
 \end_inset
 
  then 
 \begin_inset Formula $P(0)$
 \end_inset
 
- is the topological entropy 
+ is equal to the topological entropy 
 \begin_inset Formula $h_{{\rm top}}({\cal F})$
 \end_inset
 
@@ -412,10 +477,14 @@ where
 \end_inset
 
 , and equilibrium states for 
-\begin_inset Formula $\vp=0$
+\begin_inset Formula $\vp\equiv0$
 \end_inset
 
- are called measure of maximum entropy.
+ are called 
+\shape italic
+measure of maximum entropy
+\shape default
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -436,7 +505,8 @@ singular set
 \end_inset
 
 .
- For surfaces without focal points, we can write 
+ For surfaces without focal points, we can describe the singular set as
+ 
 \begin_inset Formula $\Sing=\{v\in T^{1}S:\ K(\pi f_{t}v)=0\ \forall t\in\R\}$
 \end_inset
 
@@ -455,7 +525,7 @@ reference "sec:Preliminaries-of-geometry"
 
 \end_inset
 
- for alternative definitions).
+ for alternative characterizations of the singular set).
  The complement of 
 \begin_inset Formula $\Sing$
 \end_inset
@@ -464,7 +534,7 @@ reference "sec:Preliminaries-of-geometry"
 \shape italic
 regular set
 \shape default
- and denoted by
+ and denoted by 
 \begin_inset Formula $\Reg$
 \end_inset
 
@@ -472,34 +542,35 @@ regular set
 \end_layout
 
 \begin_layout Standard
-Our first result asserts that every potential with 
-\begin_inset Quotes eld
+Our first result asserts the uniqueness of the equilibrium states for the
+ potentials with “nice” regularity and carrying smaller pressure on the
+ singular set.
+ The potentials with “nice” regularity include 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
 \end_inset
 
-nice
-\begin_inset Quotes erd
-\end_inset
-
- regularity and carry smaller pressure in the singular set has a unique
- equilibrium state.
- In particular, Hölder potentials and the geometric potential 
+ potentials and the 
+\shape italic
+geometric potential
+\shape default
+ 
 \begin_inset Formula $\vp^{u}$
 \end_inset
 
-, that is, 
+defined as 
 \begin_inset Formula $\varphi^{u}(v):=-\lim_{t\to\infty}\frac{1}{t}{\displaystyle \log\det(}\left.df_{t}\right|_{E^{u}(v)})$
 \end_inset
 
-, have 
-\begin_inset Quotes eld
-\end_inset
-
-nice
-\begin_inset Quotes erd
-\end_inset
-
- regularity that we needed.
- 
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -549,8 +620,20 @@ Let
 \begin_inset Formula $\vp:T^{1}S\to\R$
 \end_inset
 
- be a Hölder continuous potential or a scalar multiple of the geometrical
- potential.
+ be a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ continuous potential or a scalar multiple of the geometrical potential.
  Suppose 
 \begin_inset Formula $\vp$
 \end_inset
@@ -607,7 +690,7 @@ key "BCFT2017"
 
 \end_inset
 
- and this paper follow the general frame work introduced by Climenhaga and
+ and this paper follow the general framework introduced by Climenhaga and
  Thompson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -615,8 +698,8 @@ key "Climenhaga:2016ut"
 
 \end_inset
 
- about uniqueness of equilibrium states for non-uniformly hyperbolic systems.
- We have more detailed discussion of this method in Section
+ regarding the unique equilibrium states for non-uniformly hyperbolic systems.
+ We have more detailed discussion of this method in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Preliminaries-of-dynamics"
@@ -647,17 +730,23 @@ sufficient hyperbolicity
 \begin_inset Quotes erd
 \end_inset
 
- (namely, specification property) then this potential has a unique equilibrium
- state.
- Please see Section 
+ (namely, the specification property) then this potential has a unique equilibri
+um state.
+ We discuss more in detail of this method in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Preliminaries-of-dynamics"
 
 \end_inset
 
- for more detailed discussions.
- 
+ and Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Preliminaries-of-geometry"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -667,16 +756,15 @@ reference "sec:Preliminaries-of-dynamics"
 \begin_layout Standard
 The second result, following Theorem A, we discuss several ergodic properties
  of these unique equilibrium states.
- We successfully extend several properties that we have seen as in the uniform
- hyperbolic cases (cf., for example, 
+ We successfully extend several properties known to hold under uniform hyperboli
+c cases (cf., for example, 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Parry:1990tn"
 
 \end_inset
 
-), as well as in nonpositively curved surfaces (cf.
- for example, 
+), as well as under nonpositively curved surfaces (cf., for example, 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Pollicott:1996jq"
@@ -698,10 +786,10 @@ key "BCFT2017"
 \end_inset
 
 ).
- Namely, these unique equilibrium states are Bernoulli and weighted regular
- period orbits are equidistributed with respect to them.
- Recall that a measure is Bernoulli implies it is K, is strongly mixing,
- and has other weaker ergodic properties.
+ Namely, these unique equilibrium states are Bernoulli and the weak* limit
+ of the weighted regular period orbits.
+ Recall that other weaker ergodic properties such as being Kolmogorov and
+ strongly mixing follows once the measure is Bernoulli.
  
 \end_layout
 
@@ -783,17 +871,18 @@ end{thmx}
 \end_layout
 
 \begin_layout Standard
-In our last main result, we focus on the geometric potential 
+In our last main result, we study on the geometric potential 
 \begin_inset Formula $\vp^{u}$
 \end_inset
 
- and the pressure function 
+ and its pressure function 
 \begin_inset Formula $q\mapsto P(q\vp^{u})$
 \end_inset
 
- associated to it.
- We give the full picture of the pressure function, and this picture coincide
- with the case of nonpositively curved manifolds (see, for example, 
+.
+ We give the full description of the pressure function, and show that the
+ situation is analogous to the nonpositively curved manifolds (see, for
+ example, 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Burns:2014gq"
@@ -832,15 +921,7 @@ begin{thmx}
 \end_layout
 
 \begin_layout Standard
-With the same 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
- and 
-\begin_inset Formula $S$
-\end_inset
-
- as above.
+Under the same assumption in Theorem A.
  Suppose 
 \begin_inset Formula $\varphi=q\varphi^{u}$
 \end_inset
@@ -903,6 +984,22 @@ status open
 
 
 \backslash
+begin{figure}[H]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{center}
 \end_layout
 
@@ -939,6 +1036,38 @@ status open
 
 
 \backslash
+caption{Pressure function}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 end{thmx}
 \end_layout
 
@@ -960,8 +1089,8 @@ reference "sec:Preliminaries-of-dynamics"
 
 \end_inset
 
-, we will go over background in thermodynamics; especially we introduce
- the primary tool, the Climenhaga-Thompson program, used in this paper.
+, we go over the background in thermodynamics; in particular, we introduce
+ the primary tool, the Climenhaga-Thompson program.
  In Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -969,7 +1098,7 @@ reference "sec:Preliminaries-of-geometry"
 
 \end_inset
 
-, we discuss definitions and geometric features of surfaces and manifolds
+, we recall the definitions and geometric features of surfaces and manifolds
  without focal points.
  Section 
 \begin_inset CommandInset ref
@@ -992,7 +1121,9 @@ reference "sec:The-Bowen-property"
 
 \end_inset
 
- are devoted to set up the framework for Climenhaga-Thompson program.
+ are devoted to setting up the framework for Climenhaga-Thompson program,
+ namely, orbit decomposition, the specification property, and the Bowen
+ property.
  We will prove Theorem A in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1015,7 +1146,8 @@ reference "sec:Thm_C_exampels"
 
 \end_inset
 
-, we will show Theorem C and provide some examples satisfying Theorem A.
+, we will show Theorem C and provide some examples of potentials satisfying
+ Theorem A.
  
 \end_layout
 
@@ -1029,13 +1161,13 @@ reference "sec:Thm_C_exampels"
 
 \begin_layout Acknowledgement*
 The authors are extremely grateful to Vaughn Climenhaga and Daniel Thompson
- for not only organized the 2017 MRC program in dynamical systems and proposed
- this project to the authors, but also their continuous support and help
- after the MRC program.
- This paper would have been possible without them.
- The author also would like to thank Keith Burns for sharing many useful
- suggestions and ideas.
- 
+ for not only organizing the 2017 MRC program in dynamical systems and proposing
+ this project to the authors, but also for their continuous support and
+ help after the MRC program.
+ This paper would have not been possible without them.
+ The authors also would like to thank Keith Burns for sharing many useful
+ suggestions and ideas, and Amie Wilkinson for suggestions on improving
+ the presentation of this paper.
 \end_layout
 
 \begin_layout --Separator--
@@ -1062,10 +1194,7 @@ name "sec:Preliminaries-of-dynamics"
 \end_layout
 
 \begin_layout Standard
-In this section, we introduce necessary background in thermodynamics so
- that readers can understand our results as well as the main tool used in
- this work: the Climenhaga-Thompson criteria for the uniqueness of equilibrium
- states.
+In this section, we introduce necessary background in thermodynamics.
  An excellent reference for terminologies introduced in this section is
  Walters' book 
 \begin_inset CommandInset citation
@@ -1199,7 +1328,7 @@ Bowen ball
  is defined as 
 \begin_inset Formula 
 \[
-B_{t}(x,\delta)=\{y\in X:\ d(f_{\tau}x,f_{\tau}y)<\delta\ {\rm for}\ 0\leq t\leq\tau\}.
+B_{t}(x,\delta)=\{y\in X:\ d(f_{\tau}x,f_{\tau}y)<\delta\ {\rm for}\ {\rm all\ }0\leq t\leq\tau\}.
 \]
 
 \end_inset
@@ -1232,15 +1361,15 @@ item
 \shape italic
 separated
 \shape default
- if 
-\begin_inset Formula $\forall x,y\in E$
+ if for all 
+\begin_inset Formula $x,y\in E$
 \end_inset
 
- and 
+ with 
 \begin_inset Formula $x\neq y$
 \end_inset
 
- there exists 
+, there exists 
 \begin_inset Formula $t_{0}\in[0,t]$
 \end_inset
 
@@ -1329,7 +1458,7 @@ finite length orbit segments
 
 \begin_layout Standard
 Let 
-\begin_inset Formula ${\cal C}_{t}=\{x\in X:\ (x,t)\in{\cal C}\}$
+\begin_inset Formula ${\cal C}_{t}:=\{x\in X:\ (x,t)\in{\cal C}\}$
 \end_inset
 
  be the set of length 
@@ -1419,19 +1548,11 @@ topological pressure
 \end_layout
 
 \begin_layout Standard
-Alternatively, the topological pressure of 
-\begin_inset Formula $\vp$
+As noted in the introduction, the pressure 
+\begin_inset Formula $P(\vp)$
 \end_inset
 
- with respect to 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
- can be defined through the 
-\shape italic
-variational principle
-\shape default
-, that is, 
+ satisfies the variational principle
 \begin_inset Formula 
 \[
 P(\vp)=\sup_{\mu\in{\cal M}({\cal F})}\{h_{\mu}({\cal F})+\int\vp d\mu\}
@@ -1451,44 +1572,16 @@ invariant probability measures on
 \begin_inset Formula $X$
 \end_inset
 
- and 
-\begin_inset Formula $h_{\mu}({\cal F})$
-\end_inset
-
- is the measure-theoretic entropy of 
-\begin_inset Formula $(X,{\cal F},\mu)$
-\end_inset
-
 .
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Definition
-We call a measure 
+ Also, a measure 
 \begin_inset Formula $\mu\in{\cal M}({\cal F})$
 \end_inset
 
- 
-\shape italic
-an equilibrium state
-\shape default
- for 
+ realizing the supreme is called an equilibrium state for 
 \begin_inset Formula $\vp$
 \end_inset
 
- if 
-\begin_inset Formula 
-\[
-P(\vp)=h_{\mu}({\cal F})+\int\vp d\mu.
-\]
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -1545,9 +1638,10 @@ item
 \begin_inset Formula $\mu\mapsto h_{\mu}$
 \end_inset
 
- is upper semi-continuous, we know equilibrium states exist for every continuous
+ is upper semi-continuous, any weak* limit of a sequence invariant measures
+ approximating the pressure is an equilibrium state.
+ In particular, there exists at least one equilibrium state for every continuous
  potentials.
- 
 \end_layout
 
 \begin_layout Remark
@@ -1563,9 +1657,9 @@ item
 
 \end_inset
 
- In our case, the geodesics flow over surfaces without focal point, the
- upper semi-continuity of the entropy map is guaranteed by the entropy-expansivi
-ty proved in 
+ In our setting, the geodesics flow over surfaces without focal points,
+ the upper semi-continuity of the entropy map is guaranteed by the entropy-expan
+sivity established in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Liu:2016de"
@@ -1596,9 +1690,9 @@ Climenhaga-Thompson's criteria for the uniqueness of equilibrium states
 \end_layout
 
 \begin_layout Standard
-Climenhaga and Thompson have a series of successful works on obtaining uniquenes
-s of equilibrium states for various non-uniformly hyperbolic systems, for
- example, 
+Climenhaga and Thompson have a series of successful results on establishing
+ the uniqueness of the equilibrium states of various non-uniformly hyperbolic
+ systems; see 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Climenhaga:2012ed,Climenhaga:2013gm,Climenhaga:2015wf,Climenhaga:2016ut,BCFT2017"
@@ -1621,24 +1715,18 @@ key "Climenhaga:2012ed,Climenhaga:2013gm,Climenhaga:2015wf,Climenhaga:2016ut,BCF
 \end_layout
 
 \begin_layout Standard
-One of the primary ideas in Climenhaga-Thompson program is to show that
- the system has 
-\begin_inset Quotes eld
+One of the primary ideas in Climenhaga-Thompson program is to relax the
+ original assumptions from the work of Bowen on the uniformly hyperbolic
+ systems 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bowen:1974df"
+
 \end_inset
 
-hyperbolic
-\begin_inset Quotes erd
-\end_inset
-
- behavior and the potential has 
-\begin_inset Quotes eld
-\end_inset
-
-good regularity
-\begin_inset Quotes erd
-\end_inset
-
- on a collection of finite orbit segments 
+ by asking that the “hyperbolic” behavior on the system and the “good regularity
+” on the potential to hold on a (large) collection of finite orbit segments
+ 
 \begin_inset Formula ${\cal C}$
 \end_inset
 
@@ -1653,11 +1741,11 @@ hyperbolic
 \begin_inset Quotes erd
 \end_inset
 
- behavior means 
+ behavior refers to the 
 \shape italic
 specification
 \shape default
- and 
+ and the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1665,11 +1753,11 @@ good regularity
 \begin_inset Quotes erd
 \end_inset
 
- means the potential has the
+ refers to the potential has the
 \shape italic
  Bowen property, 
 \shape default
-which are defined below.
+on the potentials.
  
 \end_layout
 
@@ -1829,48 +1917,11 @@ where
 \end_layout
 
 \begin_layout Standard
-We remark that the specification and Bowen property defined above is inspired
- by Bowen's work 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bowen:1974df"
-
-\end_inset
-
- in uniformly hyperbolic systems.
- Moreover, when 
+We remark when 
 \begin_inset Formula ${\cal C}=X\times[0,\infty)$
 \end_inset
 
  these definitions coincide with Bowen's original version.
- 
-\end_layout
-
-\begin_layout Standard
-One of the essential points in the Climenhaga-Thompson it to allow one to
- ask these property only on a sub-collection 
-\begin_inset Formula ${\cal G}$
-\end_inset
-
- 
-\begin_inset Quotes eld
-\end_inset
-
-good
-\begin_inset Quotes erd
-\end_inset
-
- orbit segments.
- In other words, we decompose every finite orbit segments into three parts
- and only ask for these property to hold on the 
-\begin_inset Quotes eld
-\end_inset
-
-good
-\begin_inset Quotes erd
-\end_inset
-
- part.
  
 \end_layout
 
@@ -2010,12 +2061,6 @@ end{enumerate}
 
 \end_layout
 
-\begin_layout Standard
-
-\color red
-PICTURE?
-\end_layout
-
 \begin_layout --Separator--
 
 \end_layout
@@ -2032,8 +2077,9 @@ reference "sec:Decompositions-for-finite"
 \begin_inset Formula $({\cal P},{\cal G},{\cal S})$
 \end_inset
 
- and prove it has required properties in following sections.
- Because of some technical reasons (see 
+ and prove that such decomposition has required properties in subsequent
+ sections.
+ Due to some technical reasons (see 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Climenhaga:2016ut"
@@ -2068,8 +2114,8 @@ and similarly for
 \end_layout
 
 \begin_layout Standard
-The following three terms is the last piece needed for stating the Climenhaga-Th
-ompson criteria.
+The following three terms are the remaining pieces needed for stating the
+ Climenhaga-Thompson criteria.
  
 \end_layout
 
@@ -2079,7 +2125,7 @@ ompson criteria.
 
 \begin_layout Definition
 For 
-\begin_inset Formula $x\in X$
+\begin_inset Formula ${\color{blue}x}\in X$
 \end_inset
 
 , 
@@ -2219,7 +2265,7 @@ P_{{\rm exp}}^{\perp}(\vp):=\lim_{\ep\to0}P_{\exp}^{\perp}(\vp,\ep)
  where 
 \begin_inset Formula 
 \[
-P_{\exp}^{\perp}(\vp,\ep):=\sup_{\mu\in{\cal M}^{e}({\cal F})}\{h_{\mu}(f_{1})+\int\vp d\mu:\ \mu({\rm NE}(\ep))=1\}
+P_{\exp}^{\perp}(\vp,\ep):=\sup\{h_{\mu}(f_{1})+\int\vp d\mu:\ \mu\in{\cal M}^{e}({\cal F})\ {\rm and\ }\mu({\rm NE}(\ep))=1\}
 \]
 
 \end_inset
@@ -2311,19 +2357,14 @@ reference "sec:Pressure-gap-and_Thm_A"
 \end_layout
 
 \begin_layout Theorem
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{Climenhaga:2016ut}, Theorem A]
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem A"
+key "Climenhaga:2016ut"
 
 \end_inset
 
- 
+
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:C-T_criteria"
@@ -2474,6 +2515,8 @@ Then
 \end_layout
 
 \begin_layout Subsection
+
+\color red
 Gurevich pressure 
 \end_layout
 
@@ -2498,7 +2541,75 @@ key "Gelfert:2014hn"
  terms.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
+In what follows, let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a Riemannian manifold, 
+\begin_inset Formula ${\cal F}=(f_{t})_{t\in\R}$
+\end_inset
+
+ be the geodesic flow on 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+, and 
+\begin_inset Formula $\vp:T^{1}M\to\R$
+\end_inset
+
+ be a continuous potential.
+ We denote the set of closed regular geodesics with length in the interval
+ 
+\begin_inset Formula $(a,b]$
+\end_inset
+
+ by 
+\begin_inset Formula ${\rm Per}_{R}(a,b]$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\g\in{\rm Per}_{R}(a,b]$
+\end_inset
+
+, we define 
+\begin_inset Formula 
+\[
+\Phi(\g):=\int_{\g}\vp=\int_{0}^{|\g|}\vp(f_{t}v)dt
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $v\in T^{1}M$
+\end_inset
+
+ is tangent to 
+\begin_inset Formula $\g$
+\end_inset
+
+ and 
+\begin_inset Formula $|\g|$
+\end_inset
+
+ is the length of 
+\begin_inset Formula $\g$
+\end_inset
+
+.
+ Given 
+\begin_inset Formula $T,\Delta>0$
+\end_inset
+
+, we define 
+\begin_inset Formula 
+\[
+\Lambda_{\Reg,\Delta}^{*}(\vp,T):=\sum_{\g\in{\rm Per}_{R}(T-\D,T]}e^{\Phi(\g)}.
+\]
+
+\end_inset
+
 
 \end_layout
 
@@ -2517,24 +2628,14 @@ status open
 
 \end_inset
 
- Let 
-\begin_inset Formula $M$
+ Given 
+\begin_inset Formula $\Delta>0$
 \end_inset
 
- be a Riemannian manifold, 
-\begin_inset Formula ${\cal F}=(f_{t})_{t\in\R}$
-\end_inset
+,
+\end_layout
 
- be the geodesic flow on 
-\begin_inset Formula $T^{1}M$
-\end_inset
-
-, and 
-\begin_inset Formula $\vp:T^{1}M\to\R$
-\end_inset
-
- be a continuous potential.
- 
+\begin_layout Definition
 \begin_inset ERT
 status open
 
@@ -2567,10 +2668,18 @@ item
 
  The 
 \shape italic
+upper regular
+\shape default
+ 
+\shape italic
 Gurevich pressure
 \shape default
  
-\begin_inset Formula $P_{Gur}$
+\begin_inset Formula $\overline{P}_{\Reg,\D}^{*}$
+\end_inset
+
+ of 
+\begin_inset Formula $\vp$
 \end_inset
 
  is defined as 
@@ -2579,37 +2688,12 @@ Gurevich pressure
 \begin_layout Definition
 \begin_inset Formula 
 \[
-P_{Gur}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t-1,t)}e^{\int_{\g}\vp}
+\overline{P}_{\Reg,\D}^{*}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\Lambda_{\Reg,\Delta}^{*}(\vp,t).
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula ${\rm Per}(T-1,T)$
-\end_inset
 
- the set of primitive periodic geometrically distinct orbits (i.e., geodesics)
- of length in 
-\begin_inset Formula $[T-1,T)$
-\end_inset
-
-, 
-\begin_inset Formula $l(\g)$
-\end_inset
-
- is the length of 
-\begin_inset Formula $\g$
-\end_inset
-
-, and 
-\begin_inset Formula $\int_{\g}\vp=\int_{0}^{l(\g)}\vp(f_{s}x)ds$
-\end_inset
-
- for any 
-\begin_inset Formula $x\in\g$
-\end_inset
-
-,.
 \end_layout
 
 \begin_layout Definition
@@ -2625,38 +2709,47 @@ item
 
 \end_inset
 
- The 
+ The
+\shape italic
+ lower
+\shape default
+ 
 \shape italic
 regular Gurevich pressure
 \shape default
  
-\begin_inset Formula $P_{\Reg}$
+\begin_inset Formula $\underline{P}_{\Reg,\D}^{*}$
+\end_inset
+
+ of 
+\begin_inset Formula $\vp$
 \end_inset
 
  is defined as 
 \begin_inset Formula 
 \[
-P_{\Reg}(\vp):=\limsup_{t\to\infty}\frac{1}{t}\log\sum_{\g\in{\rm Per}(t-1,t,\Reg)}e^{\int_{\g}\vp}
+\underline{P}_{\Reg,\D}^{*}(\vp):=\liminf_{t\to\infty}\frac{1}{t}\log\Lambda_{\Reg,\Delta}^{*}(\vp,t).
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
+
+\end_layout
+
+\begin_layout Definition
+When 
+\begin_inset Formula $\overline{P}_{{\rm Reg},\D}^{*}(\vp)=\underline{P}_{\Reg,\D}^{*}(\vp)$
 \end_inset
 
- is the subset of 
-\begin_inset Formula ${\rm Per}(T-1,T)$
-\end_inset
-
- that every orbit is contained in 
-\begin_inset Formula ${\rm Reg}$
+, we call this value the 
+\shape italic
+regular Gurevich pressure 
+\shape default
+and denote it by 
+\begin_inset Formula $P_{\Reg,\D}^{*}(\vp)$
 \end_inset
 
 .
-
-\color green
- 
 \end_layout
 
 \begin_layout Definition
@@ -2679,58 +2772,51 @@ end{enumerate}
 
 \end_layout
 
-\begin_layout Standard
-In Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Prop_eq_states_Thm_B"
-
+\begin_layout Remark
+Our 
+\shape italic
+upper
+\shape default
+ regular Gurevich pressure 
+\begin_inset Formula $\overline{P}_{\Reg,\D}^{*}$
 \end_inset
 
-, using Pollicott's idea in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pollicott:1996jq"
-
+ is the regular Gurevich pressure 
+\begin_inset Formula $P_{{\rm Gur},{\cal R}}$
 \end_inset
 
- (as well as Gelfert-Schapira 
+ used in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Gelfert:2014hn"
 
 \end_inset
 
-), we will prove equalities 
-\begin_inset Formula $P_{\Reg}(\vp)\leq P_{Gur}(\vp)\leq P(\vp)$
+, and indeed using the same argument as in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gelfert:2014hn"
+
 \end_inset
 
- in our setting, Moreover, we will show that any potential 
-\begin_inset Formula $\vp$
+, one can show that 
+\begin_inset Formula $\overline{P}_{\Reg,\D}^{*}$
 \end_inset
 
- with a unique equilibrium state satisfies 
-\begin_inset Formula $P_{\Reg}(\vp)=P(\vp)$
+ is independent of 
+\begin_inset Formula $\D>0$
 \end_inset
 
 .
- As observed in Gelfert-Schapira 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Gelfert:2014hn"
+ However, to derive the equidistribution property, we need to take the lower
+ regular Gurevich pressure into account (see Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:pressure_equal_equidistribution"
 
 \end_inset
 
-, the equality 
-\begin_inset Formula $P_{\Reg}(\vp)=P(\vp)$
-\end_inset
-
- implies that the unique equilibrium state 
-\begin_inset Formula $\mu_{\vp}$
-\end_inset
-
- is the weak* limit of weighted regular period orbits.
- 
+).
 \end_layout
 
 \begin_layout --Separator--
@@ -2750,10 +2836,14 @@ For a potential
 \begin_inset Formula $\vp-$
 \end_inset
 
-weighted regular period orbits, if 
+weighted regular period orbits, if there exists 
+\begin_inset Formula $\D>0$
+\end_inset
+
+ such that 
 \begin_inset Formula 
 \[
-\mu=\lim_{T\to\infty}\frac{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}\delta_{\g}}{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}}
+\mu=\lim_{T\to\infty}\frac{\sum_{\g\in{\rm Per}_{R}(T-\D,T]}e^{\Phi(\g)}\delta_{\g}}{\Lambda_{\Reg,\Delta}^{*}(\vp,T)}
 \]
 
 \end_inset
@@ -2774,19 +2864,105 @@ weighted regular period orbits, if
 \end_layout
 
 \begin_layout Standard
-Since in most of our discussion the potential 
-\begin_inset Formula $\vp$
+In his proof of the variational principle in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 9.10"
+key "Walters:2000vc"
+
 \end_inset
 
- is given and fixed, we will omit 
-\begin_inset Formula $\vp$
+, Walters pointed out a way to construct equilibrium states from periodic
+ orbits.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 9.10"
+key "Walters:2000vc"
+
 \end_inset
 
- and simply say 
+ Given 
+\begin_inset Formula $\D>0$
+\end_inset
+
+, suppose there exists 
+\begin_inset Formula $\{T_{k}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\lim_{k\to\infty}\frac{1}{T_{k}}\Lambda_{\Reg,\Delta}^{*}(\vp,T_{k})=P(\vp)
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+\lim_{k\to\infty}\frac{\sum_{\g\in{\rm Per}_{R}(T_{k}-\D,T_{k}]}e^{\Phi(\g)}\delta_{\g}}{\Lambda_{\Reg,\Delta}^{*}(\vp,T_{k})}=\mu
+\]
+
+\end_inset
+
+ then 
 \begin_inset Formula $\mu$
 \end_inset
 
- is weak* limit of weighted regular period orbits.
+ is an equilibrium state.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+From the above observation we have:
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:pressure_equal_equidistribution"
+
+\end_inset
+
+Given 
+\begin_inset Formula $\D>0$
+\end_inset
+
+, suppose 
+\begin_inset Formula $P_{\Reg,\D}^{*}(\vp)=P(\vp)$
+\end_inset
+
+ and 
+\begin_inset Formula $\vp$
+\end_inset
+
+ has a unique equilibrium 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+, then 
+\begin_inset Formula $\mu_{\vp}$
+\end_inset
+
+ is the weak* limit of 
+\begin_inset Formula $\vp-$
+\end_inset
+
+weighted regular closed geodesics.
 \end_layout
 
 \begin_layout --Separator--
@@ -2879,26 +3055,18 @@ geodesics flow
 \begin_inset Formula $\gamma_{v}$
 \end_inset
 
- is the (unit speed) geodesics determined by the initial vector 
+ is the (unit speed) geodesic determined by the initial vector 
 \begin_inset Formula $v\in T^{1}M$
 \end_inset
 
 .
- Recall that for a Riemannian manifolds 
-\begin_inset Formula $M$
-\end_inset
-
- one can lift its Riemannian metric to the tangent bundle, that is, the
- 
+ Recall that for any Riemannian manifold, we can naturally equip its tangent
+ bundle with the 
 \shape italic
-Sasaki metric
+Sasaki metric.
+ 
 \shape default
- on 
-\begin_inset Formula $TM$
-\end_inset
-
-.
- In what follows, without stating specifically, the norm 
+In what follows, without stating specifically, the norm 
 \begin_inset Formula $||\cdot||$
 \end_inset
 
@@ -2923,7 +3091,7 @@ Jacobi field
 \begin_inset Formula $\g$
 \end_inset
 
- which satisfies the Jacobi equation below: 
+ which satisfying the Jacobi equation: 
 \begin_inset Formula 
 \[
 J''(t)+K(\g(t))\dot{\g}(t)=0
@@ -2944,7 +3112,7 @@ J''(t)+K(\g(t))\dot{\g}(t)=0
 \end_inset
 
 .
- A Jacobi field is called 
+ A Jacobi field is 
 \shape italic
 orthogonal
 \shape default
@@ -2987,7 +3155,7 @@ status open
 
 \end_inset
 
- We call a Riemannian manifold 
+ A Riemannian manifold 
 \begin_inset Formula $M$
 \end_inset
 
@@ -2995,7 +3163,7 @@ status open
 \shape italic
 no focal points
 \shape default
- if for any initial vanishing orthogonal Jacobi field 
+ if for any initial vanishing Jacobi field 
 \begin_inset Formula $J(t)$
 \end_inset
 
@@ -3021,7 +3189,7 @@ no focal points
 
 \begin_layout Remark
 There are other equivalent definitions for surface/manifolds without focal
- points, and many geometric features are introduced in 
+ points, and many of their geometric features are introduced in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "doCarmo:2013tg"
@@ -3079,7 +3247,7 @@ item
 \begin_inset Formula $\subsetneq$
 \end_inset
 
- no conjugate points
+ no conjugate points.
 \end_layout
 
 \begin_layout Remark
@@ -3095,27 +3263,21 @@ item
 
 \end_inset
 
- 
-\color red
-Picture of Jacobi fields
-\end_layout
-
-\begin_layout Remark
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\end_layout
+ One can find examples from each category above from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gulliver:1975gx"
 
 \end_inset
 
- 
-\color red
-Gerber and Gulliver examples 
+, as well as 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gerber:2003go"
+
+\end_inset
+
+, for examples in the above assertion.
 \end_layout
 
 \begin_layout Remark
@@ -3165,7 +3327,7 @@ It is a classical result that one can identify the tangent space of
 \end_inset
 
  on 
-\begin_inset Formula $TT^{1}S$
+\begin_inset Formula $TT^{1}M$
 \end_inset
 
 .
@@ -3173,7 +3335,7 @@ It is a classical result that one can identify the tangent space of
 \begin_inset Formula ${\cal J}(\g)$
 \end_inset
 
- the space of space of orthogonal Jacobi fields along a geodesics 
+ the space of space of orthogonal Jacobi fields along a geodesic 
 \begin_inset Formula $\g$
 \end_inset
 
@@ -3283,11 +3445,11 @@ E^{u}(v):= & \{\xi\in T_{v}T^{1}M:\ J_{\xi}\in{\cal J}^{u}(v)\}.
 \end_layout
 
 \begin_layout Standard
-Last, we define the 
+Last, we define 
 \begin_inset Formula $E^{c}(v)$
 \end_inset
 
- the be the bundle given by the flow direction.
+ given by the flow direction.
 \end_layout
 
 \begin_layout --Separator--
@@ -3321,7 +3483,7 @@ rank
 \begin_inset Formula $v\in T^{1}M$
 \end_inset
 
- is the dimension of the space of parallel orthogonal Jacobi fields.
+ is the dimension of the space of parallel Jacobi fields.
  We call 
 \begin_inset Formula $M$
 \end_inset
@@ -3344,7 +3506,7 @@ status open
 
 \begin_layout Plain Layout
 
-[Singular set and regular set]
+[Singular and Regular set]
 \end_layout
 
 \end_inset
@@ -3394,7 +3556,7 @@ name "prop:no_focal_points"
 
 \end_inset
 
-Let 
+ Let 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3442,10 +3604,6 @@ item
 \end_inset
 
  
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -3456,10 +3614,6 @@ status open
 cite{Hurley:1986km}
 \end_layout
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  The geodesic flow 
@@ -3483,19 +3637,11 @@ item
 \end_inset
 
 
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Theorem 4.7, 6.7"
 key "Pesin:1977vi"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  
@@ -3532,19 +3678,11 @@ item
 \end_inset
 
 
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Theorem 4.11, 6.4"
 key "Pesin:1977vi"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  The subbundles 
@@ -3563,7 +3701,11 @@ key "Pesin:1977vi"
 \begin_inset Formula $E^{cs}(v)$
 \end_inset
 
- are flow invariant where 
+ are 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+--invariant where 
 \begin_inset Formula $E^{cs}(v)=E^{c}(v)\oplus E^{s}(v)$
 \end_inset
 
@@ -3588,19 +3730,11 @@ item
 \end_inset
 
 
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Theorem 6.1, 6.4"
 key "Pesin:1977vi"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  The subbundles 
@@ -3619,7 +3753,11 @@ key "Pesin:1977vi"
 \begin_inset Formula $E^{cs}(v)$
 \end_inset
 
- are integrable to flow invariant foliations 
+ are integrable to 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+--invariant foliations 
 \begin_inset Formula $W^{u}(v)$
 \end_inset
 
@@ -3636,7 +3774,29 @@ key "Pesin:1977vi"
 \end_inset
 
 , respectively.
+ Moreover, 
+\begin_inset Formula $W^{u}(v)$
+\end_inset
+
+ (resp.
  
+\begin_inset Formula $W^{s}(v)$
+\end_inset
+
+) is consisted of vectors which are perpendicular to 
+\begin_inset Formula $H^{u}(v)$
+\end_inset
+
+ (resp.
+ 
+\begin_inset Formula $H^{s}(v)$
+\end_inset
+
+) and toward to the same side as 
+\begin_inset Formula $v$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Proposition
@@ -3653,19 +3813,11 @@ item
 \end_inset
 
 
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Lemma, p. 246"
 key "Eschenburg:1977kn"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  
@@ -3693,19 +3845,19 @@ item
 \end_inset
 
  
-\begin_inset Formula ${\rm (}$
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 1"
+key "OSullivan:1976cf"
+
 \end_inset
 
-
+,
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Theorem 2"
 key "Eschenburg:1977kn"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  
@@ -3719,15 +3871,15 @@ The Flat Strip Theorem: if geodesics
 \begin_inset Formula $\g_{1},\g_{2}$
 \end_inset
 
- are bi-asymptotic (i.e., 
+ are bi-asymptotic in the sense that 
 \begin_inset Formula $d(\g_{1}(t),\g_{2}(t))$
 \end_inset
 
- is bonded as 
-\begin_inset Formula $t\to\pm\infty$
+ is uniformly bounded for all 
+\begin_inset Formula $t\in\R$
 \end_inset
 
-), then 
+, then 
 \begin_inset Formula $\g_{1}$
 \end_inset
 
@@ -3751,65 +3903,12 @@ item
 
 \end_inset
 
- 
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{Hurley:1986km}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
-\end_inset
-
- If 
-\begin_inset Formula $M$
-\end_inset
-
- is rank 1, then the geodesic flow 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
- is topologically transitive.
-\end_layout
-
-\begin_layout Proposition
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula ${\rm (}$
-\end_inset
-
 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Corollary 3.3, 3.6"
 key "Eberlein:1973hu"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  Suppose 
@@ -3828,7 +3927,11 @@ key "Eberlein:1973hu"
 \begin_inset Formula $t\in\R$
 \end_inset
 
-.
+ where 
+\begin_inset Formula $\pi:T^{1}M\to M$
+\end_inset
+
+ is the canonical projection.
  
 \end_layout
 
@@ -3846,18 +3949,10 @@ item
 \end_inset
 
  
-\begin_inset Formula ${\rm (}$
-\end_inset
-
-
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hopf:1948tn"
 
-\end_inset
-
-
-\begin_inset Formula ${\rm )}$
 \end_inset
 
  Suppose 
@@ -3892,14 +3987,28 @@ end{enumerate}
 \end_layout
 
 \begin_layout Standard
-We shall introduce more metrics on these flow invariant these spaces, so
- that we can do more finer analysis.
+We shall introduce more metrics on 
+\begin_inset Formula $T^{1}M$
+\end_inset
+
+ and the flow invariant foliations induced in Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:no_focal_points"
+
+\end_inset
+
+ so that we can perform finer analysis.
  We write 
 \begin_inset Formula $d_{{\rm S}}$
 \end_inset
 
- for the distance function induced by the Sasaki metric on 
+ for the distance function on 
 \begin_inset Formula $T^{1}M$
+\end_inset
+
+ induced by the Sasaki metric on 
+\begin_inset Formula $TT^{1}M$
 \end_inset
 
 .
@@ -3943,11 +4052,16 @@ It is not hard to see,
 \end_inset
 
  are uniformly equivalent.
- Thus, for the convenience, every Bowen ball 
+ Thus, we will primarily work with the Knieper metric 
+\begin_inset Formula $d_{K}$
+\end_inset
+
+ throughout the paper.
+ In particular, any Bowen ball 
 \begin_inset Formula $B_{t}(v,\ep)$
 \end_inset
 
- used in this paper is defined with respect to the Knieper metric 
+ appearing from here onward is with respect to the Knieper metric 
 \begin_inset Formula $d_{K}$
 \end_inset
 
@@ -3992,10 +4106,6 @@ d^{s}(u,w):=\inf\{l(\pi\g):\ \g:[0,1]\to W^{s}(v),\ \g(0)=u,\ \g(1)=w\}
 \end_inset
 
  where 
-\begin_inset Formula $\pi:T^{1}M\to M$
-\end_inset
-
- is the canonical projection, 
 \begin_inset Formula $l$
 \end_inset
 
@@ -4003,7 +4113,7 @@ d^{s}(u,w):=\inf\{l(\pi\g):\ \g:[0,1]\to W^{s}(v),\ \g(0)=u,\ \g(1)=w\}
 \begin_inset Formula $M$
 \end_inset
 
-, and the infimum is taking over all 
+, and the infimum is taken over all 
 \begin_inset Formula $C^{1}$
 \end_inset
 
@@ -4040,7 +4150,7 @@ W_{\rho}^{s}(v):=\{w\in W^{s}(v):\ d^{s}(v,w)\leq\rho\}.
 
 \end_inset
 
- Moreover, locally we can define a similar intrinsic metric 
+ Moreover, we can locally define a similar intrinsic metric 
 \begin_inset Formula $d^{cs}$
 \end_inset
 
@@ -4074,11 +4184,11 @@ where
 \end_inset
 
 .
- We define 
+ We also define 
 \begin_inset Formula $d^{u},W_{\rho}^{u}(v),d^{cu}(v)$
 \end_inset
 
- in the same way.
+ analogously.
  Notice that when 
 \begin_inset Formula $\rho$
 \end_inset
@@ -4109,7 +4219,11 @@ where
 \end_inset
 
  is a non-increasing function.
- Similarly, for 
+ Indeed, it follows Definition 
+\end_layout
+
+\begin_layout Standard
+Similarly, for 
 \begin_inset Formula $\sigma\in\{u,cu\}$
 \end_inset
 
@@ -4161,16 +4275,23 @@ unstable horosphere
 \begin_inset Formula $H^{u}(v)\subset M$
 \end_inset
 
- as 
-\begin_inset Formula $H^{s}(v)=\pi(W^{s}(v))$
+ as the projection of the respective foliations to 
+\begin_inset Formula $M$
 \end_inset
 
- and 
-\begin_inset Formula $H^{u}(v)=\pi(W^{s}(v))$
+:
+\begin_inset Formula 
+\[
+H^{s}(v)=\pi(W^{s}(v))\mbox{\ and\ }H^{u}(v)=\pi(W^{s}(v)).
+\]
+
 \end_inset
 
-.
- We now summarize some useful properties of them.
+
+\end_layout
+
+\begin_layout Standard
+We now summarize some useful properties of them.
 \end_layout
 
 \begin_layout --Separator--
@@ -4182,15 +4303,10 @@ unstable horosphere
 \end_layout
 
 \begin_layout Proposition
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{Eschenburg:1977kn}, Theorem 1 (i) (ii)]
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 1 (i) (ii)"
+key "Eschenburg:1977kn"
 
 \end_inset
 
@@ -4260,7 +4376,7 @@ item
 \begin_inset Formula $C^{2}$
 \end_inset
 
--embedded hypersurfaces in the universal covering 
+-embedded hypersurfaces when lifted to the universal cover 
 \begin_inset Formula $\widetilde{M}$
 \end_inset
 
@@ -4373,7 +4489,7 @@ reference "prop:no_focal_points"
 
 \end_inset
 
-, 
+ and 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop:horoshpere"
@@ -4444,7 +4560,7 @@ item
 \begin_inset Formula $H^{s}(v)$
 \end_inset
 
-) is one dimensional and called 
+) is one dimensional and called the 
 \shape italic
 unstable
 \shape default
@@ -4527,7 +4643,7 @@ item
 \end_inset
 
  is given by 
-\begin_inset Formula $k^{u}(v)$
+\begin_inset Formula $k^{s}(v)$
 \end_inset
 
  the 
@@ -4535,11 +4651,11 @@ item
 geodesic curvature
 \shape default
  
-\begin_inset Formula $k^{u}(v)$
+\begin_inset Formula $k^{s}(v)$
 \end_inset
 
  of the horocycle of 
-\begin_inset Formula $H^{u}(v)$
+\begin_inset Formula $H^{s}(v)$
 \end_inset
 
  at 
@@ -4556,7 +4672,7 @@ geodesic curvature
 
 .
  Moreover, we have 
-\begin_inset Formula $-k^{s}(-v)=k^{u}(v)$
+\begin_inset Formula $k^{s}(-v)=k^{u}(v)$
 \end_inset
 
 .
@@ -4579,10 +4695,6 @@ end{itemize}
 
 \end_layout
 
-\begin_layout --Separator--
-
-\end_layout
-
 \begin_layout Subsection
 Hyperbolicity indices 
 \begin_inset Formula $\lambda$
@@ -4590,6 +4702,13 @@ Hyperbolicity indices
 
  and 
 \begin_inset Formula $\lt$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Hyperbolicity-indices-"
+
 \end_inset
 
 
@@ -4612,8 +4731,8 @@ In this subsection, using
 \begin_inset Formula $k^{u}$
 \end_inset
 
- we introduce several useful numbers to quantify the hyperbolicity for any
- 
+ we introduce several useful functions to quantify the hyperbolicity for
+ any 
 \begin_inset Formula $v\in T^{1}S$
 \end_inset
 
@@ -4625,7 +4744,7 @@ reference "sec:Decompositions-for-finite"
 
 \end_inset
 
- to derive a decomposition for orbit segments.
+ to derive the decomposition for orbit segments.
  
 \end_layout
 
@@ -4861,7 +4980,7 @@ item
 \end_inset
 
 .
- Indeed, we have 
+ However, we generally have 
 \begin_inset Formula $\lt(v)\geq\int_{-T}^{T}\lambda(f_{\tau}v)d\tau$
 \end_inset
 
@@ -4947,8 +5066,9 @@ no focal points
 \begin_inset Quotes erd
 \end_inset
 
- setting is that Jacobi fields are NOT strictly convex in our setting.
- As one can see in 
+ setting is that Jacobi fields are not strictly convex in the no focal points
+ setting.
+ As one can observe in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BCFT2017"
@@ -4964,11 +5084,11 @@ key "BCFT2017"
 \end_inset
 
  to characterize the singular set.
- However, in our case, 
+ However, in our setting, 
 \begin_inset Formula $\lambda$
 \end_inset
 
- does not enjoy such a property.
+ does not enjoy such properties.
  Therefore, we need to accumulate more hyperbolicity through integrating
  
 \begin_inset Formula $\lambda$
@@ -4978,11 +5098,11 @@ key "BCFT2017"
 \begin_inset Formula $T$
 \end_inset
 
-, which is why we introduce a new quantity 
+; indeed, this is our motivation for introducing a new function 
 \begin_inset Formula $\lambda_{T}$
 \end_inset
 
- in our setting.
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -4990,8 +5110,8 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Standard
-The following proposition and lemma shows relations between horocycles and
- related Jacobi fields.
+The following proposition and lemma establish relations between horocycles
+ and related Jacobi fields.
  The version we state below is from 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5007,19 +5127,6 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Proposition
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{BCFT2017}, Lemma 2.7]
-\end_layout
-
-\end_inset
-
- 
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:k^u_and_Coddazi_eq"
@@ -5027,6 +5134,14 @@ name "prop:k^u_and_Coddazi_eq"
 \end_inset
 
 Let 
+\begin_inset Formula $\g_{v}(t)$
+\end_inset
+
+ be a unit speed geodesic such that 
+\begin_inset Formula $\dot{\g}_{v}(0)=v$
+\end_inset
+
+, and 
 \begin_inset Formula $J^{u}$
 \end_inset
 
@@ -5038,8 +5153,8 @@ Jacobi field along
 \begin_inset Formula $\g_{v}$
 \end_inset
 
-, that is, the Jacobi field derived by varying geodesics perpendicular to
- 
+, that is, the Jacobi field derived by varying through geodesics perpendicular
+ to 
 \begin_inset Formula $H^{u}(v)$
 \end_inset
 
@@ -5049,11 +5164,11 @@ Jacobi field along
 \end_inset
 
  and 
-\begin_inset Formula $(J^{u})'(t_{0})=k^{u}(f_{t_{0}}v)J^{u}(t_{0})$
+\begin_inset Formula $(J^{u})'(t)=k^{u}(f_{t}v)J^{u}(t)$
 \end_inset
 
  for all 
-\begin_inset Formula $t_{0}\in\R$
+\begin_inset Formula $t\in\R$
 \end_inset
 
 .
@@ -5074,14 +5189,123 @@ Jacobi field along
 \end_inset
 
  and 
-\begin_inset Formula $(J^{s})'(t_{0})=-k^{s}(f_{t_{0}}v)J^{s}(t_{0})$
+\begin_inset Formula $(J^{s})'(t)=-k^{s}(f_{t}v)J^{s}(t)$
 \end_inset
 
  for all 
-\begin_inset Formula $t_{0}\in\R$
+\begin_inset Formula $t\in\R$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\alpha(s,t)$
+\end_inset
+
+ for 
+\begin_inset Formula $(s,t)\in(-\ep,\ep)\times\R$
+\end_inset
+
+ be the variation of geodesics along 
+\begin_inset Formula $H^{u}(v)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\alpha(0,t)=\g_{v}(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha(s,0)\in H^{u}(v)$
+\end_inset
+
+, such that 
+\begin_inset Formula $\left.\frac{\partial}{\partial s}\alpha(s,t)\right|_{s=0}=J^{u}(t)$
+\end_inset
+
+.
+ Then when 
+\begin_inset Formula $t=0$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+(J^{u})'(0)= & \left.\frac{\nabla}{\partial t}\frac{\partial}{\partial s}\alpha(s,t)\right|_{s=0,t=0}=\left.\frac{\nabla}{\partial s}\frac{\partial}{\partial t}\alpha(s,t)\right|_{s=0,t=0}\\
+= & \nabla_{J^{u}(0)}N={\cal U}^{u}(v)(J(0))=k^{u}(v)J(0)
+\end{align*}
+
+\end_inset
+
+where the second equality is by the symmetry of the Levi-Civita connection
+ and the last equality follows from Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:horoshpere"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+To see this is true for all 
+\begin_inset Formula $t$
+\end_inset
+
+, we notice that the flow invariant unstable manifold 
+\begin_inset Formula $W^{u}(v)$
+\end_inset
+
+ is consisted of vectors which are perpendicular to 
+\begin_inset Formula $H^{u}(v)$
+\end_inset
+
+ and toward to the same side as 
+\begin_inset Formula $v$
+\end_inset
+
+ (cf.
+ Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:no_focal_points"
+
+\end_inset
+
+).
+ That is, when we vary geodesics perpendicularly along 
+\begin_inset Formula $H^{u}(v),$
+\end_inset
+
+ these geodesics vary perpendicularly along 
+\begin_inset Formula $H^{u}(f_{t}v)$
+\end_inset
+
+ as well.
+ Thus, 
+\begin_inset Formula $J^{u}(t)$
+\end_inset
+
+ is the Jacobi field derived by varying geodesics perpendicular to 
+\begin_inset Formula $H^{u}(f_{t}v)$
+\end_inset
+
+, and hence repeat the computation as above, we have 
+\begin_inset Formula $(J^{u})'(t)=k^{u}(f_{t}v)J^{u}(t)$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $J^{s}$
+\end_inset
+
+, the argument is the same.
 \end_layout
 
 \begin_layout --Separator--
@@ -5097,7 +5321,7 @@ Let
 \begin_inset Formula $k^{u}(v)$
 \end_inset
 
- for 
+ over all 
 \begin_inset Formula $v\in T^{1}S$
 \end_inset
 
@@ -5158,15 +5382,10 @@ reference "eq:metric_jacobi_unit_tangent_bundle"
 \end_layout
 
 \begin_layout Lemma
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{BCFT2017}, Lemma 2.9]
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 2.11"
+key "BCFT2017"
 
 \end_inset
 
@@ -5196,7 +5415,7 @@ Let
 \end_inset
 
 .
- Then 
+ Then, for , 
 \begin_inset Formula 
 \begin{equation}
 ||J^{u}(t)||\geq e^{\int_{0}^{t}k^{u}(f_{\tau}v)d\tau}||J^{u}(0)||{\rm \ }and\ ||J^{s}(t)||\leq e^{-\int_{0}^{t}k^{s}(f_{\tau}v)d\tau}||J^{s}(0)||.
@@ -5360,28 +5579,12 @@ name "sec:Decompositions-for-finite"
 \end_layout
 
 \begin_layout Standard
-Throughout this section, 
-\begin_inset Formula $S$
-\end_inset
-
- denotes a closed surface of genus 
-\begin_inset Formula $\geq2$
-\end_inset
-
- without focal points, 
-\begin_inset Formula ${\cal F}$
-\end_inset
-
- is the geodesic flow on 
-\begin_inset Formula $T^{1}S$
-\end_inset
-
-, and 
+We retain the same notations as previous sections, and denote a potential
+ by 
 \begin_inset Formula $\vp:T^{1}S\to\R$
 \end_inset
 
- is a potential.
- 
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -5431,7 +5634,7 @@ status open
 
 \begin_layout Plain Layout
 
-[The Decomposition]
+[Good orbits and Bad orbits]
 \end_layout
 
 \end_inset
@@ -5447,30 +5650,187 @@ For any
 \begin_inset Formula $T,\eta>0$
 \end_inset
 
-, we define the decomposition 
-\begin_inset Formula $({\cal P}_{T}(\eta),{\cal G}_{T}(\eta),{\cal B}_{T}(\eta))$
+, we define the two collections of finite orbit segments 
+\begin_inset Formula ${\cal G}_{T}(\eta),{\cal B}_{T}(\eta)\subset T^{1}S\times[0,\infty)$
 \end_inset
 
- of finite orbit segments with respect to 
+ using 
 \begin_inset Formula $\lambda_{T}$
 \end_inset
 
- as 
+: 
 \begin_inset Formula 
 \begin{align*}
-{\cal P}_{T}(\eta):= & \{(v,t)\subset T^{1}S\times[0,\infty)\colon\ \int_{0}^{\tau}\lt(f_{s}v)ds<\tau\eta{\rm \ for}\ {\rm some\ {\rm \tau\in[0,}}t]\},\\
-{\cal G}_{T}(\eta):= & \{(v,t)\colon\ \int_{0}^{\tau}\lt(f_{s}v)ds\geq\tau\eta{\rm \ {\rm and\ }}\int_{0}^{\tau}\lt(f_{-s}f_{t}v)ds\geq\tau\eta\ \forall\tau\in[0,t]\}\\
-{\cal {\cal S}}_{T}(\eta):= & =\{(v,t)\colon\ \int_{0}^{\tau}\lt(f_{-s}f_{t}v)ds\geq\tau\eta{\rm \ for}\ {\rm some\ {\rm \tau\in[0,}}t]\},
+{\cal G}_{T}(\eta):= & \{(v,t)\colon\ \int_{0}^{\tau}\lt(f_{\theta}v)d\theta\geq\tau\eta{\rm \ {\rm and\ }}\int_{0}^{\tau}\lt(f_{-\theta}f_{t}v)d\theta\geq\tau\eta\ \forall\tau\in[0,t]\},\\
+{\cal B}_{T}(\eta):= & \{(v,t)\subset T^{1}S\times[0,\infty)\colon\ \int_{0}^{t}\lt(f_{\theta}v)d\theta<t\eta\}.
 \end{align*}
 
 \end_inset
 
-and 
-\begin_inset Formula ${\cal B_{T}}(\eta):={\cal P}_{T}(\eta)\cup{\cal S}_{T}(\eta)$
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Using 
+\begin_inset Formula ${\cal G}_{T}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\cal B}_{T}(\eta)$
+\end_inset
+
+, one can define a orbit decomposition 
+\begin_inset Formula $({\cal P},{\cal G},{\cal S})=({\cal B}_{T}(\eta),{\cal G}_{T}(\eta),{\cal B}_{T}(\eta))$
 \end_inset
 
 .
+ More precisely, we define three maps 
+\begin_inset Formula $p,g,s:T^{1}S\times[0,\infty)\to\R$
+\end_inset
+
+ as follows.
+ For any 
+\begin_inset Formula $(v,t)$
+\end_inset
+
+ is a finite orbit segment, 
+\begin_inset Formula $p=p(v,t)$
+\end_inset
+
+ is the largest time such that 
+\begin_inset Formula $(v,p)\in{\cal B}_{T}(\eta)$
+\end_inset
+
+, 
+\begin_inset Formula $s=s(v,t)\in[0,t-p]$
+\end_inset
+
+ is the largest time such that 
+\begin_inset Formula $(f_{t-s}v,s)\in{\cal B}_{T}(\eta)$
+\end_inset
+
+, and 
+\begin_inset Formula $g=g(v,t)=t-s-p$
+\end_inset
+
+ is the remaining time in the middle.
+ It is not hard to see 
+\begin_inset Formula $(v,p)\in{\cal B}_{T}(\eta),$
+\end_inset
+
  
+\begin_inset Formula $(f_{p}v,g)\in{\cal G}_{T}(\eta)$
+\end_inset
+
+, and 
+\begin_inset Formula $(f_{p+s}v,s)\in{\cal B}_{T}(\eta).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}[H]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Orbit Decomposition.eps
+	scale 70
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Orbit Decomposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout --Separator--
@@ -5630,15 +5990,15 @@ reference "prop:no_focal_points"
 \begin_inset Formula $\g(t)\in\Reg$
 \end_inset
 
-, and which implies 
+, and which implies that 
 \begin_inset Formula $\g\subset\Reg$
 \end_inset
 
- (because 
+ because 
 \begin_inset Formula $\Sing$
 \end_inset
 
- is flow invariant).
+ is flow invariant.
  
 \end_layout
 
@@ -5663,7 +6023,11 @@ Uniform estimates on
 \end_layout
 
 \begin_layout Standard
-Notice that 
+For the compactness of 
+\begin_inset Formula $T^{1}S$
+\end_inset
+
+, the functions 
 \begin_inset Formula $\lt$
 \end_inset
 
@@ -5684,7 +6048,7 @@ Notice that
 \end_inset
 
  such that when 
-\begin_inset Formula $d_{K}(v,w)<\delta e^{\Lambda}$
+\begin_inset Formula $d_{K}(v,w)<\delta$
 \end_inset
 
 , we have 
@@ -5785,15 +6149,10 @@ Lastly, using the above notation, we have the following control of the expanding
 \end_layout
 
 \begin_layout Lemma
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-cite{BCFT2017}, Lemma 3.8]
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 3.10"
+key "BCFT2017"
 
 \end_inset
 
@@ -6146,7 +6505,7 @@ Since
 
 \begin_layout Subsection
 Relations between 
-\begin_inset Formula $\lambda,\lambda^{s},\lambda^{u},\lt$
+\begin_inset Formula $k^{s},k^{u},\lambda,\lt$
 \end_inset
 
 , and 
@@ -6337,11 +6696,11 @@ It is clear that
 \begin_inset Formula $(2)\implies(1)$
 \end_inset
 
-, and, similarly, 
+ which then 
 \begin_inset Formula $(3)\implies(1)$
 \end_inset
 
-.
+ similarly follows.
 \end_layout
 
 \begin_layout Proof
@@ -6349,23 +6708,15 @@ To see
 \begin_inset Formula $(2)\implies(1)$
 \end_inset
 
-, it is enough to show 
+, it is enough to show that 
 \begin_inset Formula $J^{u}$
 \end_inset
 
- the unstable Jacobi field field along 
+ the unstable Jacobi field along 
 \begin_inset Formula $\g_{v}$
 \end_inset
 
- is a parallel Jacobi field where 
-\begin_inset Formula $J^{u}(t)$
-\end_inset
-
- is a unstable Jacobi field along 
-\begin_inset Formula $\gamma_{v}(t)$
-\end_inset
-
-.
+ is parallel.
  By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6657,7 +7008,7 @@ reference "lem:3.3"
 \end_inset
 
  such that 
-\begin_inset Formula $k^{\sigma}(w^{\sigma})=0$
+\begin_inset Formula $k^{\sigma}(\pi w^{\sigma})=0$
 \end_inset
 
  .
@@ -6677,7 +7028,7 @@ reference "lem:3.3"
 \begin_inset Formula $w^{u}=w^{s}$
 \end_inset
 
- (by taking same length).
+ (by taking the same length).
  It is not hard to see that the 
 \begin_inset Formula $H^{u}(f_{t_{0}}v)-$
 \end_inset
@@ -6958,11 +7309,7 @@ Moreover, there exists
 \end_layout
 
 \begin_layout Section
-
-\color green
 The specification property
-\color inherit
-
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:The-specification-property"
@@ -7041,11 +7388,7 @@ In what follows,
 \end_inset
 
 , these metrics relate to each other by (from the fact that the stable manifold
- is non-increasing in forward time and the definition of 
-\begin_inset Formula $\Lambda$
-\end_inset
-
-) 
+ is non-increasing in forward time) 
 \begin_inset Formula 
 \[
 d_{K}(v,w)\leq d^{cs}(v,w)~~\text{ and }~~d_{K}(v,w)\leq e^{\Lambda}d^{u}(v,w)
@@ -7053,7 +7396,11 @@ d_{K}(v,w)\leq d^{cs}(v,w)~~\text{ and }~~d_{K}(v,w)\leq e^{\Lambda}d^{u}(v,w)
 
 \end_inset
 
-which then imply 
+where 
+\begin_inset Formula $\Lambda=\max_{v\in T^{1}S}k^{s}(v)$
+\end_inset
+
+, and which then imply 
 \begin_inset Formula 
 \begin{align}
 \begin{split}d_{t}(v,w) & \leq d^{cs}(v,w),\\
@@ -7207,7 +7554,7 @@ The following corollary is due to the transitivity of the geodesic flow
  whose proof directly follows that of 
 \begin_inset CommandInset citation
 LatexCommand cite
-after "Corollary 4.5"
+after "Proposition 4.5"
 key "BCFT2017"
 
 \end_inset
@@ -7219,7 +7566,7 @@ key "BCFT2017"
 
 \end_layout
 
-\begin_layout Corollary
+\begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
 name "cor: connecting orbits"
@@ -7336,7 +7683,7 @@ name "prop: specification"
 
 \begin_layout Proof
 We begin by fixing any 
-\begin_inset Formula $(v_{0}',t_{0}')\in G_{T}(\eta)$
+\begin_inset Formula $(v_{0}',t_{0}')\in\gt(\eta)$
 \end_inset
 
  as our reference orbit.
@@ -7362,8 +7709,6 @@ We begin by fixing any
 \end_layout
 
 \begin_layout Proof
-
-\color blue
 Using the uniform continuity of 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -7372,21 +7717,20 @@ Using the uniform continuity of
 \begin_inset Formula $\d>0$
 \end_inset
 
- such that whenever 
-\begin_inset Formula $d_{K}(v,w)<\d e^{\Lambda}$
-\end_inset
-
-, then 
+ such that 
 \begin_inset Formula $|\lambda(v)-\lambda(w)|<\frac{\eta t_{0}'}{4Tt_{0}}$
 \end_inset
 
-.
- For such ad-hoc choice (which works because we are only considering one
- orbit of length 
-\begin_inset Formula $t_{0}$
+ whenever 
+\begin_inset Formula $d_{K}(v,w)<\d$
 \end_inset
 
-), for any 
+.
+ For such choice of 
+\begin_inset Formula $\d$
+\end_inset
+
+, for any 
 \begin_inset Formula $w\in B_{t_{0}}(v_{0},\d)$
 \end_inset
 
@@ -7399,32 +7743,15 @@ Using the uniform continuity of
 
 \end_inset
 
-Hence, any 
-\begin_inset Formula $w$
-\end_inset
-
- that 
-\begin_inset Formula $\d$
-\end_inset
-
--shadow the orbit 
-\begin_inset Formula $(v_{0},t_{0})$
-\end_inset
-
- expand/contract with rate 
-\begin_inset Formula $\frac{\eta t_{0}'}{4T}$
-\end_inset
-
- long its orbit.
- In particular, setting 
+In particular, setting 
 \begin_inset Formula $\alpha:=e^{\frac{\eta t_{0}}{4T}}>1$
 \end_inset
 
-, for any 
+, we have that for any 
 \begin_inset Formula $w,w'\in f_{-t_{0}}W_{\d}^{u}(f_{t_{0}}v_{0})$
 \end_inset
 
- we have 
+ 
 \begin_inset Formula 
 \begin{equation}
 \alpha d^{u}(fw,fw')\leq d^{u}(w,w')
@@ -7432,8 +7759,6 @@ Hence, any
 
 \end_inset
 
-
-\color inherit
  Given an arbitrary small scale 
 \begin_inset Formula $0<\rho<\min(\d,\ep)$
 \end_inset
@@ -7458,7 +7783,7 @@ Hence, any
 \begin_inset Formula $a:=a(\rho')$
 \end_inset
 
- from Corollary 
+ from Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cor: connecting orbits"
@@ -7594,7 +7919,7 @@ the orbit of
 \end_layout
 
 \begin_layout Proof
-then jumps (via Corollary 
+then jumps (via Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cor: connecting orbits"
@@ -7621,7 +7946,7 @@ reference "cor: connecting orbits"
 \end_layout
 
 \begin_layout Proof
-then jumps to (again via Corollary 
+then jumps to (again via Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cor: connecting orbits"
@@ -7650,7 +7975,7 @@ Since Corollary only allows one jump at a time, we define an auxiliary orbit
 
 \end_inset
 
-by applying Corollary 
+by applying Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cor: connecting orbits"
@@ -7707,7 +8032,7 @@ reference "eq: inductive hyp"
 \end_layout
 
 \begin_layout Proof
-We then apply Corollary 
+We then apply Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cor: connecting orbits"
@@ -7900,6 +8225,8 @@ where we have used that
 \end_layout
 
 \begin_layout Standard
+
+\color red
 One useful corollary of the specification property is the closing lemma
  which creates lots of periodic orbits, and later allows 
 \begin_inset Formula ${\cal C}_{T}(\eta)$
@@ -7936,6 +8263,8 @@ reference "prop: specification"
 \end_layout
 
 \begin_layout Lemma
+
+\color red
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Lemma 4.7"
@@ -7959,10 +8288,10 @@ name "lem:closing_lem"
 \end_inset
 
  such that for any 
-\begin_inset Formula $(v,t)\in\gt(\eta)$
+\begin_inset Formula $(v,t)\in{\cal C}_{T}(\eta)$
 \end_inset
 
- there are 
+ there exists 
 \begin_inset Formula $w\in B_{t}(v,\ep)$
 \end_inset
 
@@ -7980,6 +8309,281 @@ name "lem:closing_lem"
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+We use 
+\begin_inset Formula $\lambda_{T}(v)=\int_{-T}^{T}\lambda(f_{\sigma}v)d\sigma$
+\end_inset
+
+ below.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Corollary
+
+\color red
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 4.8"
+key "BCFT2017"
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cor: closing_lemma_regular"
+
+\end_inset
+
+For any given 
+\begin_inset Formula $T,\eta>0$
+\end_inset
+
+, there exist 
+\begin_inset Formula $\ep=\ep(T,\eta)>0$
+\end_inset
+
+ such that for any 
+\begin_inset Formula $\ep'<\ep$
+\end_inset
+
+ there exists 
+\begin_inset Formula $s=s(\ep')>0$
+\end_inset
+
+ satisfying: for any 
+\begin_inset Formula $(v,t)\in{\cal C}_{T}(\eta)$
+\end_inset
+
+ there exists
+\end_layout
+
+\begin_layout Corollary
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[font=
+\backslash
+normalfont]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ a regular vector 
+\begin_inset Formula $w$
+\end_inset
+
+ with 
+\begin_inset Formula $w\in B_{t}(v,\ep')$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Corollary
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\tau\in[0,s]$
+\end_inset
+
+ with 
+\begin_inset Formula $f_{t+\tau}w=w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $v\in\Reg_{T}(\eta)$
+\end_inset
+
+, there exists 
+\begin_inset Formula $v'=f_{\sigma}v$
+\end_inset
+
+ for some 
+\begin_inset Formula $\sigma\in[-T,T$
+\end_inset
+
+] such that 
+\begin_inset Formula $\lambda(v')>\eta$
+\end_inset
+
+, and thus 
+\begin_inset Formula $v'\in\Reg_{2T}(\eta)$
+\end_inset
+
+ and 
+\begin_inset Formula $(v',t+\sigma)\in{\cal C}_{2T}(\eta)$
+\end_inset
+
+.
+ By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:closing_lem"
+
+\end_inset
+
+, for any 
+\begin_inset Formula $2T,\eta,\ep'>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $s=s(\ep')>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $w\in B_{t+\sigma}(v',\ep')$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau\in[0,s(\ep')]$
+\end_inset
+
+ such that 
+\begin_inset Formula $f_{t+\sigma+\tau}(w)=w.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Moreover, we notice that by the continuity of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, there exists 
+\begin_inset Formula $\ep=\ep(\eta)>0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $u\in B(v,\ep)$
+\end_inset
+
+ we have 
+\begin_inset Formula $\lambda(u)>0.$
+\end_inset
+
+ This implies 
+\begin_inset Formula $u$
+\end_inset
+
+ is a regular vector.
+ 
+\end_layout
+
+\begin_layout Proof
+In sum, by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:closing_lem"
+
+\end_inset
+
+, for 
+\begin_inset Formula $T,\eta>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $\ep=\ep(\eta)>0$
+\end_inset
+
+ such for any 
+\begin_inset Formula $\ep'<\ep$
+\end_inset
+
+, we have for any 
+\begin_inset Formula $(v,t)\in{\cal C}_{T}(\eta)$
+\end_inset
+
+ there exists a vector 
+\begin_inset Formula $w$
+\end_inset
+
+ which is regular (because 
+\begin_inset Formula $\lambda(w)>0)$
+\end_inset
+
+, is in 
+\begin_inset Formula $B_{t}(v,\ep')$
+\end_inset
+
+, and satisfies 
+\begin_inset Formula $f_{t+\tau}(w)=w$
+\end_inset
+
+ where 
+\begin_inset Formula $\tau\in[0,s(\ep')].$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout --Separator--
@@ -8002,8 +8606,20 @@ name "sec:The-Bowen-property"
 \end_layout
 
 \begin_layout Standard
-In this section, we prove the Bowen property for Hölder potentials and the
- geometric potential 
+In this section, we prove the Bowen property for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ potentials and the geometric potential 
 \begin_inset Formula $\vp^{u}$
 \end_inset
 
@@ -8025,7 +8641,20 @@ key "BCFT2017"
 \end_layout
 
 \begin_layout Subsection
-Bowen property for Hölder potentials
+The Bowen property for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ potentials
 \end_layout
 
 \begin_layout --Separator--
@@ -8038,8 +8667,23 @@ A function
 \end_inset
 
  is called 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{H
+\backslash
+"{o}lder}
+\end_layout
+
+\end_inset
+
+
 \shape italic
-Hölder along stable leaves
+ along stable leaves
 \shape default
  if there exist 
 \begin_inset Formula $C,\theta,\ep>0$
@@ -8063,8 +8707,23 @@ Hölder along stable leaves
 \end_inset
 
  is called 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{H
+\backslash
+"{o}lder}
+\end_layout
+
+\end_inset
+
+
 \shape italic
-Hölder along unstable leaves 
+ along unstable leaves 
 \shape default
 if there exist 
 \begin_inset Formula $C,\theta,\ep>0$
@@ -8117,13 +8776,41 @@ reference "eq: metric comparison"
 
  is
 \shape italic
- Hölder
+ 
 \shape default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{H
+\backslash
+"{o}lder}
+\end_layout
+
+\end_inset
+
  if and only if 
 \begin_inset Formula $\vp$
 \end_inset
 
- is Hölder along stable and unstable leaves.
+ is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ along stable and unstable leaves.
  
 \end_layout
 
@@ -8202,7 +8889,20 @@ For any
 \begin_inset Formula $\varphi$
 \end_inset
 
- is Hölder along stable leaves (resp.
+ is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ along stable leaves (resp.
  unstable leaves), then 
 \begin_inset Formula $\varphi$
 \end_inset
@@ -8253,7 +8953,20 @@ reference "lem:312"
 \begin_inset Formula $\delta_{2}>0$
 \end_inset
 
- be given by the Hölder continuity along stable leaves.
+ be given by the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ continuity along stable leaves.
  Then for 
 \begin_inset Formula $\delta=\min\{\delta_{1},\delta_{2}\}$
 \end_inset
@@ -8536,7 +9249,20 @@ reference "eq:7.1"
 \end_layout
 
 \begin_layout Standard
-Sum up the above two lemmas, we have the desired result for Hölder potentials:
+Sum up the above two lemmas, we have the desired result for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ potentials:
 \end_layout
 
 \begin_layout --Separator--
@@ -8554,7 +9280,20 @@ If
 \begin_inset Formula $\varphi$
 \end_inset
 
- is Hölder continuous, then it has the Bowen property with respect to 
+ is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ continuous, then it has the Bowen property with respect to 
 \begin_inset Formula $\gt(\eta)$
 \end_inset
 
@@ -8618,7 +9357,20 @@ In general, we do not know if
 \begin_inset Formula $\vp^{u}$
 \end_inset
 
- is Hölder continuous.
+ is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ continuous.
  There are some partial results under the nonpositively curved assumption;
  however, not much is known in the no focal points setting.
  Nevertheless, in this subsection we prove 
@@ -9455,14 +10207,7 @@ reference "prop:no_focal_points"
 
 \end_inset
 
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "prop:the flat strip theorem"
-
-\end_inset
-
-)), the proof goes verbatim as in 
+), the proof goes verbatim as in 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "Proposition 5.4"
@@ -9493,7 +10238,7 @@ Let
 \begin_inset Formula ${\cal B}_{T_{0}}(\eta_{0})$
 \end_inset
 
- be the collection bad orbit segments given in 
+ be the collection of bad orbit segments given in 
 \begin_inset Formula ${\rm Definition}$
 \end_inset
 
@@ -9562,11 +10307,11 @@ The existence of such
 \begin_inset Formula $\varepsilon$
 \end_inset
 
- is guaranteed because the entropy map 
+ is guaranteed by the entropy map 
 \begin_inset Formula $\mathcal{M}(T^{1}S)\ni\mu\mapsto h_{\mu}(f)$
 \end_inset
 
- is upper semi-continuous, because 
+ is upper semi-continuous, which is true because 
 \begin_inset Formula ${\cal F}:T^{1}S\to T^{1}S$
 \end_inset
 
@@ -9619,7 +10364,7 @@ D(\mathcal{M}(\text{Sing}),\mathcal{M}_{\lambda_{T_{0}}}(\eta_{0}))<\varepsilon.
 \end_inset
 
 In particular, for any 
-\begin_inset Formula $\mu\in{\cal M}_{\lambda_{T}}(\eta_{0})$
+\begin_inset Formula $\mu\in{\cal M}_{\lambda_{T_{0}}}(\eta_{0})$
 \end_inset
 
 , we have 
@@ -9719,7 +10464,20 @@ status open
 \begin_inset Formula $\vphi:T^{1}S\to\R$
 \end_inset
 
- be a Hölder continuous potential or 
+ be a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ continuous potential or 
 \begin_inset Formula $\vp=q\cdot\vp^{u}$
 \end_inset
 
@@ -9775,7 +10533,7 @@ reference "prop:exp<sing"
 \begin_inset Formula $\vp$
 \end_inset
 
- satisfies the first assumption in 
+ satisfies the first assumption in Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:C-T_criteria"
@@ -9784,7 +10542,14 @@ reference "thm:C-T_criteria"
 
 .
  We take the decomposition 
-\begin_inset Formula $({\cal P}_{T}(\eta),{\cal G}_{T}(\eta),{\cal S}_{T}(\eta))$
+\begin_inset Formula $({\cal P},{\cal G},{\cal S})=({\cal B}_{T}(\eta),{\cal G}_{T}(\eta),{\cal B}_{T}(\eta))$
+\end_inset
+
+ given in Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def:decomposition"
+
 \end_inset
 
 , then by Proposition 
@@ -9911,7 +10676,20 @@ Theorem B
 \begin_inset Formula $\vphi:T^{1}S\to\R$
 \end_inset
 
- be a Hölder continuous function or 
+ be a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+H
+\backslash
+"{o}lder
+\end_layout
+
+\end_inset
+
+ continuous function or 
 \begin_inset Formula $\vp=q\cdot\vp^{u}$
 \end_inset
 
@@ -10330,8 +11108,7 @@ We first recall that for
 \begin_inset Formula $\mu\in{\cal M}({\cal F})$
 \end_inset
 
- and w.l.o.g.
- we may assume 
+ and, without lost of generality, we may assume 
 \begin_inset Formula $v$
 \end_inset
 
@@ -10519,7 +11296,7 @@ In this subsection, unless stated otherwise, we fix the decomposition
 \end_inset
 
  to be 
-\begin_inset Formula $({\cal P}_{T_{0}}(\eta_{0}),{\cal G}_{T_{0}}(\eta_{0}),{\cal S}_{T_{0}}(\eta_{0}))$
+\begin_inset Formula $({\cal B}_{T_{0}}(\eta_{0}),{\cal G}_{T_{0}}(\eta_{0}),{\cal B}_{T_{0}}(\eta_{0}))$
 \end_inset
 
  where 
@@ -10539,7 +11316,7 @@ reference "prop:pressue_gap_bad_orbits"
 
 .
  We notice that this decomposition 
-\begin_inset Formula $({\cal P}_{T_{0}}(\eta_{0}),{\cal G}_{T_{0}}(\eta_{0}),{\cal S}_{T_{0}}(\eta_{0}))$
+\begin_inset Formula $({\cal B}_{T_{0}}(\eta_{0}),{\cal G}_{T_{0}}(\eta_{0}),{\cal B}_{T_{0}}(\eta_{0}))$
 \end_inset
 
  satisfies the the Climenhaga-Thompson criteria for the uniqueness of equilibriu
@@ -10626,18 +11403,10 @@ reference "thm:C-T_criteria"
 \end_layout
 
 \begin_layout Lemma
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand cite
+after "Lemma 6.1"
 key "BCFT2017"
-
-\end_inset
-
-, Lemma 6.1
-\end_layout
 
 \end_inset
 
@@ -10648,6 +11417,8 @@ name "lem:6.1"
 
 \end_inset
 
+
+\color red
 For 
 \begin_inset Formula $M$
 \end_inset
@@ -10657,7 +11428,9 @@ For
 \end_inset
 
 .
- Moreover, the measure 
+ 
+\color inherit
+Moreover, the measure 
 \begin_inset Formula $\mu_{\phi}$
 \end_inset
 
@@ -10691,7 +11464,7 @@ For
 \end_inset
 
 Therefore, for 
-\begin_inset Formula $(v,t)\in{\cal G}_{T_{0}}$
+\begin_inset Formula $(v,t)\in{\cal G}$
 \end_inset
 
  and 
@@ -10705,42 +11478,34 @@ Therefore, for
  
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Lemma
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 6.2"
+key "BCFT2017"
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "lem:6.2"
 
 \end_inset
 
-
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BCFT2017"
-
-\end_inset
-
-, Lemma 6.2
-\end_layout
-
-\end_inset
-
 Given 
-\begin_inset Formula $\rho,\eta>0$
+\begin_inset Formula $\rho,\eta,T>0$
 \end_inset
 
 , there exists 
 \begin_inset Formula $\eta_{1}>0$
 \end_inset
 
- so that 
-\begin_inset Formula $\eta_{0}>\eta_{1}$
-\end_inset
-
- and for any 
+ so that for any 
 \begin_inset Formula $v\in{\rm Reg}_{T}(\eta)$
 \end_inset
 
@@ -10760,6 +11525,11 @@ Given
 \begin_inset Formula $(w,s)\in{\cal G}_{T}(\eta_{1})$
 \end_inset
 
+.
+ In particular, we can choose 
+\begin_inset Formula $\eta_{1}\leq\eta_{0}$
+\end_inset
+
  where 
 \begin_inset Formula $\eta_{0}$
 \end_inset
@@ -10771,7 +11541,7 @@ reference "prop:pressue_gap_bad_orbits"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Proof
@@ -10790,15 +11560,22 @@ key "BCFT2017"
 
 \end_inset
 
- Lemma 3.9 in their proof by Lemma 
+ Corollary 3.11 in their proof by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:39"
 
 \end_inset
 
+, and the last assertion is because of for 
+\begin_inset Formula $0<\eta'\leq\eta''$
+\end_inset
+
+ one has 
+\begin_inset Formula $\Reg_{T}(\eta'')\subset\Reg_{T}(\eta')$
+\end_inset
+
 .
- 
 \end_layout
 
 \begin_layout --Separator--
@@ -10917,11 +11694,12 @@ reference "lem:6.2"
 \end_inset
 
 ).
+  
 \end_layout
 
 \begin_layout Proof
 Furthermore, the decomposition 
-\begin_inset Formula $({\cal P},{\cal G},{\cal S})=({\cal B}_{T_{0}}(\eta_{1}),{\cal G}_{T_{0}}(\eta_{1}),{\cal \mathbf{{\cal S}}}_{T_{0}}(\eta_{1}))$
+\begin_inset Formula $({\cal P},{\cal G},{\cal S})=({\cal B}_{T_{0}}(\eta_{1}),{\cal G}_{T_{0}}(\eta_{1}),{\cal \mathbf{{\cal B}}}_{T_{0}}(\eta_{1}))$
 \end_inset
 
  verifies Theorem 
@@ -10986,10 +11764,13 @@ Last, by picking
 \end_layout
 
 \begin_layout Subsection
+
+\color red
+Period regular orbits are equidistributed relative to 
 \begin_inset Formula $\mu_{\vp}$
 \end_inset
 
- is equidistributed with respect to period regular orbits
+
 \end_layout
 
 \begin_layout --Separator--
@@ -11001,6 +11782,8 @@ Last, by picking
 \end_layout
 
 \begin_layout Standard
+
+\color red
 This subsection consists of two parts, first we will prove, in general,
  for Riemannian manifolds without focal points, we have 
 \begin_inset Formula 
@@ -11030,6 +11813,8 @@ P_{{\rm Reg}}(\vp)\geq P(\vp).
 \end_layout
 
 \begin_layout Standard
+
+\color red
 In other words, in our setting, we have 
 \begin_inset Formula $P(\vp)=P_{{\rm Reg}}(\vp)$
 \end_inset
@@ -11058,6 +11843,8 @@ weighted period regular orbits.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Let start the first part.
  Recall that in the case of nonpositive curved rank one Riemannian manifolds,
  Pollicott 
@@ -11093,6 +11880,8 @@ In Pollicott's proof, the nonpositive curved condition only used to guarantee
 \end_layout
 
 \begin_layout Enumerate
+
+\color red
 For any two (unit speed) geodesics 
 \begin_inset Formula $\g_{1}$
 \end_inset
@@ -11109,6 +11898,8 @@ For any two (unit speed) geodesics
 \end_layout
 
 \begin_layout Enumerate
+
+\color red
 For all 
 \begin_inset Formula $\eta>0$
 \end_inset
@@ -11153,6 +11944,8 @@ For all
 \end_layout
 
 \begin_layout Lemma
+
+\color red
 \begin_inset CommandInset label
 LatexCommand label
 name "lem:geometric_conditions"
@@ -11165,6 +11958,8 @@ Riemannian manifolds without focal points also satisfy the above two geometric
 \end_layout
 
 \begin_layout Proof
+
+\color red
 The proof follows the same idea as 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -11237,6 +12032,8 @@ One can prove the second condition using the same argument.
 \end_layout
 
 \begin_layout Corollary
+
+\color red
 \begin_inset CommandInset label
 LatexCommand label
 name "cor:pressure_ineq"
@@ -11264,6 +12061,8 @@ where
 \end_layout
 
 \begin_layout Proof
+
+\color red
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11287,6 +12086,8 @@ key "Pollicott:1996jq"
 \end_layout
 
 \begin_layout Standard
+
+\color red
 We recall an useful lemma:
 \end_layout
 
@@ -11295,6 +12096,8 @@ We recall an useful lemma:
 \end_layout
 
 \begin_layout Lemma
+
+\color red
 \begin_inset CommandInset label
 LatexCommand label
 name "lem: Pressure the same"
@@ -11335,12 +12138,16 @@ where
 \end_layout
 
 \begin_layout Proof
+
+\color red
 The proof is elementary.
  We only prove for the first case, and the second one follows similarly.
  
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Notice 
 \begin_inset Formula $P_{Gur}^{*}(\vp)\geq P_{Gur}(\vp)$
 \end_inset
@@ -11350,6 +12157,8 @@ Notice
 \end_layout
 
 \begin_layout Proof
+
+\color red
 For 
 \begin_inset Formula $\ep>0$
 \end_inset
@@ -11395,6 +12204,8 @@ for some
 \end_layout
 
 \begin_layout Remark
+
+\color red
 For any constant 
 \begin_inset Formula $c$
 \end_inset
@@ -11448,6 +12259,8 @@ reference "prop:pressue_gap_bad_orbits"
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Let us start the second part of this subsection.
  From now on, we focus on a closed surface 
 \begin_inset Formula $S$
@@ -11499,6 +12312,8 @@ reference "prop:pressue_gap_bad_orbits"
 \end_layout
 
 \begin_layout Proposition
+
+\color red
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:pressure_match"
@@ -11526,6 +12341,8 @@ P_{{\rm Reg}}(\vphi)=P(\varphi).
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Since 
 \begin_inset Formula $P_{{\rm Reg}}(\vp+c)=P_{{\rm Reg}}(\vp)+c$
 \end_inset
@@ -11534,7 +12351,7 @@ Since
 \begin_inset Formula $P(\vp+c)=P(\vp)+c$
 \end_inset
 
-, without lost generality, we may assume 
+, without lost of generality, we may assume 
 \begin_inset Formula $P_{{\rm Reg}}(\vp),P(\vp)>0$
 \end_inset
 
@@ -11543,6 +12360,8 @@ Since
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Under the assumption 
 \begin_inset Formula $P_{{\rm Reg}}(\vp)>0$
 \end_inset
@@ -11590,6 +12409,8 @@ where
 \end_layout
 
 \begin_layout Proof
+
+\color red
 The see this, notice that for 
 \begin_inset Formula $(v,t)\in{\cal G}^{M}$
 \end_inset
@@ -11606,6 +12427,8 @@ The see this, notice that for
 \end_layout
 
 \begin_layout Proof
+
+\color red
 By the uniform continuity of the flow 
 \begin_inset Formula $f_{t}$
 \end_inset
@@ -11647,6 +12470,8 @@ By the uniform continuity of the flow
 \end_layout
 
 \begin_layout Proof
+
+\color red
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11674,6 +12499,8 @@ reference "lem:closing_lem"
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Thus there exists 
 \begin_inset Formula $t_{0}\in[-M,M]$
 \end_inset
@@ -11690,6 +12517,8 @@ Thus there exists
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Hence, 
 \begin_inset Formula $\left|\int_{0}^{t}\varphi(f_{s}v)\dd s-\int_{w}\varphi\right|\leq2M\cdot||\varphi||_{\infty}+K$
 \end_inset
@@ -11702,6 +12531,8 @@ Hence,
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Notice that if 
 \begin_inset Formula $d_{K}(v_{1},v_{2})\leq\ep$
 \end_inset
@@ -11738,6 +12569,8 @@ separated set where
 \end_layout
 
 \begin_layout Proof
+
+\color red
 In other words, for any 
 \begin_inset Formula $(t,\delta)-$
 \end_inset
@@ -11767,6 +12600,8 @@ separated set
 \end_layout
 
 \begin_layout Proof
+
+\color red
 hence, 
 \begin_inset Formula 
 \[
@@ -11787,6 +12622,8 @@ P({\cal G}^{M},\vphi)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambd
 \end_layout
 
 \begin_layout Proposition
+
+\color red
 \begin_inset CommandInset label
 LatexCommand label
 name "prop:weight_average_regular_orbits"
@@ -11818,6 +12655,8 @@ The unique equilibrium state
 \end_layout
 
 \begin_layout Proof
+
+\color red
 As pointed out in 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -11851,6 +12690,8 @@ key "Walters:2000vc"
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Notice that Knieper 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -11860,11 +12701,11 @@ key "Knieper:1998ht"
 \end_inset
 
  proved that 
-\begin_inset Formula ${\rm Per}({\rm Reg},t)$
+\begin_inset Formula ${\rm Per}(T,{\rm Reg})$
 \end_inset
 
  is a 
-\begin_inset Formula $(t,\delta)-$
+\begin_inset Formula $(T,\delta)-$
 \end_inset
 
 separated set for 
@@ -11884,11 +12725,13 @@ reference "lem:geometric_conditions"
 
 \end_inset
 
- implies each homotopy class only contains one geometrically distinct closed
- geodesic).
+ implies each free homotopy class only contains one geometrically distinct
+ closed geodesic).
 \end_layout
 
 \begin_layout Proof
+
+\color red
 Moreover, by Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11922,6 +12765,8 @@ reference "prop:pressure_match"
 \end_layout
 
 \begin_layout Remark
+
+\color red
 One can replace 
 \begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
 \end_inset
@@ -11966,8 +12811,8 @@ name "sec:Thm_C_exampels"
 \end_layout
 
 \begin_layout Standard
-In this section, we present the proof of Theorem C and also provide more
- examples satisfying the pressure gap property.
+In this section, we present the proof of Theorem C and also provide examples
+ satisfying the pressure gap property.
  The following lemmas shows that the scalar multiple 
 \begin_inset Formula $q\vp^{u}$
 \end_inset
@@ -11999,7 +12844,7 @@ If
 \begin_inset Formula $q\in(-\infty,1)$
 \end_inset
 
-; in particular 
+; in particular, 
 \begin_inset Formula $h_{{\rm top}}(\Sing)=0$
 \end_inset
 
@@ -12019,7 +12864,11 @@ key "Burns:1983dw"
 \begin_inset Formula $\mu_{L}({\rm Reg})>0$
 \end_inset
 
-.
+ where 
+\begin_inset Formula $\mu_{L}$
+\end_inset
+
+ is the Liouville measure.
  Thus by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12033,16 +12882,12 @@ reference "lem:0LE_implies_Sing"
 \begin_layout Proof
 \begin_inset Formula 
 \[
-0<\chi^{+}(\mu_{L}):=\int_{T^{1}S}\chi^{+}(v)d\mu_{L}=-\int_{T^{1}S}\varphi^{u}d\mu_{L}
+0<\chi^{+}(\mu_{L}):=\int_{T^{1}S}\chi^{+}(v)d\mu_{L}=-\int_{T^{1}S}\varphi^{u}d\mu_{L}.
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $\mu_{L}$
-\end_inset
 
- is the Liouville measure.
 \end_layout
 
 \begin_layout Proof
@@ -12158,7 +13003,7 @@ Suppose
 \begin_inset Formula $q\varphi^{u}$
 \end_inset
 
- fro each 
+ for 
 \begin_inset Formula $q<1$
 \end_inset
 
@@ -12171,11 +13016,8 @@ Suppose
 \begin_inset Formula $\mu_{q}(\text{Reg})=1$
 \end_inset
 
-, is fully supported, Bernoulli, and is the weak
-\begin_inset Formula $*$
-\end_inset
-
--limit of weighted regular periodic orbits.
+, is fully supported, Bernoulli, and is the weak* limit of weighted regular
+ periodic orbits.
  Furthermore, the map 
 \begin_inset Formula $q\mapsto P(q\vphi^{u})$
 \end_inset
@@ -12359,6 +13201,10 @@ key "Walters:1992et"
 \begin_inset Formula $q\mapsto P(q\vp^{u})$
 \end_inset
 
+ is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
  for 
 \begin_inset Formula $q<1$
 \end_inset
@@ -12401,7 +13247,7 @@ key "BCFT2017"
  If 
 \begin_inset Formula 
 \[
-\sup_{v\in{\rm Sing}}\varphi(v)-\inf_{v\in T^{1}S}\varphi(v)<h_{{\rm top}}(\mathcal{F})
+\sup_{v\in{\rm Sing}}\varphi(v)-\inf_{v\in T^{1}S}\varphi(v)<h_{{\rm top}}(\mathcal{F}),
 \]
 
 \end_inset
