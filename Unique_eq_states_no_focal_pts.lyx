@@ -193,7 +193,7 @@ today
 
 \begin_layout Abstract
 In this paper, we study dynamics of geodesic flows over closed surfaces
- of genus greater than or equal to 2 without focal points.
+ of genus greater than or equal to 2 and without focal points.
  Especially, we prove that there is a large class of potentials having unique
  equilibrium states, including scalar multiples of the geometric potential,
  provided the scalar is less than 1.
@@ -252,6 +252,14 @@ Switch
 \end_inset
 
  (Need this in the corollary of closing lemma).
+ Made corresponding modification.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Rewrite Section 2.3 and 8.3.
 \end_layout
 
 \begin_layout --Separator--
@@ -835,7 +843,7 @@ Suppose
 \begin_inset Formula $\mu_{\varphi}({\rm Reg})=1$
 \end_inset
 
-, Bernoulli, and the weak
+, Bernoulli, and a weak
 \begin_inset Formula $^{*}$
 \end_inset
 
@@ -2792,7 +2800,8 @@ key "Gelfert:2014hn"
 
 \end_inset
 
-, and indeed using the same argument as in 
+.
+ Indeed, using the same argument as in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Gelfert:2014hn"
@@ -2832,11 +2841,15 @@ For a potential
 \begin_inset Formula $\mu$
 \end_inset
 
- is the weak* limit of 
+ is a 
+\shape italic
+weak* limit of 
 \begin_inset Formula $\vp-$
 \end_inset
 
-weighted regular period orbits, if there exists 
+weighted regular period orbits
+\shape default
+, if there exists 
 \begin_inset Formula $\D>0$
 \end_inset
 
@@ -2852,7 +2865,7 @@ weighted regular period orbits, if there exists
 \begin_inset Formula $\delta_{\g}$
 \end_inset
 
- is the normalized Lebesgue measure around a period orbit 
+ is the normalized Lebesgue measure along a period orbit 
 \begin_inset Formula $\g$
 \end_inset
 
@@ -2872,7 +2885,7 @@ key "Walters:2000vc"
 
 \end_inset
 
-, Walters pointed out a way to construct equilibrium states from periodic
+, Walters pointed out a way to construct equilibrium states through periodic
  orbits.
 \end_layout
 
@@ -2888,7 +2901,14 @@ key "Walters:2000vc"
 
 \end_inset
 
- Given 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:walters_eq_states"
+
+\end_inset
+
+Given 
 \begin_inset Formula $\D>0$
 \end_inset
 
@@ -2958,7 +2978,7 @@ Given
 \begin_inset Formula $\mu_{\vp}$
 \end_inset
 
- is the weak* limit of 
+ is a weak* limit of 
 \begin_inset Formula $\vp-$
 \end_inset
 
@@ -4831,34 +4851,10 @@ item
 \end_inset
 
 
-\begin_inset Formula $k_{T}^{s}(v):=\int_{-T}^{T}k^{s}(f_{\tau}v)d\tau$
-\end_inset
-
- and 
-\begin_inset Formula $k_{T}^{u}(v):=\int_{-T}^{T}k^{u}(f_{\tau}v)d\tau$
+\begin_inset Formula $\lambda_{T}(v):=\int_{-T}^{T}\lambda(f_{\tau}v)d\tau$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Definition
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\lambda_{T}(v):=\min\{k_{T}^{s}(v),k_{T}^{u}(v)\}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Definition
@@ -4947,44 +4943,14 @@ reference "prop:horoshpere"
 \end_inset
 
  are continuous, and so are 
-\begin_inset Formula $k_{T}^{s},k_{T}^{u},\lambda$
+\begin_inset Formula $\lambda$
 \end_inset
 
-, and 
+ and 
 \begin_inset Formula $\lt$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Remark
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\end_layout
-
-\end_inset
-
- We notice that the notation 
-\begin_inset Formula $\lt$
-\end_inset
-
- might lead to a confusion with the quantity 
-\begin_inset Formula $\int_{-T}^{T}\lambda(f_{\tau}v)d\tau$
-\end_inset
-
-.
- However, we generally have 
-\begin_inset Formula $\lt(v)\geq\int_{-T}^{T}\lambda(f_{\tau}v)d\tau$
-\end_inset
-
- and this inequality can be strict.
  
 \end_layout
 
@@ -5478,20 +5444,16 @@ name "alglem"
 
 \end_inset
 
-Moreover, for 
-\begin_inset Formula $\sigma\in\{u,s\}$
-\end_inset
-
- we have 
+Moreover, we have 
 \begin_inset Formula 
 \[
-\frac{1}{2T}\int_{0}^{t}k_{T}^{\sigma}(f_{\tau}v)d\tau-2T\Lambda\leq\int_{0}^{t}k^{\sigma}(f_{\tau}v)d\tau
+\frac{1}{2T}\int_{0}^{t}\lambda_{T}(f_{\tau}v)d\tau-2T\Lambda\leq\int_{0}^{t}\lambda(f_{\tau}v)d\tau
 \]
 
 \end_inset
 
 where 
-\begin_inset Formula $\Lambda=\max_{v\in T^{1}S}k^{u}(v).$
+\begin_inset Formula $\Lambda=\max_{v\in T^{1}S}\lambda(v).$
 \end_inset
 
 
@@ -5537,9 +5499,9 @@ The last assertion follows from
 \begin_layout Proof
 \begin_inset Formula 
 \begin{eqnarray*}
-\int_{0}^{t}k^{\sigma}(f_{\tau}v)d\tau & = & \int_{-T}^{T+t}k^{\sigma}(f_{\tau}v)d\tau-\int_{-T}^{0}k^{\sigma}(f_{\tau}v)d\tau-\int_{t}^{T+t}k^{\sigma}(f_{\tau}v)d\tau\\
- & \geq & \int_{-T}^{T+t}k^{\sigma}(f_{\tau}v)d\tau-2T\Lambda\\
- & \geq & \frac{1}{2T}\int_{0}^{t}k_{T}^{\sigma}(f_{\tau}v)d\tau-2T\Lambda.
+\int_{0}^{t}\lambda(f_{\tau}v)d\tau & = & \int_{-T}^{T+t}\lambda(f_{\tau}v)d\tau-\int_{-T}^{0}\lambda(f_{\tau}v)d\tau-\int_{t}^{T+t}\lambda(f_{\tau}v)d\tau\\
+ & \geq & \int_{-T}^{T+t}\lambda(f_{\tau}v)d\tau-2T\Lambda\\
+ & \geq & \frac{1}{2T}\int_{0}^{t}\lambda_{T}(f_{\tau}v)d\tau-2T\Lambda.
 \end{eqnarray*}
 
 \end_inset
@@ -6023,20 +5985,16 @@ Uniform estimates on
 \end_layout
 
 \begin_layout Standard
-For the compactness of 
+From the compactness of 
 \begin_inset Formula $T^{1}S$
 \end_inset
 
-, the functions 
+, the function 
+\begin_inset Formula $k^{s},k^{u},\lambda$
+\end_inset
+
+ and 
 \begin_inset Formula $\lt$
-\end_inset
-
-, 
-\begin_inset Formula $k^{s},k^{u},k_{T}^{s}$
-\end_inset
-
-, and 
-\begin_inset Formula $k_{T}^{u}$
 \end_inset
 
  are uniformly continuous, so given 
@@ -6064,15 +6022,19 @@ For the compactness of
 \end_inset
 
  is one of 
+\begin_inset Formula $\lambda,$
+\end_inset
+
+ 
 \begin_inset Formula $\lt$
 \end_inset
 
 , 
-\begin_inset Formula $k^{s},k^{u},k_{T}^{s}$
+\begin_inset Formula $k^{u}$
 \end_inset
 
-, and 
-\begin_inset Formula $k_{T}^{u}$
+ and 
+\begin_inset Formula $k^{s}$
 \end_inset
 
 .
@@ -6097,7 +6059,7 @@ For the compactness of
 \end_inset
 
 where, again, 
-\begin_inset Formula $\Theta\in\{\lt,k^{s},k^{u},k_{T}^{s},k_{T}^{u}\}$
+\begin_inset Formula $\Theta\in\{\lambda,\lt,k^{s},k^{u}\}$
 \end_inset
 
 .
@@ -6115,14 +6077,10 @@ reference "alglem"
 
 \end_inset
 
-, we have for 
-\begin_inset Formula $\sigma\in\{s,u\}$
-\end_inset
-
- 
+, we have 
 \begin_inset Formula 
 \begin{equation}
-\int_{0}^{t}\widetilde{k^{\sigma}}(f_{\tau}v)d\tau\geq\frac{1}{2T}\int_{0}^{t}\widetilde{k_{T}^{\sigma}}(f_{\tau}v)d\tau-2T\cdot\max\{0,\Lambda-\frac{\eta}{2}\}.\label{eq:k_T_tilte_k_tilte}
+\int_{0}^{t}\widetilde{\lambda}(f_{\tau}v)d\tau\geq\frac{1}{2T}\int_{0}^{t}\widetilde{\lt}(f_{\tau}v)d\tau-2T\cdot\max\{0,\Lambda-\frac{\eta}{2}\}.\label{eq:k_T_tilte_k_tilte}
 \end{equation}
 
 \end_inset
@@ -6186,7 +6144,7 @@ For any
 : 
 \begin_inset Formula 
 \[
-d^{s}(f_{t}w,f_{t}w')\leq d^{s}(w,w')e^{-\int_{0}^{t}\widetilde{k^{s}}(f_{\tau}v)d\tau}.
+d^{s}(f_{t}w,f_{t}w')\leq d^{s}(w,w')e^{-\int_{0}^{t}\widetilde{\lambda}(f_{\tau}v)d\tau}.
 \]
 
 \end_inset
@@ -6202,7 +6160,7 @@ Similarly, if
 , 
 \begin_inset Formula 
 \[
-d^{u}(f_{-t}w,f_{-t}w')\leq d^{u}(w,w')e^{-\int_{0}^{t}\widetilde{k^{u}}(f_{-\tau}v)d\tau}.
+d^{u}(f_{-t}w,f_{-t}w')\leq d^{u}(w,w')e^{-\int_{0}^{t}\widetilde{\lambda}(f_{-\tau}v)d\tau}.
 \]
 
 \end_inset
@@ -6369,9 +6327,9 @@ reference "eq:k_T_tilte_k_tilte"
  we have 
 \begin_inset Formula 
 \begin{align*}
-d^{s}(f_{\tau}w,f_{\tau}w') & \leq d^{s}(w,w')e^{-\int_{0}^{\tau}\widetilde{k^{s}}(f_{x}v)dx}\\
- & \leq d^{s}(w,w')\exp\left(\left(\frac{-1}{2T}\int_{0}^{\tau}\widetilde{k_{T}^{s}}(f_{x}v)dx\right)+2T\max\{0,\Lambda-\frac{\eta}{2}\}\right)\\
- & \leq d^{s}(w,w')\exp\left(\frac{-1}{2T}\left(\underset{\geq\tau\eta}{\underbrace{\int_{0}^{\tau}k_{T}^{\sigma}(f_{x}v)dx}}-\frac{\eta}{2}\tau\right)+2T\max\{0,\Lambda-\frac{\eta}{2}\}\right)\\
+d^{s}(f_{\tau}w,f_{\tau}w') & \leq d^{s}(w,w')e^{-\int_{0}^{\tau}\widetilde{\lambda}(f_{x}v)dx}\\
+ & \leq d^{s}(w,w')\exp\left(\left(\frac{-1}{2T}\int_{0}^{\tau}\widetilde{\lt}(f_{x}v)dx\right)+2T\max\{0,\Lambda-\frac{\eta}{2}\}\right)\\
+ & \leq d^{s}(w,w')\exp\left(\frac{-1}{2T}\left(\underset{\geq\tau\eta}{\underbrace{\int_{0}^{\tau}\lt(f_{x}v)dx}}-\frac{\eta}{2}\tau\right)+2T\max\{0,\Lambda-\frac{\eta}{2}\}\right)\\
  & \leq d^{s}(w,w')\exp\left(\frac{-\eta\tau}{2T}+\frac{\eta\tau}{4T}+2T\max\{0,\Lambda-\frac{\eta}{2}\}\right)=C\cdot d^{s}(w,w')e^{\frac{-\eta\tau}{4T}}
 \end{align*}
 
@@ -7008,7 +6966,7 @@ reference "lem:3.3"
 \end_inset
 
  such that 
-\begin_inset Formula $k^{\sigma}(\pi w^{\sigma})=0$
+\begin_inset Formula $k^{\sigma}(w^{\sigma})=0$
 \end_inset
 
  .
@@ -9570,7 +9528,7 @@ reference "lem:312"
  implies 
 \begin_inset Formula 
 \[
-|K(f_{\tau}v)-K(f_{\tau}w_{1})|\leq Q'd_{K}(f_{\tau}v,f_{\tau}w_{1})\leq Q'd^{s}(f_{\tau}v,f_{\tau}w_{1})\leq Q\exp\left(-\frac{\eta\tau}{4T}\right),
+|K(f_{\tau}v)-K(f_{\tau}w_{1})|\leq Qd_{K}(f_{\tau}v,f_{\tau}w_{1})\leq Qd^{s}(f_{\tau}v,f_{\tau}w_{1})\leq Q\exp\left(-\frac{\eta\tau}{4T}\right),
 \]
 
 \end_inset
@@ -9600,7 +9558,7 @@ reference "lem:710711"
 \end_inset
 
 once we fix 
-\begin_inset Formula $\xi<\eta/2T$
+\begin_inset Formula $\xi<\eta/4T$
 \end_inset
 
 .
@@ -9726,13 +9684,13 @@ Since
  Hence 
 \begin_inset Formula 
 \[
-(U_{1}-U_{v}^{u})'=-(U_{1}-U_{v}^{u})(U_{1}+U_{v}^{u})\leq-2k^{u}(f_{t}v)(U_{1}-U_{v}^{u}).
+(U_{1}-U_{v}^{u})'=-(U_{1}-U_{v}^{u})(U_{1}+U_{v}^{u})\leq-2k^{u}(f_{t}v)(U_{1}-U_{v}^{u})\leq-2\lambda(f_{t}v)(U_{1}-U_{v}^{u}).
 \]
 
 \end_inset
 
 Thus 
-\begin_inset Formula $(U_{1}(t)-U_{v}^{u}(t))\exp(\int_{0}^{t}2k^{u}(f_{s}v)ds)$
+\begin_inset Formula $(U_{1}(t)-U_{v}^{u}(t))\exp(\int_{0}^{t}2\lambda(f_{s}v)ds)$
 \end_inset
 
  is not increasing.
@@ -9746,8 +9704,8 @@ reference "lem:312"
  we have 
 \begin_inset Formula 
 \begin{eqnarray*}
-0 & \leq & U_{1}(t)-U_{v}^{u}(t)\leq(U_{w}^{u}(0)-U_{v}^{u}(0))\exp\left(-\int_{0}^{t}2k^{u}(f_{s}v)ds\right)\\
- & \leq & Q\exp\left(-\frac{1}{T}\int_{0}^{t}k_{T}^{u}(f_{s}v)ds\right)\leq Q\exp\left(-\frac{\eta t}{T}\right).
+0 & \leq & U_{1}(t)-U_{v}^{u}(t)\leq(U_{w}^{u}(0)-U_{v}^{u}(0))\exp\left(-\int_{0}^{t}2\lambda(f_{s}v)ds\right)\\
+ & \leq & Q\exp\left(-\frac{1}{T}\int_{0}^{t}\lt(f_{s}v)ds\right)\leq Q\exp\left(-\frac{\eta t}{T}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -9805,7 +9763,7 @@ Thus
 Together with Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "lem:312"
+reference "lem:2.9"
 
 \end_inset
 
@@ -9814,7 +9772,8 @@ reference "lem:312"
 \begin{eqnarray*}
 U_{1}(t)-U_{v}^{u}(t) & \leq & \exp\left(-\int_{s_{0}}^{t}2k^{u}(f_{s}w)ds\right)\int_{s_{0}}^{t}\exp\left(\int_{s_{0}}^{\tau}2k^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
  & = & \int_{s_{0}}^{t}\exp\left(-\int_{\tau}^{t}2k^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
- & \leq Q & \int_{s_{0}}^{t}\exp\left(-\frac{1}{T}\int_{\tau}^{t}k_{T}^{u}(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
+ & \leq & \int_{s_{0}}^{t}\exp\left(-\int_{\tau}^{t}2\lambda(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
+ & \leq Q & \int_{s_{0}}^{t}\exp\left(-\frac{1}{T}\int_{\tau}^{t}\lt(f_{s}w)ds\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau\\
  & \leq Q & \int_{0}^{t}\exp\left(-\frac{\eta(t-\tau)}{4T}\right)|K(f_{\tau}v)-K(f_{\tau}w)|d\tau.
 \end{eqnarray*}
 
@@ -11419,7 +11378,25 @@ name "lem:6.1"
 
 
 \color red
-For 
+ 
+\color inherit
+There exists 
+\begin_inset Formula $M,C,\delta>0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $t>0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\Lambda({\cal G}^{M},\delta,t)>Ce^{tP(\vp)}.\label{eq:g^M_pressure_lower_bound}
+\end{equation}
+
+\end_inset
+
+Hence, for 
 \begin_inset Formula $M$
 \end_inset
 
@@ -11428,9 +11405,7 @@ For
 \end_inset
 
 .
- 
-\color inherit
-Moreover, the measure 
+ Moreover, the equilibrium state 
 \begin_inset Formula $\mu_{\phi}$
 \end_inset
 
@@ -11782,496 +11757,21 @@ Period regular orbits are equidistributed relative to
 \end_layout
 
 \begin_layout Standard
-
-\color red
-This subsection consists of two parts, first we will prove, in general,
- for Riemannian manifolds without focal points, we have 
-\begin_inset Formula 
-\[
-P_{{\rm Reg}}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi).
-\]
-
-\end_inset
-
-In the second part, we will prove, in our setting, for a potential 
-\begin_inset Formula $\vp$
-\end_inset
-
- has a unique equilibrium state 
-\begin_inset Formula $\mu_{\vp}$
-\end_inset
-
-, we have 
-\begin_inset Formula 
-\[
-P_{{\rm Reg}}(\vp)\geq P(\vp).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-In other words, in our setting, we have 
-\begin_inset Formula $P(\vp)=P_{{\rm Reg}}(\vp)$
-\end_inset
-
-, and by an observation of Walters 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Walters:2000vc"
-
-\end_inset
-
-, we can further show 
-\begin_inset Formula $\mu_{\vp}$
-\end_inset
-
- is the weak* limit of 
-\begin_inset Formula $\vp-$
-\end_inset
-
-weighted period regular orbits.
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Let start the first part.
- Recall that in the case of nonpositive curved rank one Riemannian manifolds,
- Pollicott 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Lemma 4, Proposition 2"
-key "Pollicott:1996jq"
-
-\end_inset
-
- (also Gelfert-Schapira 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Theorem 1.1"
-key "Gelfert:2014hn"
-
-\end_inset
-
- ) proved that 
-\begin_inset Formula 
-\[
-P_{{\rm Reg}}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi).
-\]
-
-\end_inset
-
-In Pollicott's proof, the nonpositive curved condition only used to guarantee
- the following two geometric properties: Let 
-\begin_inset Formula $M$
-\end_inset
-
- be a Riemannian manifold 
-\end_layout
-
-\begin_layout Enumerate
-
-\color red
-For any two (unit speed) geodesics 
-\begin_inset Formula $\g_{1}$
-\end_inset
-
-,
-\begin_inset Formula $\g_{2}:[0,L]\to M$
-\end_inset
-
- satisfy 
-\begin_inset Formula $d(\g_{1}(t),\g_{2}(t))\leq d(\g_{1}(0),\g_{2}(0))+d(\g_{1}(L),\g_{2}(L))$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\color red
-For all 
-\begin_inset Formula $\eta>0$
-\end_inset
-
- there exist 
-\begin_inset Formula $\rho>0$
-\end_inset
-
- and 
-\begin_inset Formula $L_{0}>0$
-\end_inset
-
- such that given two geodesics 
-\begin_inset Formula $\g_{1}$
-\end_inset
-
-,
-\begin_inset Formula $\g_{2}:[0,L]\to M$
-\end_inset
-
- with 
-\begin_inset Formula $L\geq L_{0}$
-\end_inset
-
- and 
-\begin_inset Formula $d_{K}(\dot{\g_{1}}(0),\dot{\g_{2}}(0)),$
-\end_inset
-
- 
-\begin_inset Formula $d_{K}(\dot{\g_{1}}(0),\dot{\g_{2}}(0))\leq\rho$
-\end_inset
-
- we have that 
-\begin_inset Formula $d_{K}(\dot{\g_{1}}(t),\dot{\g_{2}}(t))\leq\eta$
-\end_inset
-
- for all 
-\begin_inset Formula $0\leq t\leq L$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Lemma
-
-\color red
-\begin_inset CommandInset label
-LatexCommand label
-name "lem:geometric_conditions"
-
-\end_inset
-
-Riemannian manifolds without focal points also satisfy the above two geometric
- conditions.
- 
-\end_layout
-
-\begin_layout Proof
-
-\color red
-The proof follows the same idea as 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pollicott:1996jq"
-
-\end_inset
-
-.
- Let 
-\begin_inset Formula $M$
-\end_inset
-
- be a Riemannian manifolds without focal points and 
-\begin_inset Formula $\g_{1},\g_{2}:[0,L]\to M$
-\end_inset
-
- be two geodesics.
- Since 
-\begin_inset Formula $M$
-\end_inset
-
- has no focal points, there exists a unique geodesic 
-\begin_inset Formula $\g:[0,L]\to M$
-\end_inset
-
- such that 
-\begin_inset Formula $\g(0)=\g_{1}(0)$
-\end_inset
-
- and 
-\begin_inset Formula $\g(L)=\g_{2}(L)$
-\end_inset
-
- (by parametrizing it with an appropriate constant multiple of its arc length).
- Then the no focal point condition (consider the Jacobi field 
-\begin_inset Formula $J$
-\end_inset
-
- along 
-\begin_inset Formula $\g_{1}$
-\end_inset
-
- given by the variation from 
-\begin_inset Formula $\g_{1}$
-\end_inset
-
- to 
-\begin_inset Formula $\g$
-\end_inset
-
-) implies 
-\begin_inset Formula $d(\g(t),\g_{1}(t))\leq d(\g_{2}(L),\g_{1}(L))$
-\end_inset
-
-, and similarly, 
-\begin_inset Formula $d(g(t),g_{2}(t))\leq d(\g_{1}(0),\g_{2}(0))$
-\end_inset
-
-.
- Thus we have 
-\begin_inset Formula 
-\[
-d(\g_{1}(t),\g_{2}(t))\leq d(\g(t),\g_{1}(t))+d(g(t),g_{1}(t))\leq d(\g_{1}(0),\g_{2}(0))+d(\g_{1}(L),\g_{2}(L)).
-\]
-
-\end_inset
-
-One can prove the second condition using the same argument.
- 
-\end_layout
-
-\begin_layout Corollary
-
-\color red
-\begin_inset CommandInset label
-LatexCommand label
-name "cor:pressure_ineq"
-
-\end_inset
-
-For a compact rank one Riemannian manifold 
-\begin_inset Formula $M$
-\end_inset
-
- without focal points, we have 
-\begin_inset Formula 
-\[
-P_{{\rm Reg}}(\vphi)\leq P_{Gur}(\vphi)\leq P(\vphi)
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $\vphi:T^{1}M\to\R$
-\end_inset
-
- is a continuous function.
- 
-\end_layout
-
-\begin_layout Proof
-
-\color red
-By Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:geometric_conditions"
-
-\end_inset
-
-, we can follow the proof of Lemma 4 and Proposition 2 in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pollicott:1996jq"
-
-\end_inset
-
- without modification.
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-We recall an useful lemma:
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Lemma
-
-\color red
-\begin_inset CommandInset label
-LatexCommand label
-name "lem: Pressure the same"
-
-\end_inset
-
-Suppose 
-\begin_inset Formula $P_{Gur}(\vp),P_{{\rm Reg}}(\vp)\geq0$
-\end_inset
-
-, then we have 
-\begin_inset Formula 
-\begin{align*}
-P_{Gur}^{*}(\vp) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\g\in{\rm Per}(T)}e^{\int_{\g}\varphi}}=P_{Gur}(\vp),\\
-P_{{\rm Reg}}^{*}(\varphi) & :={\displaystyle \limsup_{T\to\infty}\frac{1}{T}\log\sum_{\g\in{\rm Per}(T,{\rm Reg})}e^{\int_{\g}\varphi}=P_{{\rm Reg}}(\vp)}
-\end{align*}
-
-\end_inset
-
-where 
-\begin_inset Formula ${\rm Per}(T)$
-\end_inset
-
- (resp., 
-\begin_inset Formula ${\rm Per}(T,\Reg)$
-\end_inset
-
-) the set of primitive (resp., regular) periodic geometrically distinct geodesics
- of length smaller than 
-\begin_inset Formula $T$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proof
-
-\color red
-The proof is elementary.
- We only prove for the first case, and the second one follows similarly.
- 
-\end_layout
-
-\begin_layout Proof
-
-\color red
-Notice 
-\begin_inset Formula $P_{Gur}^{*}(\vp)\geq P_{Gur}(\vp)$
-\end_inset
-
- is obvious.
- We prove the other direction:
-\end_layout
-
-\begin_layout Proof
-
-\color red
-For 
-\begin_inset Formula $\ep>0$
-\end_inset
-
-, there exists 
-\begin_inset Formula $0<N_{0}\in\N$
-\end_inset
-
- such that for all 
-\begin_inset Formula $\N\ni T>N_{0}$
-\end_inset
-
- we have 
-\begin_inset Formula 
-\[
-\sum_{\g\in{\rm Per}(T-1,T)}e^{\int_{\g}\vp}<e^{T\cdot(P_{Gur}(\vp)+\ep)};
-\]
-
-\end_inset
-
-hence, 
-\begin_inset Formula 
-\[
-\sum_{\g\in{\rm Per}(T)}e^{\int_{\g}\vp}\leq\sum_{k=0}^{T}e^{k\cdot(P_{Gur}(\vp)+\ep)}+O(1)=c\cdot e^{(P_{Gur}(\vp)+\ep)T},
-\]
-
-\end_inset
-
-for some 
-\begin_inset Formula $c>0$
-\end_inset
-
-.
- Since 
-\begin_inset Formula $P_{Gur}(\vp)+\ep>0$
-\end_inset
-
-, we are done.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Remark
-
-\color red
-For any constant 
-\begin_inset Formula $c$
-\end_inset
-
- and when 
-\begin_inset Formula ${\cal P}(\cdot)$
-\end_inset
-
- is one of 
-\begin_inset Formula $P_{Gur}(\cdot),P_{{\rm Reg}}(\cdot),P(\cdot),P({\cal G}^{M},\cdot)$
-\end_inset
-
-, we have 
-\begin_inset Formula ${\cal P}(\vp+c)={\cal P}(\vp)+c$
-\end_inset
-
-, where 
-\begin_inset Formula ${\cal G}={\cal G}_{T_{0}}(\eta_{0})$
-\end_inset
-
- and 
-\begin_inset Formula $T_{0}$
-\end_inset
-
-, 
-\begin_inset Formula $\eta_{0}$
-\end_inset
-
- are given in Proposition 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "prop:pressue_gap_bad_orbits"
-
-\end_inset
-
-.
- However, 
-\begin_inset Formula $P_{{\rm Reg}}^{*}$
-\end_inset
-
- and 
-\begin_inset Formula $P_{Gur}^{*}$
-\end_inset
-
- do not necessary have this property.
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-Let us start the second part of this subsection.
- From now on, we focus on a closed surface 
+Let us continue the discussion on ergodic properties of the equilibrium
+ state.
+ Recall that 
 \begin_inset Formula $S$
 \end_inset
 
- of genus greater than or equal to 2 without focal points.
- We further assume 
+ is a closed surface without focal point with genus 
+\begin_inset Formula $\geq2$
+\end_inset
+
+, and 
 \begin_inset Formula $\vp:T^{1}S\to\R$
 \end_inset
 
- satisfies Theorem A.
+ is a potential satisfies Theorem A.
  Hence, 
 \begin_inset Formula $\vp$
 \end_inset
@@ -12281,11 +11781,11 @@ Let us start the second part of this subsection.
 \end_inset
 
 .
- In the following, 
+ In what follows, the good orbit segment collection 
 \begin_inset Formula ${\cal G}$
 \end_inset
 
- the good orbit segment collection always refers to 
+ always refers to 
 \begin_inset Formula ${\cal G}_{T_{0}}(\eta_{0})$
 \end_inset
 
@@ -12311,16 +11811,18 @@ reference "prop:pressue_gap_bad_orbits"
 
 \end_layout
 
-\begin_layout Proposition
+\begin_layout --Separator--
 
-\color red
+\end_layout
+
+\begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "prop:pressure_match"
+name "lem:regular_upper_bound"
 
 \end_inset
 
- Suppose 
+Suppose 
 \begin_inset Formula $\vp:T^{1}S\to\R$
 \end_inset
 
@@ -12329,10 +11831,130 @@ name "prop:pressure_match"
 \end_inset
 
 .
- Then we have 
+ For any 
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $C>0$
+\end_inset
+
+ such that 
 \begin_inset Formula 
 \[
-P_{{\rm Reg}}(\vphi)=P(\varphi).
+\Lambda_{\Reg}^{*}(\vp,t,\Delta)\leq Ce^{tP(\vp)}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $t>\Delta$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Claim:
+\series default
+ for all 
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta<{\rm inj}(S)$
+\end_inset
+
+, 
+\begin_inset Formula ${\rm Per}_{R}(t-\Delta,t]$
+\end_inset
+
+ is a 
+\begin_inset Formula $(\delta,t)$
+\end_inset
+
+-separated set.
+ 
+\end_layout
+
+\begin_layout Proof
+pf.
+ If not, suppose 
+\begin_inset Formula $\g_{1},\g_{2}$
+\end_inset
+
+ are two closed geodesic in 
+\begin_inset Formula ${\rm Per}_{R}(t-\Delta,t]$
+\end_inset
+
+ such that 
+\begin_inset Formula $d(\g_{1},\g_{2})\leq\delta$
+\end_inset
+
+, then because 
+\begin_inset Formula $\delta<{\rm inj}(S)$
+\end_inset
+
+ using the exponential map one can construct a homotopy mapping connecting
+ 
+\begin_inset Formula $\g_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\g_{2}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\g_{1},\g_{2}$
+\end_inset
+
+ are in the same free homotopy class, their lifts 
+\begin_inset Formula $\widetilde{\g}_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\widetilde{\g}_{2}$
+\end_inset
+
+ are bi-asymptotic.
+ Thus by Flat Strip Theorem (Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:the flat strip theorem"
+
+\end_inset
+
+) 
+\begin_inset Formula $\g_{1},\g_{2}$
+\end_inset
+
+ are singular, which is a contradiction.
+\end_layout
+
+\begin_layout Proof
+Notice that for every 
+\begin_inset Formula $\g\in{\rm Per}_{R}(t-\Delta,t]$
+\end_inset
+
+, let 
+\begin_inset Formula $v_{\g}$
+\end_inset
+
+ be a vector tangent to 
+\begin_inset Formula $\g$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+|\Phi(\g)-\Phi(v_{\g},t)|\leq\Delta||\vp||,\ {\rm and\ thus\ }\Lambda_{\Reg}^{*}(\vp,t,\Delta)\leq e^{\Delta||\vp||}\Lambda(\vp,\delta,t).
 \]
 
 \end_inset
@@ -12341,189 +11963,323 @@ P_{{\rm Reg}}(\vphi)=P(\varphi).
 \end_layout
 
 \begin_layout Proof
+Lastly, by 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 4.11"
+key "Climenhaga:2016ut"
+
+\end_inset
+
+, there exists 
+\begin_inset Formula $C>0$
+\end_inset
+
+ such that when 
+\begin_inset Formula $t>\Delta$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\Lambda_{\Reg}^{*}(\vp,t,\Delta)\leq e^{\Delta||\vp||}\Lambda(\vp,\delta,t)<Ce^{tP(\vp)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
 
 \color red
-Since 
-\begin_inset Formula $P_{{\rm Reg}}(\vp+c)=P_{{\rm Reg}}(\vp)+c$
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:regular_lower_bound"
+
 \end_inset
 
- and 
-\begin_inset Formula $P(\vp+c)=P(\vp)+c$
+ 
+\color inherit
+Suppose 
+\begin_inset Formula $\vp:T^{1}S\to\R$
 \end_inset
 
-, without lost of generality, we may assume 
-\begin_inset Formula $P_{{\rm Reg}}(\vp),P(\vp)>0$
+ is a potential satisfies 
+\begin_inset Formula ${\rm Theorem}\ {\rm A}$
 \end_inset
 
 .
- 
+ There exists 
+\begin_inset Formula $\Delta,C>0$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\frac{C}{t}e^{tP(\vp)}\leq\Lambda_{\Reg}^{*}(\vp,t,\Delta)
+\]
+
+\end_inset
+
+for all large 
+\begin_inset Formula $t$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout --Separator--
+
 \end_layout
 
 \begin_layout Proof
-
-\color red
-Under the assumption 
-\begin_inset Formula $P_{{\rm Reg}}(\vp)>0$
-\end_inset
-
- we know 
-\begin_inset Formula $P_{{\rm Reg}}(\vp)=P_{{\rm Reg}}^{*}(\vp)$
-\end_inset
-
- by Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem: Pressure the same"
-
-\end_inset
-
-.
- So, by Lemma 
+By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lem:6.1"
 
 \end_inset
 
- and Corollary 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cor:pressure_ineq"
-
+, we know when 
+\begin_inset Formula $M$
 \end_inset
 
-, it is enough to show 
+ is big, there exists 
+\begin_inset Formula $C_{1},\delta_{1}>0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $t>0$
+\end_inset
+
+ 
 \begin_inset Formula 
 \[
-P({\cal G}^{M},\vphi)\leq P_{{\rm Reg}}^{*}(\vphi)
+C_{1}e^{tP(\vp)}\leq\Lambda({\cal G}^{M},\delta_{1},t).
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula ${\cal G}$
+Therefore, the aim of this proof is find 
+\begin_inset Formula $\delta$
 \end_inset
 
- is the decomposition given in the proof of Theorem A.
+, 
+\begin_inset Formula $C_{2},\Delta,s_{1},s_{2}>0$
+\end_inset
+
+ such that when 
+\begin_inset Formula $t>s_{1},s_{2},\Delta,2M$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\Lambda({\cal G}^{M},\delta,t)\leq C_{2}(t+s_{1})\Lambda_{\Reg}^{*}(\vp,t-s_{2},\Delta).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We start from labeling sizes of Bowen balls relative to different propositions.
+ In what follows, we fix 
+\begin_inset Formula $T_{0},\eta_{0}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+ large so that Theorem A and Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:6.1"
+
+\end_inset
+
+ hold.
+ Let 
+\begin_inset Formula $\ep_{1}=\ep_{1}(T_{0},\eta_{0})$
+\end_inset
+
+ be given in Corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor: closing_lemma_regular"
+
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\vp$
+\end_inset
+
+ verifies the Bowen property on 
+\begin_inset Formula ${\cal G}^{M}$
+\end_inset
+
+, let 
+\begin_inset Formula $\ep_{2}=(T_{0},\eta_{0})$
+\end_inset
+
+ denote the radius of Bowen balls for the Bowen property.
+ Lastly, because 
+\begin_inset Formula $S$
+\end_inset
+
+ is compact and 
+\begin_inset Formula $f_{t}$
+\end_inset
+
+ is continuous, for any 
+\begin_inset Formula $\ep<\ep_{1}{\rm \ and\ }\ep_{2}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $\delta_{1}=\delta_{1}(\ep)$
+\end_inset
+
+ such that when 
+\begin_inset Formula $d_{K}(u,w)<\delta_{1}$
+\end_inset
+
+ we have 
+\begin_inset Formula $d_{K}(f_{\sigma}u,f_{\sigma}w)<\ep$
+\end_inset
+
+ for any 
+\begin_inset Formula $\sigma\in[-M,M]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+The fist step is to associate each 
+\begin_inset Formula $(v,t)\in{\cal G}^{M}$
+\end_inset
+
+ with a regular closed orbit whose length is in the interval 
+\begin_inset Formula $[t-t_{1},t+t_{2}]$
+\end_inset
+
+ for some 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+.
+ Notice that for each 
+\begin_inset Formula $(v,t)\in{\cal G}^{M}$
+\end_inset
+
+, there exists 
+\begin_inset Formula $0<s,p<M$
+\end_inset
+
+ such that 
+\begin_inset Formula $(f_{p}v,t-s-p)=(v',t')\in{\cal G}$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Proof
 
-\color red
-The see this, notice that for 
-\begin_inset Formula $(v,t)\in{\cal G}^{M}$
-\end_inset
-
-, there exist 
-\begin_inset Formula $M>p,s>0$
-\end_inset
-
- such that 
-\begin_inset Formula $(f_{p}v,t-s-p):=(v',t')$
-\end_inset
-
- is a good orbit.
-\end_layout
-
-\begin_layout Proof
-
-\color red
-By the uniform continuity of the flow 
-\begin_inset Formula $f_{t}$
-\end_inset
-
-, we know that for 
+\series bold
+Claim:
+\series default
+ given 
 \begin_inset Formula $\ep>0$
 \end_inset
 
- (choosing the same 
-\begin_inset Formula $\ep$
+, for 
+\begin_inset Formula $\delta_{2}=\min\{\ep,\delta_{1}(\ep)\}$
 \end_inset
 
- as in the Bowen property) there exists 
-\begin_inset Formula $\ep'>0$
+, let 
+\begin_inset Formula $(v',t')\in{\cal G}^{M}$
 \end_inset
 
-, w.l.o.g.
- we may assume 
-\begin_inset Formula $\ep>\ep'$
-\end_inset
-
-, such that for 
-\begin_inset Formula $v,w\in T^{1}S$
+ as defined above, then there exists 
+\begin_inset Formula $s=s(\delta_{2})>0$
 \end_inset
 
  and 
-\begin_inset Formula $d_{K}(v,w)\leq\ep'$
-\end_inset
-
- we have 
-\begin_inset Formula $d_{K}(f_{s}v,f_{s}w)\leq\ep$
-\end_inset
-
- for all 
-\begin_inset Formula $s\in[-M,M]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-
-\color red
-By Lemma 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lem:closing_lem"
-
-\end_inset
-
- (i.e., the closing lemma), for 
-\begin_inset Formula $\ep'>0$
-\end_inset
-
- there exists a regular periodic vector 
-\begin_inset Formula $w\in B_{t'}(v',\ep')$
-\end_inset
-
- of period 
-\begin_inset Formula $t'+\tau$
-\end_inset
-
- for some 
-\begin_inset Formula $\tau\in[0,s(\ep')]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-
-\color red
-Thus there exists 
-\begin_inset Formula $t_{0}\in[-M,M]$
+\begin_inset Formula $w\in B_{t'}(v',\delta_{2})$
 \end_inset
 
  such that 
-\begin_inset Formula $d_{K}(f_{t_{0}}w,v)\leq\ep$
+\begin_inset Formula $w$
 \end_inset
 
-, and moreover, 
-\begin_inset Formula $f_{t_{0}}w\in B_{t}(v,\ep)$
+ is a regular vector and 
+\begin_inset Formula $f_{t'+\tau}(w)=w$
+\end_inset
+
+ for some 
+\begin_inset Formula $\tau\in[0,s]$
+\end_inset
+
+.
+ Moreover, we have 
+\begin_inset Formula $f_{-p}w\in B_{t}(v,\ep_{})$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Proof
+pf.
+ This is a direct consequence of Corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor: closing_lemma_regular"
 
-\color red
-Hence, 
-\begin_inset Formula $\left|\int_{0}^{t}\varphi(f_{s}v)\dd s-\int_{w}\varphi\right|\leq2M\cdot||\varphi||_{\infty}+K$
 \end_inset
 
- where 
+, because 
+\begin_inset Formula $(v',t')\in{\cal G\subset}{\cal C}_{T_{0}}(\eta_{0}).$
+\end_inset
+
+ The last assertions is because 
+\begin_inset Formula $w\in B(v',\delta_{2})\subset B(v',\delta_{1})$
+\end_inset
+
+ and the uniform continuity of the flow.
+ Thus, we have the claim.
+\end_layout
+
+\begin_layout Proof
+Moreover, since 
+\begin_inset Formula $\ep<\ep_{2}$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left|\Phi(v,t)-\Phi(w,t'+\tau)\right| & =\left|\int_{0}^{t}\vp(f_{\sigma}v)d\sigma-\int_{0}^{t'+\tau}\vp(f_{\sigma}w)d\sigma\right|\\
+ & \leq\left|\int_{0}^{s}\vp(f_{\sigma}v)d\sigma+\int_{0}^{t'}\vp(f_{\sigma}v')d\sigma+\int_{0}^{p}\vp(f_{\sigma+t'}v)d\sigma-\int_{0}^{t'+\tau}\vp(f_{\sigma}w)d\sigma\right|\\
+ & \leq(2M+\tau)||\vp||+\left|\int_{0}^{t'}(\vp(f_{\sigma}v')-\vp(f_{\sigma}w))d\sigma\right|,\\
+ & \leq(2M+\tau)||\vp||+K
+\end{alignat*}
+
+\end_inset
+
+where 
 \begin_inset Formula $K$
 \end_inset
 
@@ -12531,67 +12287,103 @@ Hence,
 \end_layout
 
 \begin_layout Proof
+In sum, given 
+\begin_inset Formula $\ep>0$
+\end_inset
 
-\color red
-Notice that if 
-\begin_inset Formula $d_{K}(v_{1},v_{2})\leq\ep$
+, we can define a map 
+\begin_inset Formula $\Psi:{\cal G}^{M}\ni(v,t)\mapsto(w,t'+\tau)$
+\end_inset
+
+ where 
+\begin_inset Formula $w$
+\end_inset
+
+ is tangent to a regular closed orbit 
+\begin_inset Formula $\g_{w}\in{\rm Per}_{R}(t',t'+\tau]\subset{\rm Per}_{R}(t-2M,t+s]$
 \end_inset
 
  and 
-\begin_inset Formula $(v_{1},t_{1}),(v_{2},t_{2})$
-\end_inset
-
- in a 
-\begin_inset Formula $(s,\delta)-$
-\end_inset
-
-separated set where 
-\begin_inset Formula $\delta>3\ep$
-\end_inset
-
-, then the corresponding regular periodic vectors 
-\begin_inset Formula $w_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $w_{2}$
-\end_inset
-
-, respectively, are distinct (because 
-\begin_inset Formula $\exists t_{1}\in[0,s]$
-\end_inset
-
- such that 
-\begin_inset Formula $d_{K}(f_{t_{1}}w_{1},f_{t_{1}}w_{2})>\ep$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Proof
-
-\color red
-In other words, for any 
-\begin_inset Formula $(t,\delta)-$
-\end_inset
-
-separated set 
-\begin_inset Formula $E\subset{\cal G}_{t}^{M}:=\{(v,t)\in{\cal G}^{M}\}$
-\end_inset
-
-, there exists an injection from 
-\begin_inset Formula $E$
-\end_inset
-
- to 
-\begin_inset Formula ${\rm Per}(s+s(\ep'),{\rm Reg})$
+\begin_inset Formula $|\Phi(v,t)-\Phi(\g_{w})|\leq(2M+s)||\vp||+K$
 \end_inset
 
 .
- Thus 
+ 
+\end_layout
+
+\begin_layout Proof
+We notice that 
+\begin_inset Formula $\left.\Psi\right|_{E_{t}}$
+\end_inset
+
+ is an injection for every 
+\begin_inset Formula $(\delta,t)$
+\end_inset
+
+-separated set 
+\begin_inset Formula $E_{t}\subset{\cal G}^{M}$
+\end_inset
+
+ provided 
+\begin_inset Formula $\delta>3\ep$
+\end_inset
+
+ (because for every 
+\begin_inset Formula $(v,t)\in E_{t}$
+\end_inset
+
+, its image 
+\begin_inset Formula $\Psi(v,t)=(w,t'+\tau)$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $w\in B_{t}(v,\ep)$
+\end_inset
+
+).
+ Moreover, because 
+\begin_inset Formula $\Psi(E_{t})$
+\end_inset
+
+ is 
+\begin_inset Formula $(\delta,t)$
+\end_inset
+
+-separated, each 
+\begin_inset Formula $\g\in{\rm Per}_{R}(t-2M,t+s]$
+\end_inset
+
+ has at most 
+\begin_inset Formula $\frac{t+s}{\delta}$
+\end_inset
+
+ elements of 
+\begin_inset Formula $\Psi(E_{t})$
+\end_inset
+
+ tangent to it.
+
+\color red
+ 
+\end_layout
+
+\begin_layout Proof
+Hence, for 
+\begin_inset Formula $\delta>3\ep$
+\end_inset
+
+, then for all 
+\begin_inset Formula $(\delta,t)$
+\end_inset
+
+-separated set 
+\begin_inset Formula $E_{t}\subset{\cal G}^{M}$
+\end_inset
+
+ with 
 \begin_inset Formula 
 \[
-\sum_{(v,t)\in E}e^{\int_{0}^{t}\varphi(f_{s}v)\dd s}\leq\sum_{w\in{\rm Per}(t+s(\ep'),{\rm Reg})}e^{2M\cdot||\varphi||_{\infty}+K+\int_{w}\varphi};
+\sum_{(v,t)\in E_{t}}e^{\Phi(v,t)}\leq\frac{t+s}{\delta}\cdot e^{(2M+s)||\vp||+K}\cdot\sum_{\g\in{\rm Per}_{R}[t-2M,t+s]}e^{\Phi(\g)}.
 \]
 
 \end_inset
@@ -12599,25 +12391,15 @@ separated set
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout --Separator--
 
-\color red
-hence, 
-\begin_inset Formula 
-\[
-\limsup_{t\to\infty}\frac{1}{t}\log\Lambda({\cal G}^{M},\vphi,\delta,t)\leq P_{{\rm Reg}}^{*}(\vphi);
-\]
+\end_layout
 
-\end_inset
+\begin_layout Standard
+From the above two lemmas, we can conclude: 
+\end_layout
 
-lastly, we have 
-\begin_inset Formula 
-\[
-P({\cal G}^{M},\vphi)=\lim_{\delta\to0}\limsup_{t\to\infty}\frac{1}{t}\log\Lambda({\cal G}^{M},\vphi,\delta,t)\leq P_{{\rm Reg}}^{*}(\vphi).
-\]
-
-\end_inset
-
+\begin_layout --Separator--
 
 \end_layout
 
@@ -12630,6 +12412,8 @@ name "prop:weight_average_regular_orbits"
 
 \end_inset
 
+
+\color inherit
 The unique equilibrium state 
 \begin_inset Formula $\mu_{\varphi}$
 \end_inset
@@ -12638,149 +12422,51 @@ The unique equilibrium state
 \begin_inset Formula ${\rm Theorem\ A}$
 \end_inset
 
- is the weak
+ is a weak
 \begin_inset Formula $^{*}$
 \end_inset
 
  limit of the weighted regular periodic orbits.
- More precisely, 
+ More precisely, there exists 
+\begin_inset Formula $\D>0$
+\end_inset
+
+ such that 
 \begin_inset Formula 
 \[
-\mu_{\vp}=\lim_{T\to\infty}\frac{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}\delta_{\g}}{\sum_{\g\in{\rm Per}(T-1,T,\ {\rm Reg})}e^{\int_{\g}\vp}}
+\mu_{\vp}=\lim_{T\to\infty}\frac{\sum_{\g\in{\rm Per}_{R}(T-\D,T]}e^{\Phi(\g)}\delta_{\g}}{\Lambda_{\Reg,\Delta}^{*}(\vp,T)}
 \]
 
 \end_inset
 
+
+\color red
  
 \end_layout
 
 \begin_layout Proof
-
-\color red
-As pointed out in 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Remark 3"
-key "Gelfert:2014hn"
-
-\end_inset
-
-, Walters 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Theorem 9.10"
-key "Walters:2000vc"
-
-\end_inset
-
- proved that the weak* limit of the weighted regular periodic orbits on
- 
-\begin_inset Formula $(t,\delta)$
-\end_inset
-
--separated set is an equilibrium state for 
-\begin_inset Formula $\vphi$
-\end_inset
-
- with respect to 
-\begin_inset Formula $P(\varphi,\delta,t)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-
-\color red
-Notice that Knieper 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "p. 310"
-key "Knieper:1998ht"
-
-\end_inset
-
- proved that 
-\begin_inset Formula ${\rm Per}(T,{\rm Reg})$
-\end_inset
-
- is a 
-\begin_inset Formula $(T,\delta)-$
-\end_inset
-
-separated set for 
-\begin_inset Formula $\delta$
-\end_inset
-
- is small enough; hence, so is 
-\begin_inset Formula ${\rm Per}(T-1,T,\ {\rm Reg})$
-\end_inset
-
-.
- Although Knieper's setting was nonpositively curved manifolds, his proof
- works for the no focal points (because Lemma 
+It follows immediately from Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "lem:geometric_conditions"
+reference "lem:regular_upper_bound"
 
 \end_inset
 
- implies each free homotopy class only contains one geometrically distinct
- closed geodesic).
-\end_layout
-
-\begin_layout Proof
-
-\color red
-Moreover, by Proposition 
+, Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "prop:pressure_match"
+reference "lem:regular_lower_bound"
 
 \end_inset
 
- we have 
-\begin_inset Formula $P_{{\rm Reg}}(\varphi)=P(\varphi)$
-\end_inset
+, and Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:6.1"
 
-, thus the weak
-\begin_inset Formula $^{*}$
-\end_inset
-
- limit of the weighted regular periodic orbits is an equilibrium state for
- 
-\begin_inset Formula $\varphi$
-\end_inset
-
-, which is 
-\begin_inset Formula $\mu_{\varphi}$
-\end_inset
-
- by uniqueness.
- 
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Remark
-
-\color red
-One can replace 
-\begin_inset Formula ${\rm Per}(T-1,T,{\rm Reg})$
-\end_inset
-
- by 
-\begin_inset Formula ${\rm Per}(T-\delta,T,{\rm Reg})$
-\end_inset
-
- for any 
-\begin_inset Formula $\delta>0$
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout --Separator--
